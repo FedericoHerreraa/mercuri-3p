@@ -10,7 +10,7 @@ export const Footer = () => {
                     <div className="md:col-span-2">
                         <div className="font-bold text-2xl mb-4">Mercuri3P</div>
                         <p className="text-gray-400 mb-6 max-w-md">
-                            Transforming organizations through agile methodologies and conscious communication. Building the future of work, one conversation at a time.
+                            Desarrollamos productos sustentables con propósito, combinando innovación, sustentabilidad y eficiencia. Especialistas en packaging como herramienta de diferenciación.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
@@ -32,28 +32,28 @@ export const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="font-semibold text-lg mb-4">Services</h4>
+                        <h4 className="font-semibold text-lg mb-4">Servicios</h4>
                         <ul className="space-y-2 text-gray-400">
-                            <li><a href="#" className="hover:text-white transition-colors">Digital Transformation</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Organizational Development</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Strategic Innovation</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Agile Implementation</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Packaging Sustentable</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Desarrollo End to End</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Manufactura Sostenible</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Gestión de Proyectos</a></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-semibold text-lg mb-4">Company</h4>
+                        <h4 className="font-semibold text-lg mb-4">Empresa</h4>
                         <ul className="space-y-2 text-gray-400">
-                            <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Our Approach</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Nosotros</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Nuestro Enfoque</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Casos de Éxito</a></li>
+                            <li><a href="#" className="hover:text-white transition-colors">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                    <p>&copy; 2024 Mercuri3P. All rights reserved. | Conscious communication for transformative results.</p>
+                    <p>&copy; 2024 Mercuri3P. Todos los derechos reservados. | Desarrollo de productos sustentables con propósito.</p>
                 </div>
             </div>
         </footer>

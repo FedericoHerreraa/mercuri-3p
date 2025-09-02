@@ -9,10 +9,10 @@ export const Cases = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
                 <div className="text-center mb-16 animate-slide-up">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Success Stories
+                        Casos de Éxito
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Real transformations achieved through our agile and conscious approach to organizational change.
+                        Transformaciones reales logradas a través de nuestro enfoque integral en desarrollo de productos sustentables y packaging innovador.
                     </p>
                 </div>
 
@@ -25,20 +25,20 @@ export const Cases = () => {
                                 </svg>
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Global Tech Company</h3>
-                                <p className="text-gray-600">Digital Transformation</p>
+                                <h3 className="text-xl font-semibold text-gray-900">Empresa de Alimentos Orgánicos</h3>
+                                <p className="text-gray-600">Packaging Sustentable</p>
                             </div>
                         </div>
                         <p className="text-gray-600 mb-6">
-                            Led a comprehensive digital transformation for a multinational technology company, implementing agile methodologies across 15 teams and 3 continents. The initiative resulted in 40% faster product delivery and significantly improved cross-team collaboration.
+                            Desarrollamos una línea completa de packaging biodegradable para una empresa líder en alimentos orgánicos. El proyecto incluyó rediseño estructural, selección de materiales sustentables y optimización de costos, logrando 60% de reducción en impacto ambiental.
                         </p>
                         <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">40% faster delivery</span>
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">15 teams transformed</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Global implementation</span>
+                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">60% menos impacto</span>
+                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">100% biodegradable</span>
+                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">25% ahorro costos</span>
                         </div>
                         <blockquote className="text-gray-700 italic border-l-4 border-blue-500 pl-4">
-                            &ldquo;Mercuri3P&apos;s approach to conscious communication transformed not just our processes, but our entire organizational culture. The results speak for themselves.&rdquo;
+                            &ldquo;MERCURI 3P transformó completamente nuestra propuesta de valor. El nuevo packaging no solo es sustentable, sino que se convirtió en nuestra principal herramienta de diferenciación.&rdquo;
                         </blockquote>
                     </div>
 
@@ -50,20 +50,20 @@ export const Cases = () => {
                                 </svg>
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Financial Services Firm</h3>
-                                <p className="text-gray-600">Organizational Development</p>
+                                <h3 className="text-xl font-semibold text-gray-900">Startup de Cosméticos Naturales</h3>
+                                <p className="text-gray-600">Desarrollo de Producto End to End</p>
                             </div>
                         </div>
                         <p className="text-gray-600 mb-6">
-                            Redesigned organizational structure and communication frameworks for a leading financial services firm. Enhanced leadership effectiveness and team collaboration, resulting in 25% improvement in employee engagement and 30% reduction in project timeline.
+                            Acompañamos el desarrollo completo de una línea de cosméticos naturales desde la conceptualización hasta el lanzamiento. Incluimos investigación de mercado, formulación de productos, diseño de packaging premium y estrategia de lanzamiento, resultando en 150% de crecimiento en ventas.
                         </p>
                         <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">25% engagement boost</span>
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">30% faster projects</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Leadership transformation</span>
+                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">150% crecimiento</span>
+                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">12 meses desarrollo</span>
+                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Premium positioning</span>
                         </div>
                         <blockquote className="text-gray-700 italic border-l-4 border-blue-500 pl-4">
-                            &ldquo;The flexible approach and focus on human-centered change management made all the difference in our transformation journey.&rdquo;
+                            &ldquo;Su enfoque integral y visión estratégica nos permitió posicionarnos como líderes en el segmento premium. El packaging se convirtió en nuestro mayor diferenciador.&rdquo;
                         </blockquote>
                     </div>
 
@@ -75,20 +75,20 @@ export const Cases = () => {
                                 </svg>
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Healthcare Innovation</h3>
-                                <p className="text-gray-600">Strategic Innovation</p>
+                                <h3 className="text-xl font-semibold text-gray-900">Empresa Farmacéutica</h3>
+                                <p className="text-gray-600">Innovación en Manufactura</p>
                             </div>
                         </div>
                         <p className="text-gray-600 mb-6">
-                            Developed innovation strategy and implementation framework for a healthcare organization looking to modernize patient care delivery. Created cross-functional innovation teams that launched 5 new service offerings within 18 months.
+                            Implementamos un sistema de manufactura sustentable para envases farmacéuticos, cumpliendo con las más estrictas normativas internacionales. El proyecto incluyó certificaciones, trazabilidad completa y reducción de 40% en desperdicios de material.
                         </p>
                         <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">5 new services</span>
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">18-month timeline</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Patient-centered</span>
+                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Certificación FDA</span>
+                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">40% menos desperdicio</span>
+                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Trazabilidad 100%</span>
                         </div>
                         <blockquote className="text-gray-700 italic border-l-4 border-blue-500 pl-4">
-                            &ldquo;Their strategic approach to innovation helped us reimagine healthcare delivery while maintaining our commitment to patient care.&rdquo;
+                            &ldquo;Su expertise en normativas y sustentabilidad nos permitió expandir a mercados internacionales manteniendo nuestro compromiso con la calidad y el medio ambiente.&rdquo;
                         </blockquote>
                     </div>
 
@@ -100,20 +100,20 @@ export const Cases = () => {
                                 </svg>
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Manufacturing Leader</h3>
-                                <p className="text-gray-600">Agile Implementation</p>
+                                <h3 className="text-xl font-semibold text-gray-900">Marca de Bebidas Premium</h3>
+                                <p className="text-gray-600">Reposicionamiento de Marca</p>
                             </div>
                         </div>
                         <p className="text-gray-600 mb-6">
-                            Implemented agile methodologies in a traditional manufacturing environment, focusing on continuous improvement and responsive operations. Achieved 35% reduction in waste and 50% improvement in time-to-market for new products.
+                            Desarrollamos una estrategia integral de reposicionamiento para una marca de bebidas, incluyendo rediseño completo del packaging, optimización de materiales y nueva experiencia de marca. El resultado fue un incremento del 80% en reconocimiento de marca y expansión a 5 nuevos mercados.
                         </p>
                         <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">35% waste reduction</span>
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">50% faster to market</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Agile manufacturing</span>
+                            <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">80% reconocimiento</span>
+                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">5 nuevos mercados</span>
+                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Packaging premium</span>
                         </div>
                         <blockquote className="text-gray-700 italic border-l-4 border-blue-500 pl-4">
-                            &ldquo;We never thought agile could work in manufacturing, but Mercuri3P showed us how to adapt the principles to our industry with remarkable results.&rdquo;
+                            &ldquo;MERCURI 3P no solo rediseñó nuestro packaging, sino que redefinió nuestra identidad de marca. El nuevo diseño comunica perfectamente nuestros valores de calidad y sustentabilidad.&rdquo;
                         </blockquote>
                     </div>
                 </div>

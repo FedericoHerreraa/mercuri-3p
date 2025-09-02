@@ -1,8 +1,8 @@
 import { Landing } from "@/components/Landing";
 import { Philosophy } from "@/components/Philosophy";
 import { Services } from "@/components/Services";
-import { Cases } from "@/components/Cases";
-import { Contact } from "@/components/Contact";
+import { CasesCTA } from "@/components/CasesCTA";
+import { ContactCTA } from "@/components/ContactCTA";
 import { Footer } from "@/components/Footer";
 
 
@@ -12,8 +12,8 @@ export default function Home() {
       <Landing />
       <Philosophy />
       <Services />
-      <Cases />
-      <Contact />
+      <CasesCTA />
+      <ContactCTA />
       <Footer />
     </>
   );
