@@ -27,11 +27,11 @@ export const ProposalComponent = () => {
                         </p>
                         {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <Link href="/contact-us">
-                                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                                <button className="bg-white text-[#0069c0] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
                                     Solicitar Cotización
                                 </button>
                             </Link>
-                            <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
+                            <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#0069c0] transition-colors">
                                 Descargar PDF
                             </button>
                         </div> */}
@@ -39,7 +39,6 @@ export const ProposalComponent = () => {
                 </div>
             </section>
 
-            {/* Metodología */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16 animate-slide-up">
@@ -55,7 +54,7 @@ export const ProposalComponent = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {methodology.map((phase, index) => (
                             <div key={index} className="card p-8 text-center group hover:shadow-xl transition-all duration-300">
-                                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <div className="w-20 h-20 bg-gradient-to-r from-[#0069c0] to-[#20f26f] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                                     <span className="text-2xl font-bold text-white">{index + 1}</span>
                                 </div>
                                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">{phase.title}</h3>
@@ -63,7 +62,7 @@ export const ProposalComponent = () => {
                                 <ul className="text-sm text-gray-500 space-y-2">
                                     {phase.activities.map((activity, actIndex) => (
                                         <li key={actIndex} className="flex items-center">
-                                            <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <svg className="w-4 h-4 text-[#20f26f] mr-2" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                             </svg>
                                             {activity}
@@ -76,7 +75,31 @@ export const ProposalComponent = () => {
                 </div>
             </section>
 
-            {/* Beneficios Clave */}
+            <section className="py-24 bg-gradient-to-r from-[#20f26f]/50 to-[#3df883]/50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16 animate-slide-up">
+                        <h2 className="text-4xl md:text-5xl font-bold text-[#0069c0] mb-6">
+                            ¿Por qué es conveniente?
+                        </h2>
+                        <p className="text-xl text-[#0069c0] max-w-3xl mx-auto">
+                            MERCURI 3P es tu socio estratégico para acelerar el crecimiento y la innovación en tu empresa.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                        {convenience.map((item, index) => (
+                            <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-3 h-3 bg-[#0069c0] rounded-full mr-3"></div>
+                                    <h3 className="text-xl font-bold text-[#0069c0]">{item.title}</h3>
+                                </div>
+                                <p className="text-[#0069c0] leading-relaxed">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             <section className="py-24 gradient-subtle">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16 animate-slide-up">
@@ -94,8 +117,8 @@ export const ProposalComponent = () => {
                             <div className="space-y-8">
                                 {benefits.map((benefit, index) => (
                                     <div key={index} className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <svg className="w-6 h-6 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={benefit.icon} />
                                             </svg>
                                         </div>
@@ -114,12 +137,37 @@ export const ProposalComponent = () => {
                                     {stats.map((stat, index) => (
                                         <div key={index} className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
                                             <span className="text-gray-600">{stat.label}</span>
-                                            <span className="text-2xl font-bold text-green-600">{stat.value}</span>
+                                            <span className="text-2xl font-bold text-[#20f26f]">{stat.value}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Cliente Objetivo */}
+            <section className="py-24 bg-gradient-to-r from-[#0069c0] to-[#137fd9] text-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16 animate-slide-up">
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                            Cliente Objetivo
+                        </h2>
+                        <p className="text-xl text-white/90 max-w-3xl mx-auto">
+                            Nuestros servicios están diseñados específicamente para diferentes tipos de organizaciones con necesidades de crecimiento y innovación.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                        {targetClients.map((client, index) => (
+                            <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-4 h-4 bg-[#20f26f] rounded-full mr-3"></div>
+                                    <h3 className="text-lg font-semibold text-white">{client}</h3>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -144,18 +192,18 @@ export const ProposalComponent = () => {
                                     <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
                                         <div className="card p-6">
                                             <div className="flex items-center mb-4">
-                                                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                                <div className="w-10 h-10 bg-[#0069c0] rounded-full flex items-center justify-center mr-4">
                                                     <span className="text-white font-bold">{index + 1}</span>
                                                 </div>
                                                 <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
                                             </div>
                                             <p className="text-gray-600 mb-4">{item.description}</p>
-                                            <div className="text-sm text-blue-600 font-medium">
+                                            <div className="text-sm text-[#0069c0] font-medium">
                                                 Duración: {item.duration}
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
+                                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#0069c0] rounded-full border-4 border-white"></div>
                                 </div>
                             ))}
                         </div>
@@ -175,12 +223,12 @@ export const ProposalComponent = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link href="/contact-us">
-                            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                            <button className="bg-white text-[#0069c0] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
                                 Contactar Ahora
                             </button>
                         </Link>
                         <Link href="/success-cases">
-                            <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
+                            <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#0069c0] transition-colors">
                                 Ver Casos de Éxito
                             </button>
                         </Link>
@@ -193,53 +241,53 @@ export const ProposalComponent = () => {
 
 const methodology = [
     {
-        title: "Análisis & Estrategia",
-        description: "Evaluamos tu mercado, competencia y oportunidades para definir la estrategia óptima.",
+        title: "Identificar Oportunidades",
+        description: "Detectamos y evaluamos oportunidades de mejora y crecimiento en tu negocio.",
         activities: [
-            "Investigación de mercado",
-            "Análisis competitivo",
-            "Definición de objetivos",
-            "Estrategia de producto"
+            "Entrevistas con stakeholders",
+            "Visitas a instalaciones",
+            "Análisis de inducciones",
+            "Generación de reporte inicial"
         ]
     },
     {
-        title: "Concepto & Diseño",
-        description: "Desarrollamos conceptos innovadores que conectan con tu audiencia objetivo.",
+        title: "Diagnóstico Situación Actual",
+        description: "Evaluamos el estado actual de tus procesos y productos para identificar áreas de mejora.",
         activities: [
-            "Ideación creativa",
-            "Prototipado rápido",
-            "Validación de conceptos",
-            "Diseño detallado"
+            "Análisis de datos existentes",
+            "Desarrollo de propuestas",
+            "Análisis con equipo interno",
+            "Priorización de iniciativas"
         ]
     },
     {
-        title: "Desarrollo & Testing",
-        description: "Transformamos ideas en productos tangibles con rigurosas pruebas de calidad.",
+        title: "Loop de Soluciones & Plan de Acción",
+        description: "Diseñamos e implementamos soluciones específicas con un plan de acción claro.",
         activities: [
-            "Desarrollo técnico",
-            "Pruebas de calidad",
-            "Optimización",
-            "Validación funcional"
+            "Definición de entregables",
+            "Acuerdo con stakeholders",
+            "Test piloto",
+            "Launch y escalamiento"
         ]
     },
     {
-        title: "Producción & Scaling",
-        description: "Implementamos procesos eficientes para la producción a escala comercial.",
+        title: "Monitoreo & Control",
+        description: "Seguimiento continuo de los resultados para asegurar el éxito del proyecto.",
         activities: [
-            "Procesos de producción",
-            "Control de calidad",
-            "Optimización de costos",
-            "Escalabilidad"
+            "Definición de KPI's",
+            "Cascade al equipo",
+            "Coaching específico",
+            "Evaluación de resultados"
         ]
     },
     {
-        title: "Lanzamiento & Soporte",
-        description: "Acompañamos el lanzamiento y brindamos soporte continuo para el éxito.",
+        title: "Follow Up (FUP)",
+        description: "Soporte posterior y mejora continua para maximizar el valor del proyecto.",
         activities: [
-            "Estrategia de lanzamiento",
-            "Soporte técnico",
-            "Monitoreo continuo",
-            "Mejora continua"
+            "Reuniones de seguimiento",
+            "Coaching especializado",
+            "Capacitaciones adicionales",
+            "Optimización continua"
         ]
     }
 ]
@@ -300,4 +348,28 @@ const timeline = [
         description: "Entrega final del producto con documentación completa y soporte inicial.",
         duration: "1-2 semanas"
     }
+]
+
+const convenience = [
+    {
+        title: "Operación Diaria vs Desarrollo Estratégico",
+        description: "Muchas veces la operatoria del día a día, no deja espacio para la estrategia. MERCURI 3P es un agente catalizador para ejecutarla."
+    },
+    {
+        title: "Planes de Acción claros y Eficientes",
+        description: "Incorporamos técnicas metodológicas probadas para mejorar la efectividad en la gestión de proyectos. (Costos vs Tiempo vs Calidad)"
+    },
+    {
+        title: "Contexto Competitivo",
+        description: "El crecimiento competitivo empieza con equipos energizados y comprometidos. La Responsabilidad Social Sustentable es una barrera competitiva que debe estar en la ecuación de crecimiento."
+    }
+]
+
+const targetClients = [
+    "PYMES con potencial de crecimiento",
+    "Empresas Multinacionales con necesidades específicas",
+    "Terceros & Copackers con restricción de recursos I+D & know how puntuales",
+    "Industrias de Cuidado del Hogar y Personal, Farma, Cosmética y Perfumería",
+    "Industrias convertidoras de materiales de packaging",
+    "Cámaras, Asociaciones Industriales, Universidades"
 ]   

@@ -26,7 +26,7 @@ export const Services = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={service.icon} />
                                     </svg>
                                 </div>
-                                <h3 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                                <h3 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-[#0069c0] transition-colors">
                                     {service.title}
                                 </h3>
                                 <p className="text-gray-600 mb-6">
@@ -37,7 +37,7 @@ export const Services = () => {
                                         <li key={index}>• {benefit}</li>
                                     ))}
                                 </ul>
-                                <div className="flex items-center text-[#1ab655] font-medium group-hover:text-[#1ab655]/80 transition-colors">
+                                <div className="flex items-center text-[#20f26f] font-medium group-hover:text-[#3df883] transition-colors">
                                     <span>Conocer más</span>
                                     <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -210,39 +210,38 @@ export const services: Service[] = [
   {
     id: "consultoria-especializada",
     title: "Consultoría Especializada",
-    shortDescription: "Asesoría experta en desarrollo de productos sustentables, tendencias del mercado y optimización de recursos.",
-    fullDescription: "Brindamos consultoría estratégica especializada para empresas que buscan optimizar sus productos existentes o desarrollar nuevas líneas. Nuestro expertise abarca desde análisis de mercado hasta implementación de mejores prácticas en sustentabilidad y eficiencia operativa.",
+    shortDescription: "Aseguramiento y aceleración de la innovación, mejora de performance y optimización de costos con enfoque en sustentabilidad.",
+    fullDescription: "Brindamos consultoría integral en múltiples áreas especializadas para impulsar el crecimiento sostenido y consistente de tu empresa. Desde gestión de proyectos hasta capacitación de talento, nuestro enfoque está en generar resultados medibles y transformación real.",
     benefits: [
-      "Acceso a expertise especializada",
-      "Visión externa objetiva",
-      "Identificación de oportunidades",
-      "Optimización de recursos existentes",
-      "Reducción de riesgos",
-      "Aceleración de resultados"
+      "Gestión de Proyectos - Aseguramiento y aceleración de la innovación",
+      "Diseño de Producto/Packaging/Componentes - Mejora de performance y calidad",
+      "Optimización de Costos - Incremento de margen bruto",
+      "Sustentabilidad - Economía circular y competitividad",
+      "Capacitación/Gestión de Talento - Crecimiento sostenido y consistente",
+      "Visión integral End-to-End (E2E)"
     ],
     process: [
-      "Diagnóstico integral actual",
-      "Análisis de oportunidades",
-      "Desarrollo de recomendaciones",
-      "Plan de implementación",
-      "Acompañamiento en ejecución",
-      "Evaluación de resultados"
+      "Identificación de oportunidades",
+      "Diagnóstico de situación actual",
+      "Loop de soluciones y plan de acción",
+      "Monitoreo y control de implementación",
+      "Follow-up y mejora continua"
     ],
     deliverables: [
-      "Diagnóstico completo",
-      "Reporte de oportunidades",
-      "Plan estratégico de mejoras",
-      "Roadmap de implementación",
-      "Capacitación de equipos",
-      "Métricas de seguimiento"
+      "Reporte de oportunidades identificadas",
+      "Diagnóstico integral de situación actual",
+      "Plan de acción con soluciones específicas",
+      "Sistema de monitoreo con KPIs definidos",
+      "Programa de seguimiento y coaching",
+      "Documentación de mejores prácticas"
     ],
-    duration: "4-12 semanas",
+    duration: "4-16 semanas",
     icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
     caseStudy: {
-      client: "Empresa de Productos de Consumo",
-      challenge: "Optimización de línea de productos con bajo margen y alta competencia",
-      solution: "Auditoría completa y rediseño de estrategia de producto y packaging",
-      results: ["35% mejora en márgenes", "25% reducción costos", "Nueva línea premium lanzada"]
+      client: "PYME de Productos de Cuidado Personal",
+      challenge: "Necesidad de optimizar procesos y desarrollar capacidades internas para competir con multinacionales",
+      solution: "Consultoría integral incluyendo optimización de costos, desarrollo de packaging sustentable y capacitación de equipos",
+      results: ["40% mejora en márgenes", "30% reducción en time-to-market", "Equipo interno capacitado", "Nueva línea sustentable exitosa"]
     }
   }
 ];

@@ -14,15 +14,15 @@ export const CasesCTA = () => {
                     </p>
                     <div className="grid md:grid-cols-3 gap-8 mb-12">
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-blue-600 mb-2">60%</div>
+                            <div className="text-3xl font-bold text-[#0069c0] mb-2">60%</div>
                             <p className="text-gray-600">Reducción en impacto ambiental</p>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-blue-600 mb-2">150%</div>
+                            <div className="text-3xl font-bold text-[#0069c0] mb-2">150%</div>
                             <p className="text-gray-600">Crecimiento promedio en ventas</p>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
+                            <div className="text-3xl font-bold text-[#0069c0] mb-2">25+</div>
                             <p className="text-gray-600">Proyectos exitosos</p>
                         </div>
                     </div>

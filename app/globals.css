@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-/* Custom CSS Variables for Brand Colors */
+/* Custom CSS Variables for Brand Colors - Mercuri 3P Palette */
 :root {
-  --color-primary: #2563eb; /* Modern blue - our accent color */
-  --color-primary-light: #3b82f6;
-  --color-primary-dark: #1d4ed8;
-  --color-accent: #0ea5e9; /* Lighter blue for highlights */
+  --color-primary: #0069c0; /* Azul oscuro principal */
+  --color-primary-light: #137fd9; /* Azul medio */
+  --color-primary-bright: #2196f3; /* Azul claro */
+  --color-accent: #20f26f; /* Verde claro */
+  --color-accent-bright: #3df883; /* Verde medio */
   --color-neutral-50: #f8fafc;
   --color-neutral-100: #f1f5f9;
   --color-neutral-200: #e2e8f0;
@@ -74,20 +75,26 @@ html {
 
 /* Custom gradient backgrounds */
 .gradient-primary {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-bright) 100%);
 }
 
 .gradient-subtle {
   background: linear-gradient(135deg, var(--color-neutral-50) 0%, var(--color-neutral-100) 100%);
 }
 
+.gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-bright) 100%);
+}
+
 /* Custom button styles */
 .btn-primary {
-  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  background: var(--color-primary);
+  @apply hover:bg-[#0069c0]/90 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
 }
 
 .btn-secondary {
-  @apply bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+  @apply bg-transparent border-2 text-white hover:bg-white hover:text-[#0069c0] font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+  border-color: var(--color-accent);
 }
 
 /* Custom card styles */
@@ -97,7 +104,7 @@ html {
 
 /* Typography enhancements */
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-bright) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

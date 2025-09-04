@@ -32,7 +32,7 @@ export const ProposalCTA = () => {
                             </button>
                         </Link>
                         <Link href="/contact-us">
-                            <button className="btn-secondary px-8 py-4 text-lg">
+                            <button className="border-2 border-[#0069c0] box-content rounded-lg bg-white text-black px-8 py-[9] text-lg cursor-pointer hover:scale-105 transition-all duration-300">
                                 Contactar Ahora
                             </button>
                         </Link>
