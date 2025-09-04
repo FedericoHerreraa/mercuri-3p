@@ -37,7 +37,7 @@ export const Services = () => {
                                         <li key={index}>• {benefit}</li>
                                     ))}
                                 </ul>
-                                <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-800 transition-colors">
+                                <div className="flex items-center text-[#1ab655] font-medium group-hover:text-[#1ab655]/80 transition-colors">
                                     <span>Conocer más</span>
                                     <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

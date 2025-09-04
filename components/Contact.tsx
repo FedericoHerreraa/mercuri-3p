@@ -65,7 +65,7 @@ export const Contact = () => {
                             </div>
                         </div>
 
-                        <form className="card p-8">
+                        <form className="p-8 bg-white rounded-lg shadow-md">
                             <div className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
