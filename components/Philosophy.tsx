@@ -5,27 +5,27 @@
 
 export const Philosophy = () => {
     return (
-        <section id="about" className="py-24 bg-white">
+        <section id="about" className="py-24 bg-gradient-to-r from-[#0069c0] to-[#137fd9]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 animate-slide-up">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <h2 className="text-4xl md:text-5xl font-bold text-zinc-200 mb-6">
                         Nuestros Valores
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
                         Principios fundamentales que guían nuestro trabajo y definen cómo transformamos ideas en productos exitosos.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                     {cards.map((card, index) => (
-                        <div key={index} className="card p-8 text-center">
-                            <div className="w-16 h-16 bg-[#0069c0]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <div key={index} className="border border-zinc-200/50 rounded-xl p-8 text-center bg-white/10 hover:scale-105 transition-all duration-300">
+                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <svg className="w-8 h-8 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">{card.title}</h3>
-                            <p className="text-gray-600">{card.description}</p>
+                            <h3 className="text-xl font-semibold text-zinc-200 mb-4">{card.title}</h3>
+                            <p className="text-zinc-200">{card.description}</p>
                         </div>
                     ))}
                 </div>
