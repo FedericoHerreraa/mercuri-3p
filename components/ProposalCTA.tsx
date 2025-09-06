@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export const ProposalCTA = () => {
     return (
-        <section className="py-24 gradient-subtle">
+        <section className="py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <div className="flex justify-center mb-8">
@@ -27,7 +27,7 @@ export const ProposalCTA = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/proposal">
-                            <button className="btn-primary px-8 py-4 text-lg">
+                            <button className="btn-primary cursor-pointer px-8 py-4 text-lg">
                                 Ver Propuesta Completa
                             </button>
                         </Link>

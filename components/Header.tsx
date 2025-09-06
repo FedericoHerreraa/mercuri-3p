@@ -8,7 +8,7 @@ export const Header = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-26">
                     <Link href="/">
-                        <Image src="/logo-sin-bg.png" alt="Mercuri3P" width={100} height={100} />
+                        <Image src="/logo-sin-bg.png" alt="Mercuri3P" width={120} height={120} />
                     </Link>
                     <div className="hidden md:flex space-x-8">
                         <Link href="/" className="text-gray-600 hover:text-[#0069c0] transition-colors">Inicio</Link>

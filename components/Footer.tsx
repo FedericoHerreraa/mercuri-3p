@@ -1,4 +1,4 @@
-
+import Link from "next/link"
 
 
 
@@ -34,10 +34,12 @@ export const Footer = () => {
                     <div>
                         <h4 className="font-semibold text-lg mb-4">Servicios</h4>
                         <ul className="space-y-2 text-gray-400">
-                            <li><a href="#" className="hover:text-white transition-colors">Packaging Sustentable</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Desarrollo End to End</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Manufactura Sostenible</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Gestión de Proyectos</a></li>
+                            <li><Link href="/detail/packaging-sustentable" className="hover:text-white transition-colors">Packaging Sustentable</Link></li>
+                            <li><Link href="/detail/estrategia-producto-end-to-end" className="hover:text-white transition-colors">Desarrollo End to End</Link></li>
+                            <li><Link href="/detail/manufactura-sustentabilidad" className="hover:text-white transition-colors">Manufactura Sostenible</Link></li>
+                            <li><Link href="/detail/gestion-integral-proyectos" className="hover:text-white transition-colors">Gestión de Proyectos</Link></li>
+                            <li><Link href="/detail/consultoria-especializada" className="hover:text-white transition-colors">Consultoria especializada</Link></li>
+                            <li><Link href="/detail/innovacion-diseno" className="hover:text-white transition-colors">Innovacion en diseño</Link></li>
                         </ul>
                     </div>
 
@@ -45,9 +47,9 @@ export const Footer = () => {
                         <h4 className="font-semibold text-lg mb-4">Empresa</h4>
                         <ul className="space-y-2 text-gray-400">
                             <li><a href="#" className="hover:text-white transition-colors">Nosotros</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Nuestro Enfoque</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Casos de Éxito</a></li>
-                            <li><a href="#" className="hover:text-white transition-colors">Contacto</a></li>
+                            <li><Link href="/#about" className="hover:text-white transition-colors">Nuestro Enfoque</Link></li>
+                            <li><a href="/success-cases" className="hover:text-white transition-colors">Casos de Éxito</a></li>
+                            <li><a href="/contact-us" className="hover:text-white transition-colors">Contacto</a></li>
                         </ul>
                     </div>
                 </div>

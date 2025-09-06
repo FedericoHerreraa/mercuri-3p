@@ -12,7 +12,7 @@ export const Landing = () => {
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div className="animate-fade-in">
                     <h1 className="text-zinc-900 text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        Impulsamos el Desarrollo de
+                        Desarrollamos 
                         <span className="bg-gradient-to-r from-[#0069c0] to-[#2196f3] bg-clip-text text-transparent block mt-2"> Productos con Propósito</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">

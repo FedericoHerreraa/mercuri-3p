@@ -37,7 +37,7 @@ export const ContactCTA = () => {
                         </div>
                     </div>
                     <Link href="/contact-us">
-                        <button className="btn-primary text-lg px-8 py-4">
+                        <button className="btn-primary cursor-pointer text-lg px-8 py-4">
                             Contactarnos Ahora
                         </button>
                     </Link>

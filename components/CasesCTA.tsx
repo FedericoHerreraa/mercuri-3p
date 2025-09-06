@@ -27,7 +27,7 @@ export const CasesCTA = () => {
                         </div>
                     </div>
                     <Link href="/success-cases">
-                        <button className="btn-primary text-lg px-8 py-4">
+                        <button className="btn-primary cursor-pointer text-lg px-8 py-4">
                             Ver Todos los Casos de Éxito
                         </button>
                     </Link>
