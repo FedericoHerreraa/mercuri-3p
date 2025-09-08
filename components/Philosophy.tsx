@@ -1,5 +1,14 @@
+'use client'
 
 
+import { 
+    Lightbulb, 
+    Target, 
+    Users, 
+    Zap, 
+    Leaf 
+} from "lucide-react"
+import { motion } from "framer-motion"
 
 
 
@@ -12,21 +21,39 @@ export const Philosophy = () => {
                         Nuestros Valores
                     </h2>
                     <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
-                        Principios fundamentales que guían nuestro trabajo y definen cómo transformamos ideas en productos exitosos.
+                        Principios fundamentales que guían nuestro trabajo y aportan valor en cada etapa del proceso.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
                     {cards.map((card, index) => (
-                        <div key={index} className="border border-zinc-200/50 rounded-xl p-8 text-center bg-white/10 hover:scale-105 transition-all duration-300">
-                            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <svg className="w-8 h-8 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
+                        <motion.div 
+                            key={index} 
+                            className="border border-zinc-200/50 rounded-xl p-8 text-center bg-white/10"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ 
+                                duration: 0.6, 
+                                delay: index * 0.1,
+                                ease: "easeOut" 
+                            }}
+                            whileHover={{ 
+                                scale: 1.05, 
+                                y: -10,
+                                transition: { duration: 0.2 }
+                            }}
+                        >
+                            <motion.div 
+                                className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6"
+                                whileHover={{ rotate: 360 }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                {card.icon}
+                            </motion.div>
                             <h3 className="text-xl font-semibold text-zinc-200 mb-4">{card.title}</h3>
                             <p className="text-zinc-200">{card.description}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
@@ -38,22 +65,27 @@ export const Philosophy = () => {
 const cards = [
     {
         title: "Innovación",
-        description: "Mantenerse siempre a la vanguardia en técnicas y tecnologías aplicadas al desarrollo de productos."
+        description: "Mantenerse siempre a la vanguardia en técnicas y tecnologías aplicadas al desarrollo de productos.",
+        icon: <Lightbulb className="w-6 h-6 text-[#20f26f]" />
     },
     {
         title: "Excelencia en el Negocio",
-        description: "Visión integral del negocio de principio a fin (E2E), asegurando resultados que impulsen el crecimiento."
+        description: "Visión integral del negocio de principio a fin (E2E), asegurando resultados que impulsen el crecimiento.",
+        icon: <Target className="w-6 h-6 text-[#20f26f]" />
     },
     {
         title: "Colaboración & Teamwork",
-        description: "Promover una colaboración sólida con clientes y socios, formando equipos que impulsen la transformación tanto del negocio como de las personas."
+        description: "Promover una colaboración sólida con clientes y socios, formando equipos que impulsen la transformación tanto del negocio como de las personas.",
+        icon: <Users className="w-6 h-6 text-[#20f26f]" />
     },
     {
         title: "Adaptabilidad",
-        description: "Ser flexibles para responder a las demandas cambiantes del mercado. Los detalles son cruciales; estar preparados con planes alternativos basados en análisis de riesgos e impacto comercial."
+        description: "Ser flexibles para responder a las demandas cambiantes del mercado. Los detalles son cruciales; estar preparados con planes alternativos basados en análisis de riesgos e impacto comercial.",
+        icon: <Zap className="w-6 h-6 text-[#20f26f]" />
     },
     {
         title: "Sostenibilidad",
-        description: "Impulsar soluciones que respeten el medio ambiente y sean socialmente responsables, creando valor duradero."
+        description: "Impulsar soluciones que respeten el medio ambiente y sean socialmente responsables, creando valor duradero.",
+        icon: <Leaf className="w-6 h-6 text-[#20f26f]" />
     }
 ]

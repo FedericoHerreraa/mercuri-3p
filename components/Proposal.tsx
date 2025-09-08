@@ -1,30 +1,59 @@
-
+'use client'
 
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export const ProposalComponent = () => {
     return (
         <>
             <section className="py-32 text-white gradient-subtle">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center animate-slide-up">
-                        <div className="flex justify-center mb-8">
-                            <Image 
-                                src="/logo-sin-bg.png" 
-                                alt="Mercuri3P" 
-                                width={200} 
-                                height={200}
-                                className=""
-                            />
-                        </div>
-                        <h1 className="text-5xl md:text-7xl text-gray-700 font-bold mb-8">
+                    <motion.div 
+                        className="text-center"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <motion.div 
+                            className="flex justify-center mb-8"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            <motion.div
+                                whileHover={{ 
+                                    scale: 1.1, 
+                                    rotate: 5,
+                                    transition: { duration: 0.3 }
+                                }}
+                            >
+                                <Image 
+                                    src="/logo-sin-bg.png" 
+                                    alt="Mercuri3P" 
+                                    width={200} 
+                                    height={200}
+                                    className=""
+                                />
+                            </motion.div>
+                        </motion.div>
+                        <motion.h1 
+                            className="text-5xl md:text-7xl text-gray-700 font-bold mb-8"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
                             Nuestra Propuesta
-                        </h1>
-                        <p className="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-700">
+                        </motion.h1>
+                        <motion.p 
+                            className="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-700"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        >
                             Transformamos tu visión en productos sustentables que generan impacto real. 
                             Descubre cómo podemos impulsar tu negocio hacia el futuro.
-                        </p>
+                        </motion.p>
                         {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">
                             <Link href="/contact-us">
                                 <button className="bg-white text-[#0069c0] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
@@ -35,41 +64,92 @@ export const ProposalComponent = () => {
                                 Descargar PDF
                             </button>
                         </div> */}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16 animate-slide-up">
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <motion.div 
+                        className="text-center mb-16"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <motion.h2 
+                            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
                             Nuestra Metodología
-                        </h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        </motion.h2>
+                        <motion.p 
+                            className="text-xl text-gray-600 max-w-3xl mx-auto"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
                             Un proceso estructurado de 5 fases que garantiza resultados excepcionales 
                             y la entrega de productos que superan las expectativas.
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {methodology.map((phase, index) => (
-                            <div key={index} className="card p-8 text-center group hover:shadow-xl transition-all duration-300">
-                                <div className="w-20 h-20 bg-gradient-to-r from-[#0069c0] to-[#20f26f] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <motion.div 
+                                key={index} 
+                                className="card p-8 text-center group"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ 
+                                    duration: 0.6, 
+                                    delay: index * 0.1,
+                                    ease: "easeOut" 
+                                }}
+                                whileHover={{ 
+                                    y: -8,
+                                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                                    transition: { duration: 0.2 }
+                                }}
+                            >
+                                <motion.div 
+                                    className="w-20 h-20 bg-gradient-to-r from-[#0069c0] to-[#20f26f] rounded-full flex items-center justify-center mx-auto mb-6"
+                                    whileHover={{ 
+                                        scale: 1.1,
+                                        rotate: 10,
+                                        transition: { duration: 0.2 }
+                                    }}
+                                >
                                     <span className="text-2xl font-bold text-white">{index + 1}</span>
-                                </div>
+                                </motion.div>
                                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">{phase.title}</h3>
                                 <p className="text-gray-600 mb-6">{phase.description}</p>
                                 <ul className="text-sm text-gray-500 space-y-2">
                                     {phase.activities.map((activity, actIndex) => (
-                                        <li key={actIndex} className="flex items-center">
+                                        <motion.li 
+                                            key={actIndex} 
+                                            className="flex items-center"
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ 
+                                                duration: 0.4, 
+                                                delay: 0.6 + (index * 0.1) + (actIndex * 0.05)
+                                            }}
+                                        >
                                             <svg className="w-4 h-4 text-[#20f26f] mr-2" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                             </svg>
                                             {activity}
-                                        </li>
+                                        </motion.li>
                                     ))}
                                 </ul>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -77,24 +157,72 @@ export const ProposalComponent = () => {
 
             <section className="py-24 bg-gradient-to-r from-[#20f26f]/50 to-[#3df883]/50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16 animate-slide-up">
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#0069c0] mb-6">
+                    <motion.div 
+                        className="text-center mb-16"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <motion.h2 
+                            className="text-4xl md:text-5xl font-bold text-[#0069c0] mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
                             ¿Por qué es conveniente?
-                        </h2>
-                        <p className="text-xl text-[#0069c0] max-w-3xl mx-auto">
+                        </motion.h2>
+                        <motion.p 
+                            className="text-xl text-[#0069c0] max-w-3xl mx-auto"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
                             MERCURI 3P es tu socio estratégico para acelerar el crecimiento y la innovación en tu empresa.
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
 
                     <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
                         {convenience.map((item, index) => (
-                            <div key={index} className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
-                                <div className="flex items-center mb-4">
+                            <motion.div 
+                                key={index} 
+                                className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ 
+                                    duration: 0.6, 
+                                    delay: index * 0.1,
+                                    ease: "easeOut" 
+                                }}
+                                whileHover={{ 
+                                    y: -5,
+                                    boxShadow: "0 25px 50px -12px rgba(0, 105, 192, 0.3)",
+                                    transition: { duration: 0.2 }
+                                }}
+                            >
+                                <motion.div 
+                                    className="flex items-center mb-4"
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.6 + (index * 0.1) }}
+                                >
                                     <div className="w-3 h-3 bg-[#0069c0] rounded-full mr-3"></div>
                                     <h3 className="text-xl font-bold text-[#0069c0]">{item.title}</h3>
-                                </div>
-                                <p className="text-[#0069c0] leading-relaxed">{item.description}</p>
-                            </div>
+                                </motion.div>
+                                <motion.p 
+                                    className="text-[#0069c0] leading-relaxed"
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.8 + (index * 0.1) }}
+                                >
+                                    {item.description}
+                                </motion.p>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -102,47 +230,135 @@ export const ProposalComponent = () => {
 
             <section className="py-24 gradient-subtle">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16 animate-slide-up">
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    <motion.div 
+                        className="text-center mb-16"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <motion.h2 
+                            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
                             ¿Por qué elegirnos?
-                        </h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        </motion.h2>
+                        <motion.p 
+                            className="text-xl text-gray-600 max-w-3xl mx-auto"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
                             Nuestro enfoque integral y experiencia comprobada nos convierte en el socio ideal 
                             para el desarrollo de tus productos sustentables.
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
 
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        >
                             <div className="space-y-8">
                                 {benefits.map((benefit, index) => (
-                                    <div key={index} className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <motion.div 
+                                        key={index} 
+                                        className="flex items-start space-x-4"
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ 
+                                            duration: 0.4, 
+                                            delay: 0.8 + (index * 0.1)
+                                        }}
+                                        whileHover={{ 
+                                            x: 10,
+                                            transition: { duration: 0.2 }
+                                        }}
+                                    >
+                                        <motion.div 
+                                            className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                                            whileHover={{ 
+                                                scale: 1.1,
+                                                backgroundColor: "rgba(0, 105, 192, 0.2)",
+                                                transition: { duration: 0.2 }
+                                            }}
+                                        >
                                             <svg className="w-6 h-6 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={benefit.icon} />
                                             </svg>
-                                        </div>
+                                        </motion.div>
                                         <div>
                                             <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
                                             <p className="text-gray-600">{benefit.description}</p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
-                        </div>
-                        <div className="relative">
-                            <div className="bg-white p-8 rounded-2xl shadow-xl">
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6">Resultados Garantizados</h3>
+                        </motion.div>
+                        <motion.div 
+                            className="relative"
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                        >
+                            <motion.div 
+                                className="bg-white p-8 rounded-2xl shadow-xl"
+                                whileHover={{ 
+                                    y: -5,
+                                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.3)",
+                                    transition: { duration: 0.2 }
+                                }}
+                            >
+                                <motion.h3 
+                                    className="text-2xl font-bold text-gray-900 mb-6"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.8 }}
+                                >
+                                    Resultados Garantizados
+                                </motion.h3>
                                 <div className="space-y-4">
                                     {stats.map((stat, index) => (
-                                        <div key={index} className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                                        <motion.div 
+                                            key={index} 
+                                            className="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ 
+                                                duration: 0.4, 
+                                                delay: 1 + (index * 0.1)
+                                            }}
+                                            whileHover={{ 
+                                                scale: 1.02,
+                                                backgroundColor: "rgba(32, 242, 111, 0.1)",
+                                                transition: { duration: 0.2 }
+                                            }}
+                                        >
                                             <span className="text-gray-600">{stat.label}</span>
-                                            <span className="text-2xl font-bold text-[#20f26f]">{stat.value}</span>
-                                        </div>
+                                            <motion.span 
+                                                className="text-2xl font-bold text-[#20f26f]"
+                                                initial={{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                viewport={{ once: true }}
+                                                transition={{ duration: 0.6, delay: 1.2 + (index * 0.1) }}
+                                            >
+                                                {stat.value}
+                                            </motion.span>
+                                        </motion.div>
                                     ))}
                                 </div>
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -150,23 +366,74 @@ export const ProposalComponent = () => {
             {/* Cliente Objetivo */}
             <section className="py-24 bg-gradient-to-r from-[#0069c0] to-[#137fd9] text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16 animate-slide-up">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <motion.div 
+                        className="text-center mb-16"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
+                        <motion.h2 
+                            className="text-4xl md:text-5xl font-bold mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
                             Cliente Objetivo
-                        </h2>
-                        <p className="text-xl text-white/90 max-w-3xl mx-auto">
+                        </motion.h2>
+                        <motion.p 
+                            className="text-xl text-white/90 max-w-3xl mx-auto"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                        >
                             Nuestros servicios están diseñados específicamente para diferentes tipos de organizaciones con necesidades de crecimiento y innovación.
-                        </p>
-                    </div>
+                        </motion.p>
+                    </motion.div>
 
                     <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                         {targetClients.map((client, index) => (
-                            <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                                <div className="flex items-center mb-4">
-                                    <div className="w-4 h-4 bg-[#20f26f] rounded-full mr-3"></div>
+                            <motion.div 
+                                key={index} 
+                                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ 
+                                    duration: 0.4, 
+                                    delay: 0.6 + (index * 0.1),
+                                    ease: "easeOut" 
+                                }}
+                                whileHover={{ 
+                                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+                                    scale: 1.02,
+                                    transition: { duration: 0.2 }
+                                }}
+                            >
+                                <motion.div 
+                                    className="flex items-center mb-4"
+                                    initial={{ opacity: 0, x: -10 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.3, delay: 0.8 + (index * 0.1) }}
+                                >
+                                    <motion.div 
+                                        className="w-4 h-4 bg-[#20f26f] rounded-full mr-3"
+                                        initial={{ scale: 0 }}
+                                        whileInView={{ scale: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ 
+                                            duration: 0.3, 
+                                            delay: 1 + (index * 0.1),
+                                            type: "spring",
+                                            stiffness: 300
+                                        }}
+                                    ></motion.div>
                                     <h3 className="text-lg font-semibold text-white">{client}</h3>
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -213,27 +480,70 @@ export const ProposalComponent = () => {
 
             {/* CTA Final */}
             <section className="py-24 gradient-primary text-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <motion.div 
+                    className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    <motion.h2 
+                        className="text-4xl md:text-5xl font-bold mb-6"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         ¿Listo para comenzar?
-                    </h2>
-                    <p className="text-xl mb-8 text-white/90">
+                    </motion.h2>
+                    <motion.p 
+                        className="text-xl mb-8 text-white/90"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
                         Contacta con nosotros para una consulta gratuita y descubre cómo podemos 
                         transformar tu idea en un producto exitoso.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    </motion.p>
+                    <motion.div 
+                        className="flex flex-col sm:flex-row gap-6 justify-center"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                    >
                         <Link href="/contact-us">
-                            <button className="bg-white text-[#0069c0] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                            <motion.button 
+                                className="bg-white text-[#0069c0] px-8 py-4 rounded-lg font-semibold text-lg"
+                                whileHover={{ 
+                                    scale: 1.05,
+                                    y: -2,
+                                    boxShadow: "0 15px 30px rgba(255, 255, 255, 0.3)",
+                                    transition: { duration: 0.2 }
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 Contactar Ahora
-                            </button>
+                            </motion.button>
                         </Link>
                         <Link href="/success-cases">
-                            <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#0069c0] transition-colors">
+                            <motion.button 
+                                className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg"
+                                whileHover={{ 
+                                    backgroundColor: "white",
+                                    color: "#0069c0",
+                                    scale: 1.05,
+                                    y: -2,
+                                    transition: { duration: 0.2 }
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 Ver Casos de Éxito
-                            </button>
+                            </motion.button>
                         </Link>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </section>
         </>
     )

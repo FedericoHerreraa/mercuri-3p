@@ -18,230 +18,193 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "packaging-sustentable",
-    title: "Desarrollo de Packaging Sustentable",
-    shortDescription: "Diseño y desarrollo integral de packaging innovador que combina funcionalidad, estética y responsabilidad ambiental.",
-    fullDescription: "Desarrollamos soluciones de packaging que no solo protegen y presentan tu producto de manera excepcional, sino que también minimizan el impacto ambiental. Nuestro enfoque integral considera desde la selección de materiales hasta el diseño de la experiencia del usuario, creando envases que se convierten en una ventaja competitiva sostenible.",
+    id: "gestion-proyectos",
+    title: "Gestión de Proyectos",
+    shortDescription: "Aseguramiento y aceleración de la innovación a través de metodologías probadas de gestión de proyectos.",
+    fullDescription: "Implementamos sistemas de gestión de proyectos que garantizan la entrega exitosa de iniciativas de innovación. Nuestro enfoque asegura que los proyectos se ejecuten en tiempo, presupuesto y con los estándares de calidad más altos, acelerando el time-to-market y maximizando el ROI.",
     benefits: [
-      "Reducción significativa del impacto ambiental",
-      "Diferenciación clara en el mercado",
-      "Cumplimiento de normativas ambientales",
-      "Optimización de costos a largo plazo",
-      "Fortalecimiento de la imagen de marca",
-      "Aumento en la percepción de valor del producto"
+      "Aseguramiento y aceleración de la innovación",
+      "Entrega de proyectos en tiempo y presupuesto",
+      "Metodologías probadas y escalables",
+      "Reducción de riesgos operativos",
+      "Optimización de recursos disponibles",
+      "Mayor velocidad de implementación"
     ],
     process: [
-      "Análisis de producto y mercado objetivo",
-      "Investigación de materiales sustentables",
-      "Desarrollo de conceptos de diseño",
-      "Prototipado y testing de funcionalidad",
-      "Optimización para producción",
+      "Diagnóstico de capacidades actuales",
+      "Diseño de metodología personalizada",
+      "Implementación de herramientas y procesos",
+      "Capacitación de equipos internos",
+      "Monitoreo y optimización continua",
+      "Evaluación de resultados y mejoras"
+    ],
+    deliverables: [
+      "Metodología de gestión personalizada",
+      "Herramientas de seguimiento y control",
+      "Capacitación de equipos",
+      "Documentación de procesos",
+      "Sistema de métricas y KPIs",
+      "Reportes de progreso regulares"
+    ],
+    duration: "8-16 semanas",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+    caseStudy: {
+      client: "Empresa de Tecnología",
+      challenge: "Múltiples proyectos de innovación sin metodología clara generaban retrasos y sobrecostos",
+      solution: "Implementación de framework ágil personalizado con herramientas de seguimiento en tiempo real",
+      results: ["40% reducción en time-to-market", "25% mejora en cumplimiento de presupuestos", "95% satisfacción de stakeholders"]
+    }
+  },
+  {
+    id: "diseno-producto-packaging",
+    title: "Diseño de Producto & Packaging",
+    shortDescription: "Mejora de la performance y calidad del producto através de diseño innovador y re-ingeniería especializada.",
+    fullDescription: "Desarrollamos soluciones de diseño integral que mejoran significativamente la performance, calidad y competitividad de productos, packaging y componentes. Nuestro enfoque combina innovación técnica con viabilidad comercial para crear ventajas competitivas sostenibles.",
+    benefits: [
+      "Mejora de la Performance y Calidad del producto",
+      "Optimización técnica y funcional",
+      "Re-ingeniería especializada",
+      "Diferenciación competitiva",
+      "Reducción de defectos y rechazos",
+      "Aumento del valor percibido"
+    ],
+    process: [
+      "Análisis técnico de performance actual",
+      "Identificación de oportunidades de mejora",
+      "Desarrollo de conceptos innovadores",
+      "Prototipado y validación técnica",
+      "Optimización para manufactura",
       "Implementación y seguimiento"
     ],
     deliverables: [
-      "Especificaciones técnicas completas",
-      "Diseños estructurales y gráficos",
-      "Selección de materiales sustentables",
-      "Prototipos funcionales",
-      "Manual de implementación",
-      "Certificaciones ambientales"
+      "Análisis de performance detallado",
+      "Conceptos de re-diseño optimizados",
+      "Especificaciones técnicas mejoradas",
+      "Prototipos funcionales validados",
+      "Documentación de implementación",
+      "Plan de transición y mejora"
     ],
-    duration: "8-16 semanas",
-    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    duration: "10-18 semanas",
+    icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM7 3H5v12a2 2 0 002 2 2 2 0 002-2V3zM17 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4z",
     caseStudy: {
-      client: "Empresa de Alimentos Orgánicos",
-      challenge: "Necesidad de packaging biodegradable que mantuviera la frescura del producto",
-      solution: "Desarrollamos envases 100% compostables con barrera natural que extiende la vida útil",
-      results: ["60% reducción en impacto ambiental", "25% ahorro en costos", "40% aumento en ventas"]
+      client: "Empresa de Productos de Consumo",
+      challenge: "Producto con alta tasa de defectos y bajo rendimiento en comparación con competencia",
+      solution: "Re-ingeniería completa del producto y packaging con nuevos materiales y procesos optimizados",
+      results: ["60% reducción en defectos", "35% mejora en performance", "20% reducción en costos de producción"]
     }
   },
   {
-    id: "estrategia-producto-end-to-end",
-    title: "Estrategia de Producto End to End",
-    shortDescription: "Desarrollo completo de productos desde la conceptualización hasta el lanzamiento, integrando recursos internos con nuestra expertise.",
-    fullDescription: "Acompañamos todo el ciclo de vida del desarrollo de tu producto, desde la idea inicial hasta su exitoso lanzamiento en el mercado. Integramos seamlessly con tu equipo interno, aportando expertise especializada en cada fase del proceso para garantizar resultados excepcionales.",
+    id: "optimizacion-costos",
+    title: "Optimización de Costos",
+    shortDescription: "Incremento del margen bruto a través de análisis integral y optimización estratégica de costos operativos.",
+    fullDescription: "Implementamos estrategias integrales de optimización de costos que van más allá de la reducción simple de gastos. Nuestro enfoque analiza toda la cadena de valor para identificar oportunidades de incremento de margen bruto sin comprometer la calidad o la experiencia del cliente.",
     benefits: [
-      "Visión estratégica integral del producto",
-      "Reducción de tiempo de desarrollo",
-      "Minimización de riesgos de mercado",
-      "Optimización de recursos internos",
-      "Acceso a expertise especializada",
-      "Mayor probabilidad de éxito comercial"
+      "Incremento de Margen Bruto",
+      "Optimización de cadena de valor",
+      "Reducción de desperdicios operativos",
+      "Mejora en eficiencia de procesos",
+      "Negociación estratégica con proveedores",
+      "ROI medible y sostenible"
     ],
     process: [
-      "Investigación de mercado y oportunidades",
-      "Desarrollo de concepto y validación",
-      "Diseño y especificaciones técnicas",
-      "Prototipado y testing de mercado",
-      "Planificación de producción",
-      "Estrategia de lanzamiento y go-to-market"
+      "Análisis integral de estructura de costos",
+      "Mapeo de cadena de valor completa",
+      "Identificación de oportunidades críticas",
+      "Desarrollo de estrategias de optimización",
+      "Implementación por fases priorizadas",
+      "Monitoreo de resultados y ajustes"
     ],
     deliverables: [
-      "Estudio de mercado completo",
-      "Concepto de producto validado",
-      "Especificaciones técnicas detalladas",
-      "Plan de desarrollo y cronograma",
-      "Estrategia de lanzamiento",
-      "Análisis de viabilidad comercial"
+      "Análisis detallado de estructura de costos",
+      "Roadmap de optimización priorizado",
+      "Estrategias de negociación con proveedores",
+      "Plan de implementación por fases",
+      "Sistema de métricas y seguimiento",
+      "Reportes de impacto en margen bruto"
+    ],
+    duration: "12-20 semanas",
+    icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    caseStudy: {
+      client: "Empresa Manufacturera",
+      challenge: "Márgenes bajo presión por incremento de costos de materias primas y competencia",
+      solution: "Optimización integral de procesos, renegociación de contratos y eficiencias operativas",
+      results: ["18% incremento en margen bruto", "30% reducción en desperdicios", "25% mejora en eficiencia operativa"]
+    }
+  },
+  {
+    id: "sustentabilidad",
+    title: "Sustentabilidad",
+    shortDescription: "Implementación de economía circular y estrategias de sustentabilidad que generan competitividad y valor agregado.",
+    fullDescription: "Desarrollamos e implementamos estrategias de sustentabilidad y economía circular que no solo contribuyen al cuidado del medio ambiente, sino que también generan ventajas competitivas, reducen costos operativos y abren nuevas oportunidades de negocio.",
+    benefits: [
+      "Economía Circular y Competitividad",
+      "Reducción de impacto ambiental",
+      "Nuevas oportunidades de revenue",
+      "Compliance con regulaciones ambientales",
+      "Mejora en reputación de marca",
+      "Atracción de inversión responsable"
+    ],
+    process: [
+      "Diagnóstico de impacto ambiental actual",
+      "Diseño de estrategia de economía circular",
+      "Identificación de oportunidades de valor",
+      "Implementación de iniciativas piloto",
+      "Escalamiento y optimización",
+      "Medición de impacto y comunicación"
+    ],
+    deliverables: [
+      "Diagnóstico de sustentabilidad integral",
+      "Estrategia de economía circular",
+      "Plan de implementación por fases",
+      "Métricas de impacto ambiental y económico",
+      "Certificaciones y reportes de sustentabilidad",
+      "Comunicación de valor para stakeholders"
+    ],
+    duration: "16-24 semanas",
+    icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15",
+    caseStudy: {
+      client: "Empresa de Packaging",
+      challenge: "Presión regulatoria y de clientes por soluciones más sustentables sin incrementar costos",
+      solution: "Implementación de economía circular con materiales reciclados y procesos optimizados",
+      results: ["50% reducción en huella de carbono", "15% reducción en costos de materiales", "3 nuevas líneas de productos sustentables"]
+    }
+  },
+  {
+    id: "capacitacion-gestion-talento",
+    title: "Capacitación / Gestión de Talento",
+    shortDescription: "Desarrollo de capacidades internas para lograr crecimiento sostenido y consistente a través de gestión estratégica del talento.",
+    fullDescription: "Implementamos programas integrales de capacitación y gestión de talento que desarrollan las capacidades internas necesarias para sostener el crecimiento de la organización. Nuestro enfoque combina desarrollo técnico con liderazgo para crear equipos de alto rendimiento.",
+    benefits: [
+      "Crecimiento Sostenido y Consistente",
+      "Desarrollo de capacidades críticas internas",
+      "Mejora en retención de talento clave",
+      "Incremento en productividad de equipos",
+      "Cultura de mejora continua",
+      "Preparación para escalamiento futuro"
+    ],
+    process: [
+      "Assessment de capacidades actuales",
+      "Identificación de gaps críticos",
+      "Diseño de programas de desarrollo",
+      "Implementación de capacitaciones especializadas",
+      "Coaching y mentoring ejecutivo",
+      "Evaluación de impacto y seguimiento"
+    ],
+    deliverables: [
+      "Assessment integral de talento",
+      "Programas de capacitación personalizados",
+      "Plan de desarrollo de carrera",
+      "Sistema de coaching y mentoring",
+      "Métricas de desarrollo y performance",
+      "Cultura de aprendizaje continuo"
     ],
     duration: "12-24 semanas",
-    icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
+    icon: "M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m3 5.197V9a3 3 0 00-3-3m3 12a3 3 0 00-3-3m3 3h3m-3 0l-3-3m3 3l-3 3",
     caseStudy: {
-      client: "Startup de Cosméticos Naturales",
-      challenge: "Desarrollar una línea completa desde cero con posicionamiento premium",
-      solution: "Estrategia integral incluyendo formulación, packaging premium y plan de lanzamiento",
-      results: ["150% crecimiento en ventas", "Posicionamiento premium exitoso", "Expansión a 3 países"]
-    }
-  },
-  {
-    id: "manufactura-sustentabilidad",
-    title: "Manufactura y Sustentabilidad",
-    shortDescription: "Soluciones de manufactura que priorizan la eficiencia, calidad y compromiso ambiental en todos los procesos productivos.",
-    fullDescription: "Implementamos sistemas de manufactura que equilibran perfectamente eficiencia operativa con responsabilidad ambiental. Nuestro enfoque garantiza procesos de alta calidad mientras minimizamos el impacto ecológico y optimizamos el uso de recursos.",
-    benefits: [
-      "Procesos de manufactura eficientes",
-      "Reducción significativa de desperdicios",
-      "Cumplimiento de estándares internacionales",
-      "Trazabilidad completa del proceso",
-      "Optimización de costos operativos",
-      "Certificaciones de calidad y sustentabilidad"
-    ],
-    process: [
-      "Auditoría de procesos actuales",
-      "Identificación de oportunidades de mejora",
-      "Selección y evaluación de proveedores",
-      "Implementación de sistemas de calidad",
-      "Optimización de procesos productivos",
-      "Monitoreo continuo y mejora"
-    ],
-    deliverables: [
-      "Plan de manufactura optimizado",
-      "Red de proveedores certificados",
-      "Sistemas de control de calidad",
-      "Procesos de trazabilidad",
-      "Certificaciones obtenidas",
-      "Reportes de impacto ambiental"
-    ],
-    duration: "16-20 semanas",
-    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
-    caseStudy: {
-      client: "Empresa Farmacéutica",
-      challenge: "Necesidad de manufactura que cumpla normativas FDA con enfoque sustentable",
-      solution: "Implementación de procesos certificados con 40% menos desperdicio de material",
-      results: ["Certificación FDA obtenida", "40% reducción desperdicios", "100% trazabilidad"]
-    }
-  },
-  {
-    id: "gestion-integral-proyectos",
-    title: "Gestión Integral de Proyectos",
-    shortDescription: "Gestión completa de proyectos con visión integral, asegurando optimización de costos y crecimiento del negocio.",
-    fullDescription: "Dirigimos proyectos complejos de desarrollo de productos con una metodología probada que garantiza resultados en tiempo, presupuesto y calidad. Nuestra gestión integral considera todos los aspectos del proyecto para maximizar el ROI y el impacto en el crecimiento del negocio.",
-    benefits: [
-      "Proyectos entregados en tiempo y presupuesto",
-      "Visibilidad completa del progreso",
-      "Mitigación proactiva de riesgos",
-      "Optimización continua de recursos",
-      "Comunicación transparente con stakeholders",
-      "Enfoque en resultados de negocio"
-    ],
-    process: [
-      "Definición de objetivos y alcance",
-      "Planificación estratégica detallada",
-      "Asignación y coordinación de recursos",
-      "Monitoreo y control continuo",
-      "Gestión de riesgos y cambios",
-      "Entrega y evaluación de resultados"
-    ],
-    deliverables: [
-      "Plan de proyecto detallado",
-      "Cronograma y presupuesto optimizado",
-      "Sistema de seguimiento de KPIs",
-      "Reportes de progreso regulares",
-      "Gestión de riesgos documentada",
-      "Informe final de resultados"
-    ],
-    duration: "Variable según proyecto",
-    icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4",
-    caseStudy: {
-      client: "Empresa Multinacional de Tecnología",
-      challenge: "Coordinación de desarrollo de producto en 15 equipos across 3 continentes",
-      solution: "Implementación de metodología ágil con herramientas de colaboración global",
-      results: ["40% reducción en tiempo de desarrollo", "15 equipos coordinados", "100% cumplimiento de objetivos"]
-    }
-  },
-  {
-    id: "innovacion-diseno",
-    title: "Innovación en Diseño",
-    shortDescription: "Fusionamos creatividad y funcionalidad para crear soluciones de packaging que se destacan en el mercado.",
-    fullDescription: "Nuestro equipo de diseño combina visión artística con pensamiento estratégico para crear soluciones que no solo son visualmente impactantes, sino que también resuelven problemas reales y generan diferenciación competitiva en el mercado.",
-    benefits: [
-      "Diferenciación visual distintiva",
-      "Funcionalidad optimizada",
-      "Experiencia de usuario superior",
-      "Fortalecimiento de identidad de marca",
-      "Ventaja competitiva sostenible",
-      "Incremento en percepción de valor"
-    ],
-    process: [
-      "Research de tendencias y mercado",
-      "Desarrollo de conceptos creativos",
-      "Prototipado de soluciones",
-      "Testing con usuarios objetivo",
-      "Refinamiento y optimización",
-      "Implementación y lanzamiento"
-    ],
-    deliverables: [
-      "Conceptos de diseño innovadores",
-      "Prototipos funcionales",
-      "Especificaciones de producción",
-      "Guidelines de marca aplicados",
-      "Testing de usuario documentado",
-      "Archivos finales de producción"
-    ],
-    duration: "10-16 semanas",
-    icon: "M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z",
-    caseStudy: {
-      client: "Marca de Bebidas Premium",
-      challenge: "Reposicionamiento de marca con packaging que comunique valores premium",
-      solution: "Rediseño completo con materiales premium y experiencia de unboxing memorable",
-      results: ["80% aumento en reconocimiento", "5 nuevos mercados", "Premium positioning exitoso"]
-    }
-  },
-  {
-    id: "consultoria-especializada",
-    title: "Consultoría Especializada",
-    shortDescription: "Aseguramiento y aceleración de la innovación, mejora de performance y optimización de costos con enfoque en sustentabilidad.",
-    fullDescription: "Brindamos consultoría integral en múltiples áreas especializadas para impulsar el crecimiento sostenido y consistente de tu empresa. Desde gestión de proyectos hasta capacitación de talento, nuestro enfoque está en generar resultados medibles y transformación real.",
-    benefits: [
-      "Gestión de Proyectos - Aseguramiento y aceleración de la innovación",
-      "Diseño de Producto/Packaging/Componentes - Mejora de performance y calidad",
-      "Optimización de Costos - Incremento de margen bruto",
-      "Sustentabilidad - Economía circular y competitividad",
-      "Capacitación/Gestión de Talento - Crecimiento sostenido y consistente",
-      "Visión integral End-to-End (E2E)"
-    ],
-    process: [
-      "Identificación de oportunidades",
-      "Diagnóstico de situación actual",
-      "Loop de soluciones y plan de acción",
-      "Monitoreo y control de implementación",
-      "Follow-up y mejora continua"
-    ],
-    deliverables: [
-      "Reporte de oportunidades identificadas",
-      "Diagnóstico integral de situación actual",
-      "Plan de acción con soluciones específicas",
-      "Sistema de monitoreo con KPIs definidos",
-      "Programa de seguimiento y coaching",
-      "Documentación de mejores prácticas"
-    ],
-    duration: "4-16 semanas",
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    caseStudy: {
-      client: "PYME de Productos de Cuidado Personal",
-      challenge: "Necesidad de optimizar procesos y desarrollar capacidades internas para competir con multinacionales",
-      solution: "Consultoría integral incluyendo optimización de costos, desarrollo de packaging sustentable y capacitación de equipos",
-      results: ["40% mejora en márgenes", "30% reducción en time-to-market", "Equipo interno capacitado", "Nueva línea sustentable exitosa"]
+      client: "Empresa en Crecimiento",
+      challenge: "Rápido crecimiento generaba gaps de capacidades y problemas de retención de talento",
+      solution: "Programa integral de desarrollo de liderazgo y capacitación técnica especializada",
+      results: ["85% mejora en retención de talento", "40% incremento en productividad", "3 promociones internas a posiciones clave"]
     }
   }
 ];

@@ -17,9 +17,6 @@ export const Header = () => {
                         <Link href="/success-cases" className="text-gray-600 hover:text-[#0069c0] transition-colors">Casos de éxito</Link>
                         <Link href="/contact-us" className="text-gray-600 hover:text-[#0069c0] transition-colors">Contacto</Link>
                     </div>
-                    <Link href="/contact-us">
-                        <button className="btn-primary cursor-pointer">Cotización Gratuita</button>
-                    </Link>
                 </div>
             </div>
         </nav>

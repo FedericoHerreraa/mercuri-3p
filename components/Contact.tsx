@@ -8,12 +8,12 @@ export const Contact = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16 animate-slide-up">
-                        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            ¿Listo para Innovar?
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                            ¿Listo para integrar Mercuri 3P en tu negocio? 
+                            <span className="block mt-2 text-xl font-normal text-gray-600">
+                                Hablemos y construyamos un futuro de triple Impacto juntos!!
+                            </span>
                         </h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Iniciemos una conversación sobre cómo podemos desarrollar productos sustentables que impulsen tu negocio hacia el futuro.
-                        </p>
                     </div>
 
                     <div className="grid lg:grid-cols-2 gap-12">
