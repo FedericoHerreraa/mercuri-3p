@@ -1,8 +1,17 @@
+
+
+import gestionProyectos from "../public/gestion-proyectos.jpg";
+import packaging from "../public/packaging.jpg";
+import costos from "../public/costos.jpg";
+import sustentabilidad from "../public/sustentabilidad.jpg";
+import capacitacion from "../public/capacitacion.jpg";
+
 export interface Service {
   id: string;
   title: string;
   shortDescription: string;
   fullDescription: string;
+  image?: string;
   benefits: string[];
   process: string[];
   deliverables: string[];
@@ -22,6 +31,7 @@ export const services: Service[] = [
     title: "Gestión de Proyectos",
     shortDescription: "Aseguramiento y aceleración de la innovación a través de metodologías probadas de gestión de proyectos.",
     fullDescription: "Implementamos sistemas de gestión de proyectos que garantizan la entrega exitosa de iniciativas de innovación. Nuestro enfoque asegura que los proyectos se ejecuten en tiempo, presupuesto y con los estándares de calidad más altos, acelerando el time-to-market y maximizando el ROI.",
+    image: gestionProyectos.src,
     benefits: [
       "Aseguramiento y aceleración de la innovación",
       "Entrega de proyectos en tiempo y presupuesto",
@@ -60,6 +70,7 @@ export const services: Service[] = [
     title: "Diseño de Producto & Packaging",
     shortDescription: "Mejora de la performance y calidad del producto através de diseño innovador y re-ingeniería especializada.",
     fullDescription: "Desarrollamos soluciones de diseño integral que mejoran significativamente la performance, calidad y competitividad de productos, packaging y componentes. Nuestro enfoque combina innovación técnica con viabilidad comercial para crear ventajas competitivas sostenibles.",
+    image: packaging.src,
     benefits: [
       "Mejora de la Performance y Calidad del producto",
       "Optimización técnica y funcional",
@@ -98,6 +109,7 @@ export const services: Service[] = [
     title: "Optimización de Costos",
     shortDescription: "Incremento del margen bruto a través de análisis integral y optimización estratégica de costos operativos.",
     fullDescription: "Implementamos estrategias integrales de optimización de costos que van más allá de la reducción simple de gastos. Nuestro enfoque analiza toda la cadena de valor para identificar oportunidades de incremento de margen bruto sin comprometer la calidad o la experiencia del cliente.",
+    image: costos.src,
     benefits: [
       "Incremento de Margen Bruto",
       "Optimización de cadena de valor",
@@ -136,6 +148,7 @@ export const services: Service[] = [
     title: "Sustentabilidad",
     shortDescription: "Implementación de economía circular y estrategias de sustentabilidad que generan competitividad y valor agregado.",
     fullDescription: "Desarrollamos e implementamos estrategias de sustentabilidad y economía circular que no solo contribuyen al cuidado del medio ambiente, sino que también generan ventajas competitivas, reducen costos operativos y abren nuevas oportunidades de negocio.",
+    image: sustentabilidad.src,
     benefits: [
       "Economía Circular y Competitividad",
       "Reducción de impacto ambiental",
@@ -174,6 +187,7 @@ export const services: Service[] = [
     title: "Capacitación / Gestión de Talento",
     shortDescription: "Desarrollo de capacidades internas para lograr crecimiento sostenido y consistente a través de gestión estratégica del talento.",
     fullDescription: "Implementamos programas integrales de capacitación y gestión de talento que desarrollan las capacidades internas necesarias para sostener el crecimiento de la organización. Nuestro enfoque combina desarrollo técnico con liderazgo para crear equipos de alto rendimiento.",
+    image: capacitacion.src,
     benefits: [
       "Crecimiento Sostenido y Consistente",
       "Desarrollo de capacidades críticas internas",
