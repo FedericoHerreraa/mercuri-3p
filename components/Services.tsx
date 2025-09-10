@@ -10,7 +10,13 @@ import Image from "next/image";
 export const Services = () => {
     return (
         <section id="services" className="py-24 gradient-subtle">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+                <div className="absolute -top-32 -right-32 w-80 h-80 bg-[#20f26f]/15 rounded-full blur-3xl animate-float"></div>
+                <div className="absolute top-1/4 -left-40 w-64 h-64 bg-[#3df883]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute bottom-1/4 right-1/6 w-72 h-72 bg-[#20f26f]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-[#3df883]/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+
                 <div className="text-center mb-16 animate-slide-up">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         Nuestros Servicios
@@ -23,23 +29,23 @@ export const Services = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <Link key={service.id} href={`/detail/${service.id}`}>
-                            <motion.div 
+                            <motion.div
                                 className="card cursor-pointer group"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ 
-                                    duration: 0.6, 
+                                transition={{
+                                    duration: 0.6,
                                     delay: index * 0.1,
-                                    ease: "easeOut" 
+                                    ease: "easeOut"
                                 }}
-                                whileHover={{ 
+                                whileHover={{
                                     y: -8,
                                     boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
                                     transition: { duration: 0.2 }
                                 }}
                             >
-                                <Image src={service.image ?? ""} alt={service.title} width={450} height={100} className="rounded-t-lg"/>
+                                <Image src={service.image ?? ""} alt={service.title} width={450} height={100} className="rounded-t-lg" />
                                 {/* <motion.div 
                                     className="gradient-primary w-12 h-12 rounded-lg flex items-center justify-center mb-6"
                                     whileHover={{ 

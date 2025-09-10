@@ -1,10 +1,10 @@
 
 
-import gestionProyectos from "../public/gestion-proyectos.jpg";
-import packaging from "../public/packaging.jpg";
-import costos from "../public/costos.jpg";
-import sustentabilidad from "../public/sustentabilidad.jpg";
-import capacitacion from "../public/capacitacion.jpg";
+import gestionProyectos from "../public/services/gestion-proyectos.jpg";
+import packaging from "../public/services/packaging.jpeg";
+import costos from "../public/services/costos.jpg";
+import sustentabilidad from "../public/services/sustentabilidad.jpeg";
+import capacitacion from "../public/services/capacitacion.jpg";
 
 export interface Service {
   id: string;

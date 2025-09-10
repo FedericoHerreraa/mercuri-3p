@@ -1,121 +1,170 @@
 
 
 
+'use client'
 
+import { motion } from "framer-motion";
+import Image from "next/image";
+import image1 from '../public/success-cases/rollon.png';
+import image2 from '../public/success-cases/axe.png';
+import image3 from '../public/success-cases/pote.png';
+import image4 from '../public/success-cases/steps.jpg';
+import image5 from '../public/success-cases/rexona.png';
+import image6 from '../public/success-cases/talco.png';
+
+const successCases = [
+    {
+        id: 1,
+        title: "ROLL ON",
+        productImage: image1, 
+        challenge: "Se planteó la necesidad de rediseñar el aplicador por una morfología más háptica al consumidor durante el uso y que se destaque de la competencia.",
+        result: "Se replanteó la forma de utilización a través de testeos en uso con consumidores, y a partir de ese entendimiento se cambió la morfología, dándole mejor ángulo de aplicación sobre la axila. El diseño fue adoptado globalmente y se obtuvo patentamiento de diseño global.",
+        layout: "left"
+    },
+    {
+        id: 2,
+        title: "AEROSOL AXE",
+        productImage: image2,
+        challenge: "Replantear el packaging del aerosol Axe con una concepción más moderna, dinámica, y monolítica respecto del producto estándar anterior.",
+        result: "Utilizando nuevas tecnologías de conformado de envases, se generaron grips laterales por medio de embossing de la pared de aluminio. A su vez de elimina la sobretapa del actuador generando un mecanismo on/off de accionamiento del pulsador o tapa actuadora. Diseño adoptado globalmente.",
+        layout: "right"
+    },
+    {
+        id: 3,
+        title: "POTE REXONA ODORONO",
+        productImage: image3,
+        challenge: "Reemplazar el envase existente que constaba de pote y tapa por separado, por una versión cost effective y de impacto positivo al medio ambiente y aumento de la productividad en manufactura.",
+        result: "Se diseñó un pote con tapa incluida, inspirados en una tapa tipo flip top, con bisagra tipo butterfly, logrando disminuir 20% el peso de material, por ende disminución de costo por unidad, y se aumentó la eficiencia a lo largo de la cadena de valor (moldeo, logística, inventario, manufactura).",
+        layout: "left"
+    },
+    {
+        id: 4,
+        title: "SRP",
+        productImage: image4,
+        challenge: "Reemplazar el actual empaque secundario (cajas de cartón corrugado), por una versión más económica, que facilitara la reposición en góndola, y aumentar la exposición del producto. Además poder sinergizar opciones en el punto de venta (p.ej. Puntera de góndolas, mayoristas, etc)",
+        result: "Se re diseñó el formato de la caja original, transformándola en un display (shelf ready packaging - SRP), listo para ser estructurado desde la fábrica al PDV, sin remanejos ni sobrecostos. Además se pudo optimizar el branding a través de la impresión de la caja.",
+        layout: "full"
+    },
+    {
+        id: 5,
+        title: "PCR RFM",
+        productImage: image5,
+        challenge: "Dentro del marco de la estrategia de sustentabilidad se requirió incluir rPP al actuador del producto Rexona For Men.",
+        result: "Se desarrollaron blends específicos de rPP para adecuarlo al proceso de IM y ensamblado posterior de cada componente que conforman al actuador. Finalmente se llegó a la inclusión de 80% de PCR en todo el conjunto ensamblado, logrando así cumplir las métricas estratégicas de la compañía.",
+        layout: "right"
+    },
+    {
+        id: 6,
+        title: "PCR BOTELLA TALCO",
+        productImage: image6,
+        challenge: "Incorporar rHDPE en la botella actual la cual se fabricaba con HDPE virgen. El desafío incluye evitar on costs, nulo impacto estético o funcional, maximizar el % de inclusión de PCR.",
+        result: "Se logró desarrollar una botella EBM utilizando rHDPE al 97%. Sin impacto en costos y sin interacción con el producto o el consumidor.",
+        layout: "left"
+    }
+];
 
 export const Cases = () => {
     return (
         <section id="cases" className="py-24 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-                <div className="text-center mb-16 animate-slide-up">
+            <div className="max-w-7xl mx-auto px-4 mt-20 sm:px-6 lg:px-8">
+                <motion.div 
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Casos de Éxito
+                        Casos de <span className="text-gradient">Éxito</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Transformaciones reales logradas a través de nuestro enfoque integral en desarrollo de productos sustentables y packaging innovador.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-12">
-                    <div className="card p-8">
-                        <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
-                                <svg className="w-6 h-6 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Empresa de Alimentos Orgánicos</h3>
-                                <p className="text-gray-600">Packaging Sustentable</p>
-                            </div>
-                        </div>
-                        <p className="text-gray-600 mb-6">
-                            Desarrollamos una línea completa de packaging biodegradable para una empresa líder en alimentos orgánicos. El proyecto incluyó rediseño estructural, selección de materiales sustentables y optimización de costos, logrando 60% de reducción en impacto ambiental.
-                        </p>
-                        <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-[#0069c0]/10 text-[#0069c0] text-sm rounded-full">60% menos impacto</span>
-                            <span className="px-3 py-1 bg-[#20f26f]/10 text-[#20f26f] text-sm rounded-full">100% biodegradable</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">25% ahorro costos</span>
-                        </div>
-                        <blockquote className="text-gray-700 italic border-l-4 border-[#0069c0] pl-4">
-                            &ldquo;MERCURI 3P transformó completamente nuestra propuesta de valor. El nuevo packaging no solo es sustentable, sino que se convirtió en nuestra principal herramienta de diferenciación.&rdquo;
-                        </blockquote>
-                    </div>
+                <div className="space-y-24">
+                    {successCases.map((caseItem, index) => (
+                        <motion.div
+                            key={caseItem.id}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: index * 0.1 }}
+                            className={`${caseItem.layout === 'full' ? '' : 'grid lg:grid-cols-2 gap-12 items-center border-b border-gray-200 pb-12'}`}
+                        >
+                            {caseItem.layout === 'full' ? (
+                                // Layout especial para SRP
+                                <div className="text-center">
+                                    <div className="mb-8">
+                                        <div className="w-20 h-1 bg-[#20f26f] mx-auto mb-6"></div>
+                                        <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                                            {caseItem.title}
+                                        </h3>
+                                    </div>
+                                    
+                                    <div className="grid lg:grid-cols-2 gap-12 mb-12">
+                                        <div className="text-left">
+                                            <h4 className="text-2xl font-bold text-gray-900 mb-4">El Desafío</h4>
+                                            <p className="text-gray-700 leading-relaxed">
+                                                {caseItem.challenge}
+                                            </p>
+                                        </div>
+                                        <div className="text-left">
+                                            <h4 className="text-2xl font-bold text-gray-900 mb-4">El Resultado</h4>
+                                            <p className="text-gray-700 leading-relaxed">
+                                                {caseItem.result}
+                                            </p>
+                                        </div>
+                                    </div>
 
-                    <div className="card p-8">
-                        <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
-                                <svg className="w-6 h-6 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Startup de Cosméticos Naturales</h3>
-                                <p className="text-gray-600">Desarrollo de Producto End to End</p>
-                            </div>
-                        </div>
-                        <p className="text-gray-600 mb-6">
-                            Acompañamos el desarrollo completo de una línea de cosméticos naturales desde la conceptualización hasta el lanzamiento. Incluimos investigación de mercado, formulación de productos, diseño de packaging premium y estrategia de lanzamiento, resultando en 150% de crecimiento en ventas.
-                        </p>
-                        <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-[#0069c0]/10 text-[#0069c0] text-sm rounded-full">150% crecimiento</span>
-                            <span className="px-3 py-1 bg-[#20f26f]/10 text-[#20f26f] text-sm rounded-full">12 meses desarrollo</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Premium positioning</span>
-                        </div>
-                        <blockquote className="text-gray-700 italic border-l-4 border-[#0069c0] pl-4">
-                            &ldquo;Su enfoque integral y visión estratégica nos permitió posicionarnos como líderes en el segmento premium. El packaging se convirtió en nuestro mayor diferenciador.&rdquo;
-                        </blockquote>
-                    </div>
-
-                    <div className="card p-8">
-                        <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
-                                <svg className="w-6 h-6 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Empresa Farmacéutica</h3>
-                                <p className="text-gray-600">Innovación en Manufactura</p>
-                            </div>
-                        </div>
-                        <p className="text-gray-600 mb-6">
-                            Implementamos un sistema de manufactura sustentable para envases farmacéuticos, cumpliendo con las más estrictas normativas internacionales. El proyecto incluyó certificaciones, trazabilidad completa y reducción de 40% en desperdicios de material.
-                        </p>
-                        <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-[#0069c0]/10 text-[#0069c0] text-sm rounded-full">Certificación FDA</span>
-                            <span className="px-3 py-1 bg-[#20f26f]/10 text-[#20f26f] text-sm rounded-full">40% menos desperdicio</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Trazabilidad 100%</span>
-                        </div>
-                        <blockquote className="text-gray-700 italic border-l-4 border-[#0069c0] pl-4">
-                            &ldquo;Su expertise en normativas y sustentabilidad nos permitió expandir a mercados internacionales manteniendo nuestro compromiso con la calidad y el medio ambiente.&rdquo;
-                        </blockquote>
-                    </div>
-
-                    <div className="card p-8">
-                        <div className="flex items-center mb-6">
-                            <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
-                                <svg className="w-6 h-6 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6m8 0h2m-2 0v12a2 2 0 01-2 2h-2m-4 0H8a2 2 0 01-2-2v-2m0 0h8a2 2 0 002-2V8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 className="text-xl font-semibold text-gray-900">Marca de Bebidas Premium</h3>
-                                <p className="text-gray-600">Reposicionamiento de Marca</p>
-                            </div>
-                        </div>
-                        <p className="text-gray-600 mb-6">
-                            Desarrollamos una estrategia integral de reposicionamiento para una marca de bebidas, incluyendo rediseño completo del packaging, optimización de materiales y nueva experiencia de marca. El resultado fue un incremento del 80% en reconocimiento de marca y expansión a 5 nuevos mercados.
-                        </p>
-                        <div className="flex flex-wrap gap-4 mb-6">
-                            <span className="px-3 py-1 bg-[#0069c0]/10 text-[#0069c0] text-sm rounded-full">80% reconocimiento</span>
-                            <span className="px-3 py-1 bg-[#20f26f]/10 text-[#20f26f] text-sm rounded-full">5 nuevos mercados</span>
-                            <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Packaging premium</span>
-                        </div>
-                        <blockquote className="text-gray-700 italic border-l-4 border-[#0069c0] pl-4">
-                            &ldquo;MERCURI 3P no solo rediseñó nuestro packaging, sino que redefinió nuestra identidad de marca. El nuevo diseño comunica perfectamente nuestros valores de calidad y sustentabilidad.&rdquo;
-                        </blockquote>
-                    </div>
+                                    <div className="w-full max-w-4xl mx-auto">
+                                        <Image 
+                                            src={caseItem.productImage} 
+                                            alt={caseItem.title}
+                                            width={800}
+                                            height={400}
+                                            className="w-full h-auto object-contain"
+                                        />
+                                    </div>
+                                </div>
+                            ) : (
+                                <>
+                                    <div className={`${caseItem.layout === 'right' ? 'lg:order-2' : ''}`}>
+                                        <div className="w-20 h-1 bg-[#20f26f]/50 mb-6"></div>
+                                        <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                                            {caseItem.title}
+                                        </h3>
+                                        
+                                        <div className="space-y-8">
+                                            <div>
+                                                <h4 className="text-2xl font-bold text-gray-900 mb-4">El Desafío</h4>
+                                                <p className="text-gray-700 leading-relaxed text-lg">
+                                                    {caseItem.challenge}
+                                                </p>
+                                            </div>
+                                            
+                                            <div>
+                                                <h4 className="text-2xl font-bold text-gray-900 mb-4">El Resultado</h4>
+                                                <p className="text-gray-700 leading-relaxed text-lg">
+                                                    {caseItem.result}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className={`${caseItem.layout === 'right' ? 'lg:order-1' : ''} flex justify-center items-center`}>
+                                        <Image 
+                                            src={caseItem.productImage} 
+                                            alt={caseItem.title}
+                                            width={400}
+                                            height={500}
+                                            className="w-full max-w-sm h-auto object-contain rounded-2xl"
+                                        />
+                                    </div>
+                                </>
+                            )}
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>

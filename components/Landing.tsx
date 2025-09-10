@@ -8,9 +8,9 @@ export const Landing = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 gradient-subtle"></div>
+
             <div className="absolute top-20 right-20 w-72 h-72 bg-[#20f26f]/20 rounded-full blur-3xl animate-float"></div>
             <div className="absolute top-0 left-140 w-72 h-72 bg-[#20f26f]/20 rounded-full blur-3xl animate-float"></div>
-
             <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#3df883]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
