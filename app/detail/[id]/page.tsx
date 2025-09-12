@@ -89,36 +89,6 @@ export default async function Detail({ params }: DetailPageProps) {
                                         ))}
                                     </div>
                                 </div>
-
-                                {service.caseStudy && (
-                                    <div className="card p-8">
-                                        <h2 className="text-3xl font-bold text-gray-900 mb-6">Caso de Éxito</h2>
-                                        <div className="space-y-4">
-                                            <div>
-                                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Cliente:</h3>
-                                                <p className="text-gray-700">{service.caseStudy.client}</p>
-                                            </div>
-                                            <div>
-                                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Desafío:</h3>
-                                                <p className="text-gray-700">{service.caseStudy.challenge}</p>
-                                            </div>
-                                            <div>
-                                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Solución:</h3>
-                                                <p className="text-gray-700">{service.caseStudy.solution}</p>
-                                            </div>
-                                            <div>
-                                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Resultados:</h3>
-                                                <div className="flex flex-wrap gap-2">
-                                                    {service.caseStudy.results.map((result, index) => (
-                                                        <span key={index} className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">
-                                                            {result}
-                                                        </span>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
                             </div>
 
                             <div className="space-y-8">
@@ -126,10 +96,6 @@ export default async function Detail({ params }: DetailPageProps) {
                                 <div className="card p-6">
                                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Información del Servicio</h3>
                                     <div className="space-y-4">
-                                        <div>
-                                            <p className="text-sm font-medium text-gray-500 mb-1">Duración Estimada</p>
-                                            <p className="text-gray-900">{service.duration}</p>
-                                        </div>
                                         <div>
                                             <p className="text-sm font-medium text-gray-500 mb-2">Entregables Principales</p>
                                             <ul className="text-sm text-gray-700 space-y-1">
@@ -147,20 +113,6 @@ export default async function Detail({ params }: DetailPageProps) {
                                             Solicitar Cotización
                                         </button>
                                     </Link>
-                                </div>
-
-                                <div className="card p-6">
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Todos los Entregables</h3>
-                                    <ul className="text-sm text-gray-700 space-y-2">
-                                        {service.deliverables.map((deliverable, index) => (
-                                            <li key={index} className="flex items-start space-x-2">
-                                                <svg className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                <span>{deliverable}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
                             </div>
                         </div>

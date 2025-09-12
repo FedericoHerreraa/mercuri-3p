@@ -76,5 +76,4 @@ const expertiseItems = [
     "Optimización de Costos",
     "Economía Circular",
     "Capacitación de Equipos",
-    "Análisis de Mercado"
 ]

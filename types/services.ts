@@ -3,6 +3,7 @@
 import gestionProyectos from "../public/services/gestion-proyectos.jpg";
 import packaging from "../public/services/packaging.jpeg";
 import costos from "../public/services/costos.jpg";
+import costos2 from "../public/services/costos2.jpg";
 import sustentabilidad from "../public/services/sustentabilidad.jpeg";
 import capacitacion from "../public/services/capacitacion.jpg";
 
@@ -109,7 +110,7 @@ export const services: Service[] = [
     title: "Optimización de Costos",
     shortDescription: "Incremento del margen bruto a través de análisis integral y optimización estratégica de costos operativos.",
     fullDescription: "Implementamos estrategias integrales de optimización de costos que van más allá de la reducción simple de gastos. Nuestro enfoque analiza toda la cadena de valor para identificar oportunidades de incremento de margen bruto sin comprometer la calidad o la experiencia del cliente.",
-    image: costos.src,
+    image: costos2.src,
     benefits: [
       "Incremento de Margen Bruto",
       "Optimización de cadena de valor",

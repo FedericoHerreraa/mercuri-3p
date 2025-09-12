@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 export const ProposalComponent = () => {
     return (
         <>
-            <section className="py-32 text-white gradient-subtle">
+            <section className="py-32 text-white bg-[#0069c0]/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center"
@@ -54,16 +54,6 @@ export const ProposalComponent = () => {
                             Transformamos tu visión en productos sustentables que generan impacto real. 
                             Descubre cómo podemos impulsar tu negocio hacia el futuro.
                         </motion.p>
-                        {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Link href="/contact-us">
-                                <button className="bg-white text-[#0069c0] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
-                                    Solicitar Cotización
-                                </button>
-                            </Link>
-                            <button className="border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#0069c0] transition-colors">
-                                Descargar PDF
-                            </button>
-                        </div> */}
                     </motion.div>
                 </div>
             </section>
@@ -98,64 +88,88 @@ export const ProposalComponent = () => {
                         </motion.p>
                     </motion.div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {methodology.map((phase, index) => (
-                            <motion.div 
-                                key={index} 
-                                className="card p-8 text-center group"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ 
-                                    duration: 0.6, 
-                                    delay: index * 0.1,
-                                    ease: "easeOut" 
-                                }}
-                                whileHover={{ 
-                                    y: -8,
-                                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-                                    transition: { duration: 0.2 }
-                                }}
-                            >
-                                <motion.div 
-                                    className="w-20 h-20 bg-gradient-to-r from-[#0069c0] to-[#20f26f] rounded-full flex items-center justify-center mx-auto mb-6"
-                                    whileHover={{ 
-                                        scale: 1.1,
-                                        rotate: 10,
-                                        transition: { duration: 0.2 }
-                                    }}
-                                >
-                                    <span className="text-2xl font-bold text-white">{index + 1}</span>
-                                </motion.div>
-                                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{phase.title}</h3>
-                                <p className="text-gray-600 mb-6">{phase.description}</p>
-                                <ul className="text-sm text-gray-500 space-y-2">
-                                    {phase.activities.map((activity, actIndex) => (
-                                        <motion.li 
-                                            key={actIndex} 
-                                            className="flex items-center"
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
-                                            transition={{ 
-                                                duration: 0.4, 
-                                                delay: 0.6 + (index * 0.1) + (actIndex * 0.05)
-                                            }}
-                                        >
-                                            <svg className="w-4 h-4 text-[#20f26f] mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                            </svg>
-                                            {activity}
-                                        </motion.li>
-                                    ))}
-                                </ul>
-                            </motion.div>
-                        ))}
+                    <div className="relative max-w-7xl mx-auto">
+                        <div className="flex">
+                            {methodology.map((phase, index) => {
+                                const colors = [
+                                    { bg: 'from-[#0069c0]/70 to-[#0056a3]', text: 'text-white', bullet: 'bg-white' },
+                                    { bg: 'from-[#20f26f]/50 to-[#3df883]', text: 'text-gray-900', bullet: 'bg-gray-900' },
+                                    { bg: 'from-[#0069c0]/80 to-[#0056a3]/80', text: 'text-white', bullet: 'bg-white' },
+                                    { bg: 'from-[#20f26f]/80 to-[#3df883]/80', text: 'text-gray-900', bullet: 'bg-gray-900' },
+                                    { bg: 'from-[#0069c0]/30 to-[#20f26f]/40', text: 'text-gray-800', bullet: 'bg-gray-800' }
+                                ];
+                                const currentColor = colors[index];
+                                
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        className="relative"
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ 
+                                            duration: 0.6, 
+                                            delay: index * 0.1,
+                                            ease: "easeOut" 
+                                        }}
+                                        whileHover={{ 
+                                            // y: -8,
+                                            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                                            transition: { duration: 0.2 }
+                                        }}
+                                    >
+                                        <div className={`bg-gradient-to-br ${currentColor.bg} p-6 rounded-xl shadow-2xl relative z-10 min-h-[420px] flex flex-col justify-between`}>
+                                            {/* Número grande en el fondo */}
+                                            <div className="absolute top-4 right-4 text-6xl font-bold text-white/50">
+                                                {index + 1}
+                                            </div>
+                                            
+                                            <div className="mt-16">
+                                                <h3 className={`text-xl font-semibold ${currentColor.text} mb-3 leading-tight`}>
+                                                    {phase.title}
+                                                </h3>
+                                                <p className={`${currentColor.text.includes('white') ? 'text-white/90' : 'text-gray-700'} text-sm mb-4 leading-relaxed`}>
+                                                    {phase.description}
+                                                </p>
+                                            </div>
+                                            
+                                            <ul className="text-xs space-y-2">
+                                                {phase.activities.map((activity, actIndex) => (
+                                                    <motion.li 
+                                                        key={actIndex} 
+                                                        className="flex items-start"
+                                                        initial={{ opacity: 0, x: -20 }}
+                                                        whileInView={{ opacity: 1, x: 0 }}
+                                                        viewport={{ once: true }}
+                                                        transition={{ 
+                                                            duration: 0.4, 
+                                                            delay: 0.6 + (index * 0.1) + (actIndex * 0.05)
+                                                        }}
+                                                    >
+                                                        <span className={`w-1.5 h-1.5 ${currentColor.bullet} rounded-full mt-1.5 mr-2 flex-shrink-0`}></span>
+                                                        <span className={`${currentColor.text.includes('white') ? 'text-white/80' : 'text-gray-600'}`}>
+                                                            {activity}
+                                                        </span>
+                                                    </motion.li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        
+                                        {/* Flecha conectora - solo visible en desktop y no en el último */}
+                                        {index < methodology.length - 1 && (
+                                            <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-20">
+                                                <div className={`w-6 h-6 bg-gradient-to-r ${currentColor.bg} rotate-45 border-r-2 border-b-2 border-white/50`}></div>
+                                            </div>
+                                        )}
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section className="py-24 bg-gradient-to-r from-[#20f26f]/50 to-[#3df883]/50">
+            <section className="py-24 bg-gradient-to-r from-[#20f26f]/10 to-[#3df883]/30">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
@@ -174,7 +188,7 @@ export const ProposalComponent = () => {
                             ¿Por qué es conveniente?
                         </motion.h2>
                         <motion.p 
-                            className="text-xl text-[#0069c0] max-w-3xl mx-auto"
+                            className="text-xl text-black max-w-3xl mx-auto"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -188,7 +202,7 @@ export const ProposalComponent = () => {
                         {convenience.map((item, index) => (
                             <motion.div 
                                 key={index} 
-                                className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl"
+                                className="bg-white/90 backdrop-blur-sm rounded-2xl border-l-6 border-[#0069c0] p-8 shadow-xl"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -210,11 +224,10 @@ export const ProposalComponent = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.6 + (index * 0.1) }}
                                 >
-                                    <div className="w-3 h-3 bg-[#0069c0] rounded-full mr-3"></div>
-                                    <h3 className="text-xl font-bold text-[#0069c0]">{item.title}</h3>
+                                    <h3 className="text-2xl font-bold text-[#0069c0]">{item.title}</h3>
                                 </motion.div>
                                 <motion.p 
-                                    className="text-[#0069c0] leading-relaxed"
+                                    className="text-black leading-relaxed"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     viewport={{ once: true }}
@@ -364,7 +377,7 @@ export const ProposalComponent = () => {
             </section>
 
             {/* Cliente Objetivo */}
-            <section className="py-24 bg-gradient-to-r from-[#0069c0] to-[#137fd9] text-white">
+            <section className="py-24 bg-gradient-to-r from-[#0069c0]/90 to-[#137fd9]/90 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div 
                         className="text-center mb-16"
@@ -419,19 +432,7 @@ export const ProposalComponent = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.3, delay: 0.8 + (index * 0.1) }}
                                 >
-                                    <motion.div 
-                                        className="w-4 h-4 bg-[#20f26f] rounded-full mr-3"
-                                        initial={{ scale: 0 }}
-                                        whileInView={{ scale: 1 }}
-                                        viewport={{ once: true }}
-                                        transition={{ 
-                                            duration: 0.3, 
-                                            delay: 1 + (index * 0.1),
-                                            type: "spring",
-                                            stiffness: 300
-                                        }}
-                                    ></motion.div>
-                                    <h3 className="text-lg font-semibold text-white">{client}</h3>
+                                    <h3 className="text-xl font-semibold text-white">{client}</h3>
                                 </motion.div>
                             </motion.div>
                         ))}
@@ -629,7 +630,7 @@ const stats = [
     { label: "Proyectos Completados", value: "150+" },
     { label: "Satisfacción del Cliente", value: "98%" },
     { label: "Reducción de Costos", value: "35%" },
-    { label: "Time to Market", value: "-40%" }
+    { label: "Capacitación / Training específico", value: "50+" }
 ]
 
 const timeline = [

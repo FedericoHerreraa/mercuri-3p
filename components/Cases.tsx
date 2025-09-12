@@ -11,12 +11,14 @@ import image3 from '../public/success-cases/pote.png';
 import image4 from '../public/success-cases/steps.jpg';
 import image5 from '../public/success-cases/rexona.png';
 import image6 from '../public/success-cases/talco.png';
+import image7 from '../public/success-cases/Picture1.jpg';
+import image8 from '../public/success-cases/Picture7.png';
 
 const successCases = [
     {
         id: 1,
         title: "ROLL ON",
-        productImage: image1, 
+        productImage: image1,
         challenge: "Se planteó la necesidad de rediseñar el aplicador por una morfología más háptica al consumidor durante el uso y que se destaque de la competencia.",
         result: "Se replanteó la forma de utilización a través de testeos en uso con consumidores, y a partir de ese entendimiento se cambió la morfología, dándole mejor ángulo de aplicación sobre la axila. El diseño fue adoptado globalmente y se obtuvo patentamiento de diseño global.",
         layout: "left"
@@ -60,6 +62,14 @@ const successCases = [
         challenge: "Incorporar rHDPE en la botella actual la cual se fabricaba con HDPE virgen. El desafío incluye evitar on costs, nulo impacto estético o funcional, maximizar el % de inclusión de PCR.",
         result: "Se logró desarrollar una botella EBM utilizando rHDPE al 97%. Sin impacto en costos y sin interacción con el producto o el consumidor.",
         layout: "left"
+    },
+    {
+        id: 7,
+        title: "Capacitación y entrnamientos especificos",
+        productImage: [image7, image8],
+        challenge: "Incorporar rHDPE en la botella actual la cual se fabricaba con HDPE virgen. El desafío incluye evitar on costs, nulo impacto estético o funcional, maximizar el % de inclusión de PCR.",
+        result: "Se logró desarrollar una botella EBM utilizando rHDPE al 97%. Sin impacto en costos y sin interacción con el producto o el consumidor.",
+        layout: "left"
     }
 ];
 
@@ -67,7 +77,7 @@ export const Cases = () => {
     return (
         <section id="cases" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 mt-20 sm:px-6 lg:px-8">
-                <motion.div 
+                <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +111,7 @@ export const Cases = () => {
                                             {caseItem.title}
                                         </h3>
                                     </div>
-                                    
+
                                     <div className="grid lg:grid-cols-2 gap-12 mb-12">
                                         <div className="text-left">
                                             <h4 className="text-2xl font-bold text-gray-900 mb-4">El Desafío</h4>
@@ -118,13 +128,26 @@ export const Cases = () => {
                                     </div>
 
                                     <div className="w-full max-w-4xl mx-auto">
-                                        <Image 
-                                            src={caseItem.productImage} 
-                                            alt={caseItem.title}
-                                            width={800}
-                                            height={400}
-                                            className="w-full h-auto object-contain"
-                                        />
+                                        {Array.isArray(caseItem.productImage) ? (
+                                            caseItem.productImage.map((image, index) => (
+                                                <Image
+                                                    key={index}
+                                                    src={image}
+                                                    alt={caseItem.title}
+                                                    width={800}
+                                                    height={400}
+                                                    className="w-full h-auto object-contain"
+                                                />
+                                            ))
+                                        ) : (
+                                            <Image
+                                                src={caseItem.productImage}
+                                                alt={caseItem.title}
+                                                width={800}
+                                                height={400}
+                                                className="w-full h-auto object-contain"
+                                            />
+                                        )}
                                     </div>
                                 </div>
                             ) : (
@@ -134,7 +157,7 @@ export const Cases = () => {
                                         <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
                                             {caseItem.title}
                                         </h3>
-                                        
+
                                         <div className="space-y-8">
                                             <div>
                                                 <h4 className="text-2xl font-bold text-gray-900 mb-4">El Desafío</h4>
@@ -142,7 +165,7 @@ export const Cases = () => {
                                                     {caseItem.challenge}
                                                 </p>
                                             </div>
-                                            
+
                                             <div>
                                                 <h4 className="text-2xl font-bold text-gray-900 mb-4">El Resultado</h4>
                                                 <p className="text-gray-700 leading-relaxed text-lg">
@@ -151,15 +174,28 @@ export const Cases = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div className={`${caseItem.layout === 'right' ? 'lg:order-1' : ''} flex justify-center items-center`}>
-                                        <Image 
-                                            src={caseItem.productImage} 
-                                            alt={caseItem.title}
-                                            width={400}
-                                            height={500}
-                                            className="w-full max-w-sm h-auto object-contain rounded-2xl"
-                                        />
+                                        {Array.isArray(caseItem.productImage) ? (
+                                            caseItem.productImage.map((image, index) => (
+                                                <Image
+                                                    key={index}
+                                                    src={image}
+                                                    alt={caseItem.title}
+                                                    width={400}
+                                                    height={500}
+                                                    className="w-full max-w-sm h-auto object-contain rounded-2xl"
+                                                />
+                                            ))
+                                        ) : (
+                                            <Image
+                                                src={caseItem.productImage}
+                                                alt={caseItem.title}
+                                                width={400}
+                                                height={500}
+                                                className="w-full max-w-sm h-auto object-contain rounded-2xl"
+                                            />
+                                        )}
                                     </div>
                                 </>
                             )}
