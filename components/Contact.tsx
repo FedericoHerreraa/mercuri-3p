@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Linkedin, Facebook, Phone, Mail } from 'lucide-react'
+import { Linkedin, Facebook, Phone, Mail, Loader2 } from 'lucide-react'
+import { toast } from 'sonner'
 
 export const Contact = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -32,12 +33,15 @@ export const Contact = () => {
                 body: JSON.stringify(formData),
             });
             if (!response.ok) {
+                toast.error("Failed to send email");
                 throw new Error("Failed to send email");
             }
             const data = await response.json();
+            toast.success("Email sent successfully");
             console.log(data);
             cleanFormData();
         } catch (error) {
+            toast.error("Failed to send email");
             console.error(error);
         } finally {
             setIsLoading(false);
@@ -146,7 +150,7 @@ export const Contact = () => {
                                     <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} id="message" rows={4} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Cuéntanos sobre tu desafío o visión..."></textarea>
                                 </div>
 
-                                <button type="submit" className="btn-primary w-full" disabled={isLoading}>{isLoading ? "Enviando..." : "Enviar Mensaje"}</button>
+                                <button type="submit" className="btn-primary w-full cursor-pointer text-center" disabled={isLoading}>{isLoading ? <Loader2 className="w-4 h-4 animate-spin mx-auto" /> : "Enviar Mensaje"}</button>
                             </div>
                         </form>
                     </div>

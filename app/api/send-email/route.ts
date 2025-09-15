@@ -10,18 +10,17 @@ export async function POST(request: Request) {
 
     const sendEmail = await resend.emails.send({
         from: "Mercuri3P <contacto@mercuri3p.com>",
-        to: "fede.juan.herrera@gmail.com",
-        // to: "mercuri3p@gmail.com",
+        to: "mercuri3p@outlook.com",
         subject: "Nuevo mensaje de contacto",
         html: `<p>Nombre: ${name}</p><p>Email: ${email}</p><p>Empresa: ${company}</p><p>Servicio: ${service}</p><p>Mensaje: ${message}</p>`,
     });
     
-    // const sendEmailToClient = await resend.emails.send({
-    //     from: "Mercuri3P <contacto@mercuri3p.com>",
-    //     to: email,
-    //     subject: "Nuevo mensaje de contacto",
-    //     html: `<p>Nombre: ${name}</p><p>Email: ${email}</p><p>Mensaje: ${message}</p>`,
-    // });
+    const sendEmailToClient = await resend.emails.send({
+        from: "Mercuri3P <contacto@mercuri3p.com>",
+        to: email,
+        subject: "Enviado nuevo mensaje de contacto",
+        html: `<p>Nombre: ${name}</p><p>Email: ${email}</p><p>Mensaje: ${message}</p>`,
+    });
 
-    return NextResponse.json({ sendEmail });
+    return NextResponse.json({ sendEmail, sendEmailToClient });
 }
