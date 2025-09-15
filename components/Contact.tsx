@@ -1,8 +1,50 @@
+'use client'
 
-
+import { useState } from 'react'
 import { Linkedin, Facebook, Phone, Mail } from 'lucide-react'
 
 export const Contact = () => {
+    const [isLoading, setIsLoading] = useState(false);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        company: "",
+        service: "",
+        message: "",
+    })
+
+    const cleanFormData = () => {
+        setFormData({
+            name: "",
+            email: "",
+            company: "",
+            service: "",
+            message: "",
+        })
+    }
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsLoading(true);
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                body: JSON.stringify(formData),
+            });
+            if (!response.ok) {
+                throw new Error("Failed to send email");
+            }
+            const data = await response.json();
+            console.log(data);
+            cleanFormData();
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setIsLoading(false);
+            cleanFormData();
+        }
+    }
+
     return (
         <section id="contact" className="py-24 gradient-subtle mt-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,27 +110,27 @@ export const Contact = () => {
                             </div>
                         </div>
 
-                        <form className="p-8 bg-white rounded-lg shadow-md">
+                        <form className="p-8 bg-white rounded-lg shadow-md" onSubmit={handleSubmit}>
                             <div className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
-                                        <input type="text" id="name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Tu nombre" />
+                                        <input value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} type="text" id="name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Tu nombre" />
                                     </div>
                                     <div>
                                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                        <input type="email" id="email" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="tu@email.com" />
+                                        <input value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} type="email" id="email" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="tu@email.com" />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">Empresa</label>
-                                    <input type="text" id="company" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Tu empresa" />
+                                    <input value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} type="text" id="company" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Tu empresa" />
                                 </div>
 
                                 <div>
                                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label>
-                                    <select id="service" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors">
+                                    <select value={formData.service} onChange={(e) => setFormData({ ...formData, service: e.target.value })} id="service" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors">
                                         <option>Selecciona un servicio</option>
                                         <option>Desarrollo de Packaging Sustentable</option>
                                         <option>Estrategia de Producto End to End</option>
@@ -101,10 +143,10 @@ export const Contact = () => {
 
                                 <div>
                                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
-                                    <textarea id="message" rows={4} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Cuéntanos sobre tu desafío o visión..."></textarea>
+                                    <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} id="message" rows={4} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Cuéntanos sobre tu desafío o visión..."></textarea>
                                 </div>
 
-                                <button type="submit" className="btn-primary w-full">Enviar Mensaje</button>
+                                <button type="submit" className="btn-primary w-full" disabled={isLoading}>{isLoading ? "Enviando..." : "Enviar Mensaje"}</button>
                             </div>
                         </form>
                     </div>
