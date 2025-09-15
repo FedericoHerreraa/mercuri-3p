@@ -36,10 +36,6 @@ export const AboutUsComponent = () => {
                             <Image src="/image-nosotros.png" alt="About Us" width={500} height={500} />
                         </div>
                         <div className="w-1/2 space-y-6">
-                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                                Acerca de <span className="text-gradient">Mí</span>
-                            </h1>
-                            
                             <div className="space-y-6 text-gray-700 leading-relaxed">
                                 <p className="text-lg">
                                     <span className="font-semibold text-[#0069c0]">Profesional con más de 30 años de experiencia</span> en desarrollo de productos, 

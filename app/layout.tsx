@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
+import { WhatsappIcon } from "@/components/WhatsappIcon";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="font-sans antialiased text-gray-900 bg-white">
         <Header />
         {children}
+        <WhatsappIcon />
       </body>
     </html>
   );
