@@ -16,7 +16,7 @@ export const Header = () => {
                         <Link href="/proposal" className="text-gray-600 hover:text-[#0069c0] transition-colors">Propuesta</Link>
                         <Link href="/about-us" className="text-gray-600 hover:text-[#0069c0] transition-colors">Nosotros</Link>
                         <Link href="/success-cases" className="text-gray-600 hover:text-[#0069c0] transition-colors">Casos de éxito</Link>
-                        <Link href="/videos" className="text-gray-600 hover:text-[#0069c0] transition-colors">Videos</Link>
+                        {/* <Link href="/videos" className="text-gray-600 hover:text-[#0069c0] transition-colors">Videos</Link> */}
                         <Link href="/contact-us" className="text-gray-600 hover:text-[#0069c0] transition-colors">Contacto</Link>
                     </div>
                 </div>
