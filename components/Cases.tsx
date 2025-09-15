@@ -65,7 +65,7 @@ const successCases = [
     },
     {
         id: 7,
-        title: "Capacitación y entrnamientos especificos",
+        title: "Capacitación y entrenamientos específicos",
         productImage: [image7, image8],
         challenge: "Incorporar rHDPE en la botella actual la cual se fabricaba con HDPE virgen. El desafío incluye evitar on costs, nulo impacto estético o funcional, maximizar el % de inclusión de PCR.",
         result: "Se logró desarrollar una botella EBM utilizando rHDPE al 97%. Sin impacto en costos y sin interacción con el producto o el consumidor.",

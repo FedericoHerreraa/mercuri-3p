@@ -1,25 +1,18 @@
 
+'use client'
+
 import { getServiceById, getAllServiceIds } from "@/types/services";
 import { Footer } from "@/components/Footer";
 import { ContactCTA } from "@/components/ContactCTA";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { useTranslation } from "react-i18next";
+import { useParams } from "next/navigation";
 
-interface DetailPageProps {
-    params: {
-        id: string;
-    };
-}
-
-export async function generateStaticParams() {
-    const serviceIds = getAllServiceIds();
-    return serviceIds.map((id) => ({
-        id: id,
-    }));
-}
-
-export default async function Detail({ params }: DetailPageProps) {
-    const { id } = await params;
+export default function Detail() {
+    const { t } = useTranslation()
+    const params = useParams()
+    const id = params.id as string
     const service = getServiceById(id);
 
     if (!service) {
@@ -35,7 +28,7 @@ export default async function Detail({ params }: DetailPageProps) {
                             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                             </svg>
-                            Volver a Servicios
+                            {t('serviceDetail.backToServices')}
                         </Link>
                         <div className="text-center mb-8">
 
@@ -45,10 +38,10 @@ export default async function Detail({ params }: DetailPageProps) {
                                 </svg>
                             </div>
                             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                                {service.title}
+                                {t(`services.${service.id}.title`)}
                             </h1>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                {service.fullDescription}
+                                {t(`services.${service.id}.fullDescription`)}
                             </p>
                         </div>
                     </div>
@@ -61,30 +54,30 @@ export default async function Detail({ params }: DetailPageProps) {
                             <div className="lg:col-span-2 space-y-12">
 
                                 <div>
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Beneficios Clave</h2>
+                                    <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('serviceDetail.keyBenefits')}</h2>
                                     <div className="grid md:grid-cols-2 gap-4">
-                                        {service.benefits.map((benefit, index) => (
+                                        {Array.from({ length: 6 }, (_, index) => (
                                             <div key={index} className="flex items-start space-x-3">
                                                 <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                                                     <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                     </svg>
                                                 </div>
-                                                <p className="text-gray-700">{benefit}</p>
+                                                <p className="text-gray-700">{t(`benefits.${service.id}.${index + 1}`)}</p>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
 
                                 <div>
-                                    <h2 className="text-3xl font-bold text-gray-900 mb-6">Nuestro Proceso</h2>
+                                    <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('serviceDetail.ourProcess')}</h2>
                                     <div className="space-y-4">
-                                        {service.process.map((step, index) => (
+                                        {Array.from({ length: 6 }, (_, index) => (
                                             <div key={index} className="flex items-start space-x-4">
                                                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                                                     <span className="text-blue-600 font-semibold text-sm">{index + 1}</span>
                                                 </div>
-                                                <p className="text-gray-700 pt-1">{step}</p>
+                                                <p className="text-gray-700 pt-1">{t(`process.${service.id}.${index + 1}`)}</p>
                                             </div>
                                         ))}
                                     </div>
@@ -94,15 +87,15 @@ export default async function Detail({ params }: DetailPageProps) {
                             <div className="space-y-8">
 
                                 <div className="card p-6">
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Información del Servicio</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('serviceDetail.serviceInfo')}</h3>
                                     <div className="space-y-4">
                                         <div>
-                                            <p className="text-sm font-medium text-gray-500 mb-2">Entregables Principales</p>
+                                            <p className="text-sm font-medium text-gray-500 mb-2">{t('serviceDetail.mainDeliverables')}</p>
                                             <ul className="text-sm text-gray-700 space-y-1">
-                                                {service.deliverables.slice(0, 3).map((deliverable, index) => (
+                                                {Array.from({ length: 3 }, (_, index) => (
                                                     <li key={index} className="flex items-start space-x-2">
                                                         <span className="text-blue-600 mt-1">•</span>
-                                                        <span>{deliverable}</span>
+                                                        <span>{t(`deliverables.${service.id}.${index + 1}`)}</span>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -110,7 +103,7 @@ export default async function Detail({ params }: DetailPageProps) {
                                     </div>
                                     <Link href="/contact-us">
                                         <button className="btn-primary w-full mt-6">
-                                            Solicitar Cotización
+                                            {t('serviceDetail.requestQuote')}
                                         </button>
                                     </Link>
                                 </div>

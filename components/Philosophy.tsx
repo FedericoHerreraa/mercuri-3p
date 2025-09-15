@@ -9,19 +9,50 @@ import {
     Leaf 
 } from "lucide-react"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 
 
 export const Philosophy = () => {
+    const { t } = useTranslation()
+    
+    const cards = [
+        {
+            titleKey: "philosophy.innovation.title",
+            descriptionKey: "philosophy.innovation.description",
+            icon: <Lightbulb className="w-6 h-6 text-[#20f26f]" />
+        },
+        {
+            titleKey: "philosophy.excellence.title",
+            descriptionKey: "philosophy.excellence.description",
+            icon: <Target className="w-6 h-6 text-[#20f26f]" />
+        },
+        {
+            titleKey: "philosophy.collaboration.title",
+            descriptionKey: "philosophy.collaboration.description",
+            icon: <Users className="w-6 h-6 text-[#20f26f]" />
+        },
+        {
+            titleKey: "philosophy.adaptability.title",
+            descriptionKey: "philosophy.adaptability.description",
+            icon: <Zap className="w-6 h-6 text-[#20f26f]" />
+        },
+        {
+            titleKey: "philosophy.sustainability.title",
+            descriptionKey: "philosophy.sustainability.description",
+            icon: <Leaf className="w-6 h-6 text-[#20f26f]" />
+        }
+    ]
+    
     return (
         <section id="about" className="py-24 bg-gradient-to-r from-[#0069c0] to-[#137fd9]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 animate-slide-up">
                     <h2 className="text-4xl md:text-5xl font-bold text-zinc-200 mb-6">
-                        Nuestros Valores
+                        {t('philosophy.title')}
                     </h2>
                     <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
-                        Principios fundamentales que guían nuestro trabajo y aportan valor en cada etapa del proceso.
+                        {t('philosophy.description')}
                     </p>
                 </div>
 
@@ -51,8 +82,8 @@ export const Philosophy = () => {
                             >
                                 {card.icon}
                             </motion.div>
-                            <h3 className="text-xl font-semibold text-zinc-200 mb-4">{card.title}</h3>
-                            <p className="text-zinc-200">{card.description}</p>
+                            <h3 className="text-xl font-semibold text-zinc-200 mb-4">{t(card.titleKey)}</h3>
+                            <p className="text-zinc-200">{t(card.descriptionKey)}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -60,32 +91,3 @@ export const Philosophy = () => {
         </section>
     )
 }
-
-
-const cards = [
-    {
-        title: "Innovación",
-        description: "Mantenerse siempre a la vanguardia en técnicas y tecnologías aplicadas al desarrollo de productos.",
-        icon: <Lightbulb className="w-6 h-6 text-[#20f26f]" />
-    },
-    {
-        title: "Excelencia en el Negocio",
-        description: "Visión integral del negocio de principio a fin (E2E), asegurando resultados que impulsen el crecimiento.",
-        icon: <Target className="w-6 h-6 text-[#20f26f]" />
-    },
-    {
-        title: "Colaboración & Teamwork",
-        description: "Promover una colaboración sólida con clientes y socios, formando equipos que impulsen la transformación tanto del negocio como de las personas.",
-        icon: <Users className="w-6 h-6 text-[#20f26f]" />
-    },
-    {
-        title: "Adaptabilidad",
-        description: "Ser flexibles para responder a las demandas cambiantes del mercado. Los detalles son cruciales; estar preparados con planes alternativos basados en análisis de riesgos e impacto comercial.",
-        icon: <Zap className="w-6 h-6 text-[#20f26f]" />
-    },
-    {
-        title: "Sostenibilidad",
-        description: "Impulsar soluciones que respeten el medio ambiente y sean socialmente responsables, creando valor duradero.",
-        icon: <Leaf className="w-6 h-6 text-[#20f26f]" />
-    }
-]

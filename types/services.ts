@@ -1,8 +1,6 @@
 
-
 import gestionProyectos from "../public/services/gestion-proyectos.jpg";
 import packaging from "../public/services/packaging.jpeg";
-
 import costos from "../public/services/costos.jpg";
 import sustentabilidad from "../public/services/sustentabilidad.jpeg";
 import capacitacion from "../public/services/capacitacion.jpg";

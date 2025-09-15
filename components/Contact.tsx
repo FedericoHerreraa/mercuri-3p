@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { Linkedin, Facebook, Phone, Mail, Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
+import { useTranslation } from 'react-i18next'
 
 export const Contact = () => {
+    const { t } = useTranslation()
     const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
@@ -33,15 +35,15 @@ export const Contact = () => {
                 body: JSON.stringify(formData),
             });
             if (!response.ok) {
-                toast.error("Failed to send email");
+                toast.error(t("contact.toast.error"));
                 throw new Error("Failed to send email");
             }
             const data = await response.json();
-            toast.success("Email sent successfully");
+            toast.success(t("contact.toast.success"));
             console.log(data);
             cleanFormData();
         } catch (error) {
-            toast.error("Failed to send email");
+            toast.error(t("contact.toast.error"));
             console.error(error);
         } finally {
             setIsLoading(false);
@@ -55,9 +57,9 @@ export const Contact = () => {
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16 animate-slide-up">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            ¿Listo para integrar Mercuri 3P en tu negocio? 
+                            {t('contact.title')}
                             <span className="block mt-2 text-xl font-normal text-gray-600">
-                                Hablemos y construyamos un futuro de triple Impacto juntos!!
+                                {t('contact.subtitle')}
                             </span>
                         </h2>
                     </div>
@@ -65,9 +67,9 @@ export const Contact = () => {
                     <div className="grid lg:grid-cols-2 gap-12">
                         <div className="space-y-8">
                             <div>
-                                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Contáctanos</h3>
+                                <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t('contact.sectionTitle')}</h3>
                                 <p className="text-gray-600 mb-6">
-                                    Creemos que cada proyecto exitoso comienza con la comprensión. Exploremos cómo nuestro enfoque puede adaptarse a tus desafíos únicos y aspiraciones.
+                                    {t('contact.description')}
                                 </p>
                             </div>
 
@@ -77,8 +79,8 @@ export const Contact = () => {
                                         <Mail className="w-6 h-6 text-[#0069c0]" />
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-gray-900">Escríbenos</p>
-                                        <p className="text-gray-600">hola@mercuri3p.com</p>
+                                        <p className="font-semibold text-gray-900">{t('contact.writeUs')}</p>
+                                        <p className="text-gray-600">{t('contact.email')}</p>
                                     </div>
                                 </div>
 
@@ -87,8 +89,8 @@ export const Contact = () => {
                                         <Phone className="w-6 h-6 text-[#0069c0]" />
                                     </div>
                                     <div>
-                                        <p className="font-semibold text-gray-900">Llámanos</p>
-                                        <p className="text-gray-600">+54 (11) 1234-5678</p>
+                                        <p className="font-semibold text-gray-900">{t('contact.callUs')}</p>
+                                        <p className="text-gray-600">{t('contact.phone')}</p>
                                     </div>
                                 </div>
 
@@ -97,8 +99,8 @@ export const Contact = () => {
                                         <Linkedin className="w-6 h-6 text-[#0069c0]" />
                                     </div>
                                     <a href="https://www.linkedin.com/company/mercuri-3p-consulting/posts/?feedView=all" target="_blank">
-                                        <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">Visítanos</p>
-                                        <p className="text-gray-600">Consultoría especializada con presencia global</p>
+                                        <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">{t('contact.visitUs')}</p>
+                                        <p className="text-gray-600">{t('contact.linkedinDesc')}</p>
                                     </a>
                                 </div>
 
@@ -107,8 +109,8 @@ export const Contact = () => {
                                         <Facebook className="w-6 h-6 text-[#0069c0]" />
                                     </div>
                                     <a href="https://www.facebook.com/mercuri3p" target="_blank">
-                                        <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">Facebook</p>
-                                        <p className="text-gray-600">Consultoría especializada con presencia global</p>
+                                        <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">{t('contact.facebook')}</p>
+                                        <p className="text-gray-600">{t('contact.facebookDesc')}</p>
                                     </a>
                                 </div>
                             </div>
@@ -118,39 +120,39 @@ export const Contact = () => {
                             <div className="space-y-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
-                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
-                                        <input value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} type="text" id="name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Tu nombre" />
+                                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.name')}</label>
+                                        <input value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} type="text" id="name" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder={t('contact.form.namePlaceholder')} />
                                     </div>
                                     <div>
-                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                                        <input value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} type="email" id="email" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="tu@email.com" />
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.email')}</label>
+                                        <input value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} type="email" id="email" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder={t('contact.form.emailPlaceholder')} />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">Empresa</label>
-                                    <input value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} type="text" id="company" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Tu empresa" />
+                                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.company')}</label>
+                                    <input value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} type="text" id="company" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder={t('contact.form.companyPlaceholder')} />
                                 </div>
 
                                 <div>
-                                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Servicio de Interés</label>
+                                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.service')}</label>
                                     <select value={formData.service} onChange={(e) => setFormData({ ...formData, service: e.target.value })} id="service" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors">
-                                        <option>Selecciona un servicio</option>
-                                        <option>Desarrollo de Packaging Sustentable</option>
-                                        <option>Estrategia de Producto End to End</option>
-                                        <option>Manufactura y Sustentabilidad</option>
-                                        <option>Gestión Integral de Proyectos</option>
-                                        <option>Innovación en Diseño</option>
-                                        <option>Consultoría Especializada</option>
+                                        <option>{t('contact.form.selectService')}</option>
+                                        <option>{t('contact.form.service1')}</option>
+                                        <option>{t('contact.form.service2')}</option>
+                                        <option>{t('contact.form.service3')}</option>
+                                        <option>{t('contact.form.service4')}</option>
+                                        <option>{t('contact.form.service5')}</option>
+                                        <option>{t('contact.form.service6')}</option>
                                     </select>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
-                                    <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} id="message" rows={4} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder="Cuéntanos sobre tu desafío o visión..."></textarea>
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">{t('contact.form.message')}</label>
+                                    <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} id="message" rows={4} className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#0069c0] focus:border-transparent transition-colors" placeholder={t('contact.form.messagePlaceholder')}></textarea>
                                 </div>
 
-                                <button type="submit" className="btn-primary w-full cursor-pointer text-center" disabled={isLoading}>{isLoading ? <Loader2 className="w-4 h-4 animate-spin mx-auto" /> : "Enviar Mensaje"}</button>
+                                <button type="submit" className="btn-primary w-full cursor-pointer text-center" disabled={isLoading}>{isLoading ? <Loader2 className="w-4 h-4 animate-spin mx-auto" /> : t('contact.form.send')}</button>
                             </div>
                         </form>
                     </div>

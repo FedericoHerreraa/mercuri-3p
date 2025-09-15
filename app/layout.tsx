@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { WhatsappIcon } from "@/components/WhatsappIcon";
 import { Toaster } from "@/components/ui/sonner"
+import { I18nProvider } from "@/components/providers/I18nProvider";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -23,10 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased text-gray-900 bg-white">
-        <Header />
-        {children}
-        <WhatsappIcon />
-        <Toaster />
+        <I18nProvider>
+          <Header />
+          {children}
+          <WhatsappIcon />
+          <Toaster />
+        </I18nProvider>
       </body>
     </html>
   );

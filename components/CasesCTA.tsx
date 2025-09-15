@@ -2,8 +2,26 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export const CasesCTA = () => {
+    const { t } = useTranslation()
+    
+    const statsData = [
+        { 
+            numberKey: "casesCTA.stat1.number", 
+            descriptionKey: "casesCTA.stat1.description" 
+        },
+        { 
+            numberKey: "casesCTA.stat2.number", 
+            descriptionKey: "casesCTA.stat2.description" 
+        },
+        { 
+            numberKey: "casesCTA.stat3.number", 
+            descriptionKey: "casesCTA.stat3.description" 
+        }
+    ]
+    
     return (
         <section className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -21,7 +39,7 @@ export const CasesCTA = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        Casos de Éxito Reales
+                        {t('casesCTA.title')}
                     </motion.h2>
                     <motion.p 
                         className="text-xl text-gray-600 mb-8"
@@ -30,8 +48,7 @@ export const CasesCTA = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        Descubre cómo hemos transformado ideas en productos sustentables exitosos, 
-                        ayudando a empresas de diferentes sectores a alcanzar sus objetivos con packaging innovador.
+                        {t('casesCTA.description')}
                     </motion.p>
                     <motion.div 
                         className="grid md:grid-cols-3 gap-8 mb-12"
@@ -65,9 +82,9 @@ export const CasesCTA = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.8, delay: 1 + (index * 0.1) }}
                                 >
-                                    {stat.number}
+                                    {t(stat.numberKey)}
                                 </motion.div>
-                                <p className="text-gray-600">{stat.description}</p>
+                                <p className="text-gray-600">{t(stat.descriptionKey)}</p>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -88,7 +105,7 @@ export const CasesCTA = () => {
                                 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Ver Todos los Casos de Éxito
+                                {t('casesCTA.button')}
                             </motion.button>
                         </Link>
                     </motion.div>
@@ -97,9 +114,3 @@ export const CasesCTA = () => {
         </section>
     )
 }
-
-const statsData = [
-    { number: "60%", description: "Reducción en impacto ambiental" },
-    { number: "150%", description: "Crecimiento promedio en ventas" },
-    { number: "25+", description: "Proyectos exitosos" }
-]

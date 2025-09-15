@@ -6,8 +6,11 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 export const ProposalCTA = () => {
+    const { t } = useTranslation()
+    
     return (
         <section className="py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +51,7 @@ export const ProposalCTA = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        ¿Listo para transformar tu negocio?
+                        {t('proposalCTA.title')}
                     </motion.h2>
                     <motion.p 
                         className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
@@ -57,8 +60,7 @@ export const ProposalCTA = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.6 }}
                     >
-                        Descubre nuestra propuesta personalizada y cómo podemos impulsar 
-                        tu empresa hacia el siguiente nivel con nuestras soluciones innovadoras.
+                        {t('proposalCTA.description')}
                     </motion.p>
                     <motion.div 
                         className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -78,7 +80,7 @@ export const ProposalCTA = () => {
                                 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Ver Propuesta Completa
+                                {t('proposalCTA.button1')}
                             </motion.button>
                         </Link>
                         <Link href="/contact-us">
@@ -94,7 +96,7 @@ export const ProposalCTA = () => {
                                 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Contactar Ahora
+                                {t('proposalCTA.button2')}
                             </motion.button>
                         </Link>
                     </motion.div>
