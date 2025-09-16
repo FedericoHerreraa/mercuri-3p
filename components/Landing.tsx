@@ -21,7 +21,7 @@ export const Landing = () => {
     ]
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden md:py-0 py-40">
             <div className="absolute inset-0 gradient-subtle"></div>
 
             <div className="absolute top-20 right-20 w-72 h-72 bg-[#20f26f]/20 rounded-full blur-3xl animate-float"></div>
