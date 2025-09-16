@@ -28,8 +28,6 @@ export const Landing = () => {
             <div className="absolute top-0 left-140 w-72 h-72 bg-[#20f26f]/20 rounded-full blur-3xl animate-float"></div>
             <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#3df883]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
             
-            
-
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div 
                     initial={{ opacity: 0, y: 30 }}
@@ -37,7 +35,7 @@ export const Landing = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <motion.h1 
-                        className="text-zinc-900 text-5xl md:text-7xl font-bold mb-6 leading-tight"
+                        className="text-zinc-900 text-4xl md:text-7xl font-bold mb-6 leading-tight"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
@@ -69,11 +67,11 @@ export const Landing = () => {
                 <Marquee 
                     gradient={false} 
                     speed={100}
-                    className="bg-[#0069c0]/90 backdrop-blur-sm py-4"
+                    className="bg-[#0069c0]/90 backdrop-blur-sm md:py-4 py-2"
                 >
                     {expertiseItems.map((item, index) => (
                         <div key={index} className="flex items-center justify-center mx-8 text-white font-medium">
-                            <span className="w-2 h-2 bg-[#20f26f] rounded-full mr-3"></span>
+                            <span className="w-2 h-2 bg-[#20f26f] rounded-full md:mr-3 mr-2"></span>
                             {t(item)}
                         </div>
                     ))}

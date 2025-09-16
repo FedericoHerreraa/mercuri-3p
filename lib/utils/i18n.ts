@@ -281,13 +281,9 @@ const resources = {
             
             // Contact Information
             "contact.writeUs": "Escríbenos",
-            "contact.email": "hola@mercuri3p.com",
             "contact.callUs": "Llámanos",
-            "contact.phone": "+54 (11) 1234-5678",
             "contact.visitUs": "Visítanos",
-            "contact.linkedinDesc": "Consultoría especializada con presencia global",
             "contact.facebook": "Facebook",
-            "contact.facebookDesc": "Consultoría especializada con presencia global",
             
             // Contact Form
             "contact.form.name": "Nombre",
@@ -310,14 +306,209 @@ const resources = {
             
             // Toast Messages
             "contact.toast.success": "Email enviado exitosamente",
-            "contact.toast.error": "Error al enviar email"
+            "contact.toast.error": "Error al enviar email",
+            
+            // Proposal Page
+            "proposal.title": "Nuestra Propuesta",
+            "proposal.description": "Transformamos tu visión en productos sustentables que generan impacto real. Descubre cómo podemos impulsar tu negocio hacia el futuro.",
+            
+            // Methodology Section
+            "proposal.methodology.title": "Nuestra Metodología",
+            "proposal.methodology.description": "Un proceso estructurado de 5 fases que garantiza resultados excepcionales y la entrega de productos que superan las expectativas.",
+            
+            "proposal.methodology.phase1.title": "Identificar Oportunidades",
+            "proposal.methodology.phase1.description": "Detectamos y evaluamos oportunidades de mejora y crecimiento en tu negocio.",
+            "proposal.methodology.phase1.activity1": "Entrevistas con stakeholders",
+            "proposal.methodology.phase1.activity2": "Visitas a instalaciones",
+            "proposal.methodology.phase1.activity3": "Análisis de inducciones",
+            "proposal.methodology.phase1.activity4": "Generación de reporte inicial",
+            
+            "proposal.methodology.phase2.title": "Diagnóstico Situación Actual",
+            "proposal.methodology.phase2.description": "Evaluamos el estado actual de tus procesos y productos para identificar áreas de mejora.",
+            "proposal.methodology.phase2.activity1": "Análisis de datos existentes",
+            "proposal.methodology.phase2.activity2": "Desarrollo de propuestas",
+            "proposal.methodology.phase2.activity3": "Análisis con equipo interno",
+            "proposal.methodology.phase2.activity4": "Priorización de iniciativas",
+            
+            "proposal.methodology.phase3.title": "Loop de Soluciones & Plan de Acción",
+            "proposal.methodology.phase3.description": "Diseñamos e implementamos soluciones específicas con un plan de acción claro.",
+            "proposal.methodology.phase3.activity1": "Definición de entregables",
+            "proposal.methodology.phase3.activity2": "Acuerdo con stakeholders",
+            "proposal.methodology.phase3.activity3": "Test piloto",
+            "proposal.methodology.phase3.activity4": "Launch y escalamiento",
+            
+            "proposal.methodology.phase4.title": "Monitoreo & Control",
+            "proposal.methodology.phase4.description": "Seguimiento continuo de los resultados para asegurar el éxito del proyecto.",
+            "proposal.methodology.phase4.activity1": "Definición de KPI's",
+            "proposal.methodology.phase4.activity2": "Cascade al equipo",
+            "proposal.methodology.phase4.activity3": "Coaching específico",
+            "proposal.methodology.phase4.activity4": "Evaluación de resultados",
+            
+            "proposal.methodology.phase5.title": "Follow Up (FUP)",
+            "proposal.methodology.phase5.description": "Soporte posterior y mejora continua para maximizar el valor del proyecto.",
+            "proposal.methodology.phase5.activity1": "Reuniones de seguimiento",
+            "proposal.methodology.phase5.activity2": "Coaching especializado",
+            "proposal.methodology.phase5.activity3": "Capacitaciones adicionales",
+            "proposal.methodology.phase5.activity4": "Optimización continua",
+            
+            // Why Convenient Section
+            "proposal.whyConvenient.title": "¿Por qué es conveniente?",
+            "proposal.whyConvenient.description": "MERCURI 3P es tu socio estratégico para acelerar el crecimiento y la innovación en tu empresa.",
+            
+            "proposal.convenience.1.title": "Operación Diaria vs Desarrollo Estratégico",
+            "proposal.convenience.1.description": "Muchas veces la operatoria del día a día, no deja espacio para la estrategia. MERCURI 3P es un agente catalizador para ejecutarla.",
+            
+            "proposal.convenience.2.title": "Planes de Acción claros y Eficientes",
+            "proposal.convenience.2.description": "Incorporamos técnicas metodológicas probadas para mejorar la efectividad en la gestión de proyectos. (Costos vs Tiempo vs Calidad)",
+            
+            "proposal.convenience.3.title": "Contexto Competitivo",
+            "proposal.convenience.3.description": "El crecimiento competitivo empieza con equipos energizados y comprometidos. La Responsabilidad Social Sustentable es una barrera competitiva que debe estar en la ecuación de crecimiento.",
+            
+            // Why Choose Us Section
+            "proposal.whyChooseUs.title": "¿Por qué elegirnos?",
+            "proposal.whyChooseUs.description": "Nuestro enfoque integral y experiencia comprobada nos convierte en el socio ideal para el desarrollo de tus productos sustentables.",
+            
+            "proposal.benefits.1.title": "Experiencia Comprobada",
+            "proposal.benefits.1.description": "Más de 10 años desarrollando productos sustentables para empresas líderes.",
+            
+            "proposal.benefits.2.title": "Enfoque Sustentable",
+            "proposal.benefits.2.description": "Compromiso genuino con el medio ambiente en cada decisión de diseño y producción.",
+            
+            "proposal.benefits.3.title": "Innovación Constante",
+            "proposal.benefits.3.description": "Utilizamos las últimas tecnologías y metodologías para crear productos únicos.",
+            
+            "proposal.benefits.4.title": "Resultados Medibles",
+            "proposal.benefits.4.description": "Enfoque basado en datos que garantiza ROI positivo y crecimiento sostenible.",
+            
+            // Guaranteed Results Section
+            "proposal.guaranteedResults.title": "Resultados Garantizados",
+            "proposal.stats.1.label": "Proyectos Completados",
+            "proposal.stats.1.value": "150+",
+            "proposal.stats.2.label": "Satisfacción del Cliente",
+            "proposal.stats.2.value": "98%",
+            "proposal.stats.3.label": "Reducción de Costos",
+            "proposal.stats.3.value": "35%",
+            "proposal.stats.4.label": "Capacitación / Training específico",
+            "proposal.stats.4.value": "50+",
+            
+            // Target Client Section
+            "proposal.targetClient.title": "Cliente Objetivo",
+            "proposal.targetClient.description": "Nuestros servicios están diseñados específicamente para diferentes tipos de organizaciones con necesidades de crecimiento e innovación.",
+            
+            "proposal.targetClients.1": "PYMES con potencial de crecimiento",
+            "proposal.targetClients.2": "Empresas Multinacionales con necesidades específicas",
+            "proposal.targetClients.3": "Terceros & Copackers con restricción de recursos I+D & know how puntuales",
+            "proposal.targetClients.4": "Industrias de Cuidado del Hogar y Personal, Farma, Cosmética y Perfumería",
+            "proposal.targetClients.5": "Industrias convertidoras de materiales de packaging",
+            "proposal.targetClients.6": "Cámaras, Asociaciones Industriales, Universidades",
+            
+            // How We Work Section
+            "proposal.howWeWork.title": "Cómo Trabajamos",
+            "proposal.howWeWork.description": "Un proceso colaborativo y transparente que te mantiene informado en cada etapa del desarrollo.",
+            
+            "proposal.timeline.1.title": "Consulta Inicial",
+            "proposal.timeline.1.description": "Reunión para entender tus necesidades, objetivos y visión del proyecto.",
+            "proposal.timeline.1.duration": "1-2 días",
+            
+            "proposal.timeline.2.title": "Propuesta Detallada",
+            "proposal.timeline.2.description": "Elaboramos una propuesta completa con cronograma, costos y entregables.",
+            "proposal.timeline.2.duration": "3-5 días",
+            
+            "proposal.timeline.3.title": "Kick-off y Planning",
+            "proposal.timeline.3.description": "Iniciamos el proyecto con la definición detallada del alcance y metodología.",
+            "proposal.timeline.3.duration": "1 semana",
+            
+            "proposal.timeline.4.title": "Desarrollo Iterativo",
+            "proposal.timeline.4.description": "Trabajo colaborativo con entregas regulares y feedback continuo.",
+            "proposal.timeline.4.duration": "4-12 semanas",
+            
+            "proposal.timeline.5.title": "Entrega y Soporte",
+            "proposal.timeline.5.description": "Entrega final del producto con documentación completa y soporte inicial.",
+            "proposal.timeline.5.duration": "1-2 semanas",
+            
+            // Final CTA Section
+            "proposal.finalCTA.title": "¿Listo para comenzar?",
+            "proposal.finalCTA.description": "Contacta con nosotros para una consulta gratuita y descubre cómo podemos transformar tu idea en un producto exitoso.",
+            "proposal.finalCTA.button1": "Contactar Ahora",
+            "proposal.finalCTA.button2": "Ver Casos de Éxito",
+
+            // Footer
+            "footer.company": "Mercuri3P",
+            "footer.description": "Desarrollamos productos sustentables con propósito, combinando innovación, sustentabilidad y eficiencia. Especialistas en packaging como herramienta de diferenciación.",
+            "footer.servicesTitle": "Servicios",
+
+            "footer.projectManagement": "Gestión de Proyectos",
+            "footer.trainingTalent": "Capacitación / Gestión de Talento",
+            "footer.costOptimization": "Optimización de Costos",
+            "footer.sustentability": "Sustentabilidad",
+            "footer.designProductPackaging": "Diseño de Producto & Packaging",
+            
+            "footer.companyTitle": "Empresa",
+            "footer.aboutUs": "Nosotros",
+            "footer.ourApproach": "Nuestro Enfoque",
+            "footer.successCases": "Casos de Éxito",
+            "footer.contact": "Contacto",
+            "footer.copyright": "© 2024 Mercuri3P. Todos los derechos reservados. | Desarrollo de productos sustentables con propósito.",
+
+            // About Us Component
+            "aboutUs.title": "Sobre",
+            "aboutUs.titleHighlight": "Nosotros",
+            "aboutUs.subtitle": "Transformaciones reales logradas a través de nuestro enfoque integral en desarrollo de productos sustentables y packaging innovador.",
+            "aboutUs.experience": "Profesional con más de 30 años de experiencia",
+            "aboutUs.experienceDesc": "en desarrollo de productos, ingeniería de envases, gestión de proyectos y liderazgo de equipos.",
+            "aboutUs.paragraph1": "A lo largo de mi carrera he dirigido proyectos de innovación, sostenibilidad y transformación organizacional en Unilever, generando impacto real en eficiencia, cultura y resultados.",
+            "aboutUs.paragraph2": "Además cuento con larga trayectoria institucional en diversas organizaciones afines a la industria, en especial el",
+            "aboutUs.institute": "Instituto Argentino del Envase",
+            "aboutUs.paragraph3": ", donde formo parte del Comité Ejecutivo. A su vez, lidero la Comisión de Medio Ambiente del mismo instituto. En simultáneo, he dado cursos de capacitación a diversas universidades y empresas del rubro.",
+            "aboutUs.paragraph4": "Hoy, desde",
+            "aboutUs.companyName": "Mercuri 3P Consulting",
+            "aboutUs.paragraph5": ", acompaño a organizaciones que buscan evolucionar sus procesos, fortalecer sus marcas y alinear sus estrategias con valores de Triple Impacto (Ambiental, Social, Governance).",
+            "aboutUs.quote": "Me especializo en convertir",
+            "aboutUs.quoteHighlight": "desafíos complejos en soluciones prácticas",
+            "aboutUs.quoteEnd": ", combinando visión técnica, enfoque humano y pensamiento estratégico.",
+
+            // Cases Component
+            "cases.title": "Casos de",
+            "cases.titleHighlight": "Éxito",
+            "cases.subtitle": "Transformaciones reales logradas a través de nuestro enfoque integral en desarrollo de productos sustentables y packaging innovador.",
+            "cases.challenge": "El Desafío",
+            "cases.result": "El Resultado",
+
+            // Success Cases
+            "cases.rollOn.title": "ROLL ON",
+            "cases.rollOn.challenge": "Se planteó la necesidad de rediseñar el aplicador por una morfología más háptica al consumidor durante el uso y que se destaque de la competencia.",
+            "cases.rollOn.result": "Se replanteó la forma de utilización a través de testeos en uso con consumidores, y a partir de ese entendimiento se cambió la morfología, dándole mejor ángulo de aplicación sobre la axila. El diseño fue adoptado globalmente y se obtuvo patentamiento de diseño global.",
+
+            "cases.aerosolAxe.title": "AEROSOL AXE",
+            "cases.aerosolAxe.challenge": "Replantear el packaging del aerosol Axe con una concepción más moderna, dinámica, y monolítica respecto del producto estándar anterior.",
+            "cases.aerosolAxe.result": "Utilizando nuevas tecnologías de conformado de envases, se generaron grips laterales por medio de embossing de la pared de aluminio. A su vez de elimina la sobretapa del actuador generando un mecanismo on/off de accionamiento del pulsador o tapa actuadora. Diseño adoptado globalmente.",
+
+            "cases.poteRexona.title": "POTE REXONA ODORONO",
+            "cases.poteRexona.challenge": "Reemplazar el envase existente que constaba de pote y tapa por separado, por una versión cost effective y de impacto positivo al medio ambiente y aumento de la productividad en manufactura.",
+            "cases.poteRexona.result": "Se diseñó un pote con tapa incluida, inspirados en una tapa tipo flip top, con bisagra tipo butterfly, logrando disminuir 20% el peso de material, por ende disminución de costo por unidad, y se aumentó la eficiencia a lo largo de la cadena de valor (moldeo, logística, inventario, manufactura).",
+
+            "cases.srp.title": "SRP",
+            "cases.srp.challenge": "Reemplazar el actual empaque secundario (cajas de cartón corrugado), por una versión más económica, que facilitara la reposición en góndola, y aumentar la exposición del producto. Además poder sinergizar opciones en el punto de venta (p.ej. Puntera de góndolas, mayoristas, etc)",
+            "cases.srp.result": "Se re diseñó el formato de la caja original, transformándola en un display (shelf ready packaging - SRP), listo para ser estructurado desde la fábrica al PDV, sin remanejos ni sobrecostos. Además se pudo optimizar el branding a través de la impresión de la caja.",
+
+            "cases.pcrRfm.title": "PCR RFM",
+            "cases.pcrRfm.challenge": "Dentro del marco de la estrategia de sustentabilidad se requirió incluir rPP al actuador del producto Rexona For Men.",
+            "cases.pcrRfm.result": "Se desarrollaron blends específicos de rPP para adecuarlo al proceso de IM y ensamblado posterior de cada componente que conforman al actuador. Finalmente se llegó a la inclusión de 80% de PCR en todo el conjunto ensamblado, logrando así cumplir las métricas estratégicas de la compañía.",
+
+            "cases.pcrBottle.title": "PCR BOTELLA TALCO",
+            "cases.pcrBottle.challenge": "Incorporar rHDPE en la botella actual la cual se fabricaba con HDPE virgen. El desafío incluye evitar on costs, nulo impacto estético o funcional, maximizar el % de inclusión de PCR.",
+            "cases.pcrBottle.result": "Se logró desarrollar una botella EBM utilizando rHDPE al 97%. Sin impacto en costos y sin interacción con el producto o el consumidor.",
+
+            "cases.training.title": "Capacitación y entrenamientos específicos",
+            "cases.training.challenge": "Desarrollar programas de capacitación especializados que fortalezcan las competencias técnicas de los equipos internos en packaging sustentable y gestión de proyectos.",
+            "cases.training.result": "Se implementaron programas de capacitación integral que mejoraron significativamente las capacidades del equipo, incrementando la eficiencia operativa y la calidad de entregables. Los equipos capacitados lograron reducir tiempos de desarrollo en un 30% y mejorar la satisfacción del cliente."
         }
     },
     en: {
         translation: {
             // Landing Page
             "hero.title": "Your strategic partner in",
-            "hero.title2": "I + D",
+            "hero.title2": "R + D",
             "hero.description1": "At MERCURI 3P, we drive product development with purpose, combining innovation, sustainability, and efficiency. We specialize in end-to-end product development with a precise focus on",
             "hero.descriptionBold1": "packaging",
             "hero.description2": "fusing your",
@@ -390,9 +581,7 @@ const resources = {
             "contactCTA.button": "Contact Us Now",
             
             "contactCTA.email.label": "Email",
-            "contactCTA.email.value": "hello@mercuri3p.com",
             "contactCTA.phone.label": "Phone",
-            "contactCTA.phone.value": "+54 (11) 1234-5678",
             
             // Proposal CTA
             "proposalCTA.title": "Ready to transform your business?",
@@ -589,13 +778,9 @@ const resources = {
             
             // Contact Information
             "contact.writeUs": "Write to Us",
-            "contact.email": "hello@mercuri3p.com",
             "contact.callUs": "Call Us",
-            "contact.phone": "+54 (11) 1234-5678",
             "contact.visitUs": "Visit Us",
-            "contact.linkedinDesc": "Specialized consulting with global presence",
             "contact.facebook": "Facebook",
-            "contact.facebookDesc": "Specialized consulting with global presence",
             
             // Contact Form
             "contact.form.name": "Name",
@@ -618,7 +803,202 @@ const resources = {
             
             // Toast Messages
             "contact.toast.success": "Email sent successfully",
-            "contact.toast.error": "Failed to send email"
+            "contact.toast.error": "Failed to send email",
+            
+            // Proposal Page
+            "proposal.title": "Our Proposal",
+            "proposal.description": "We transform your vision into sustainable products that generate real impact. Discover how we can drive your business toward the future.",
+            
+            // Methodology Section
+            "proposal.methodology.title": "Our Methodology",
+            "proposal.methodology.description": "A structured 5-phase process that guarantees exceptional results and delivery of products that exceed expectations.",
+            
+            "proposal.methodology.phase1.title": "Identify Opportunities",
+            "proposal.methodology.phase1.description": "We detect and evaluate improvement and growth opportunities in your business.",
+            "proposal.methodology.phase1.activity1": "Stakeholder interviews",
+            "proposal.methodology.phase1.activity2": "Facility visits",
+            "proposal.methodology.phase1.activity3": "Induction analysis",
+            "proposal.methodology.phase1.activity4": "Initial report generation",
+            
+            "proposal.methodology.phase2.title": "Current Situation Diagnosis",
+            "proposal.methodology.phase2.description": "We evaluate the current state of your processes and products to identify improvement areas.",
+            "proposal.methodology.phase2.activity1": "Existing data analysis",
+            "proposal.methodology.phase2.activity2": "Proposal development",
+            "proposal.methodology.phase2.activity3": "Analysis with internal team",
+            "proposal.methodology.phase2.activity4": "Initiative prioritization",
+            
+            "proposal.methodology.phase3.title": "Solutions Loop & Action Plan",
+            "proposal.methodology.phase3.description": "We design and implement specific solutions with a clear action plan.",
+            "proposal.methodology.phase3.activity1": "Deliverable definition",
+            "proposal.methodology.phase3.activity2": "Stakeholder agreement",
+            "proposal.methodology.phase3.activity3": "Pilot testing",
+            "proposal.methodology.phase3.activity4": "Launch and scaling",
+            
+            "proposal.methodology.phase4.title": "Monitoring & Control",
+            "proposal.methodology.phase4.description": "Continuous tracking of results to ensure project success.",
+            "proposal.methodology.phase4.activity1": "KPI definition",
+            "proposal.methodology.phase4.activity2": "Team cascade",
+            "proposal.methodology.phase4.activity3": "Specific coaching",
+            "proposal.methodology.phase4.activity4": "Results evaluation",
+            
+            "proposal.methodology.phase5.title": "Follow Up (FUP)",
+            "proposal.methodology.phase5.description": "Post-implementation support and continuous improvement to maximize project value.",
+            "proposal.methodology.phase5.activity1": "Follow-up meetings",
+            "proposal.methodology.phase5.activity2": "Specialized coaching",
+            "proposal.methodology.phase5.activity3": "Additional training",
+            "proposal.methodology.phase5.activity4": "Continuous optimization",
+            
+            // Why Convenient Section
+            "proposal.whyConvenient.title": "Why is it convenient?",
+            "proposal.whyConvenient.description": "MERCURI 3P is your strategic partner to accelerate growth and innovation in your company.",
+            
+            "proposal.convenience.1.title": "Daily Operations vs Strategic Development",
+            "proposal.convenience.1.description": "Often, day-to-day operations leave no room for strategy. MERCURI 3P is a catalyst agent to execute it.",
+            
+            "proposal.convenience.2.title": "Clear and Efficient Action Plans",
+            "proposal.convenience.2.description": "We incorporate proven methodological techniques to improve effectiveness in project management. (Cost vs Time vs Quality)",
+            
+            "proposal.convenience.3.title": "Competitive Context",
+            "proposal.convenience.3.description": "Competitive growth starts with energized and committed teams. Sustainable Social Responsibility is a competitive barrier that must be in the growth equation.",
+            
+            // Why Choose Us Section
+            "proposal.whyChooseUs.title": "Why choose us?",
+            "proposal.whyChooseUs.description": "Our comprehensive approach and proven experience make us the ideal partner for developing your sustainable products.",
+            
+            "proposal.benefits.1.title": "Proven Experience",
+            "proposal.benefits.1.description": "Over 10 years developing sustainable products for leading companies.",
+            
+            "proposal.benefits.2.title": "Sustainable Approach",
+            "proposal.benefits.2.description": "Genuine commitment to the environment in every design and production decision.",
+            
+            "proposal.benefits.3.title": "Constant Innovation",
+            "proposal.benefits.3.description": "We use the latest technologies and methodologies to create unique products.",
+            
+            "proposal.benefits.4.title": "Measurable Results",
+            "proposal.benefits.4.description": "Data-driven approach that guarantees positive ROI and sustainable growth.",
+            
+            // Guaranteed Results Section
+            "proposal.guaranteedResults.title": "Guaranteed Results",
+            "proposal.stats.1.label": "Completed Projects",
+            "proposal.stats.1.value": "150+",
+            "proposal.stats.2.label": "Client Satisfaction",
+            "proposal.stats.2.value": "98%",
+            "proposal.stats.3.label": "Cost Reduction",
+            "proposal.stats.3.value": "35%",
+            "proposal.stats.4.label": "Specific Training / Coaching",
+            "proposal.stats.4.value": "50+",
+            
+            // Target Client Section
+            "proposal.targetClient.title": "Target Client",
+            "proposal.targetClient.description": "Our services are specifically designed for different types of organizations with growth and innovation needs.",
+            
+            "proposal.targetClients.1": "SMEs with growth potential",
+            "proposal.targetClients.2": "Multinational companies with specific needs",
+            "proposal.targetClients.3": "Third parties & Co-packers with R&D resource constraints & specific know-how",
+            "proposal.targetClients.4": "Home & Personal Care, Pharma, Cosmetics and Perfumery Industries",
+            "proposal.targetClients.5": "Packaging material converting industries",
+            "proposal.targetClients.6": "Chambers, Industrial Associations, Universities",
+            
+            // How We Work Section
+            "proposal.howWeWork.title": "How We Work",
+            "proposal.howWeWork.description": "A collaborative and transparent process that keeps you informed at every stage of development.",
+            
+            "proposal.timeline.1.title": "Initial Consultation",
+            "proposal.timeline.1.description": "Meeting to understand your needs, objectives, and project vision.",
+            "proposal.timeline.1.duration": "1-2 days",
+            
+            "proposal.timeline.2.title": "Detailed Proposal",
+            "proposal.timeline.2.description": "We develop a complete proposal with timeline, costs, and deliverables.",
+            "proposal.timeline.2.duration": "3-5 days",
+            
+            "proposal.timeline.3.title": "Kick-off and Planning",
+            "proposal.timeline.3.description": "We start the project with detailed scope definition and methodology.",
+            "proposal.timeline.3.duration": "1 week",
+            
+            "proposal.timeline.4.title": "Iterative Development",
+            "proposal.timeline.4.description": "Collaborative work with regular deliveries and continuous feedback.",
+            "proposal.timeline.4.duration": "4-12 weeks",
+            
+            "proposal.timeline.5.title": "Delivery and Support",
+            "proposal.timeline.5.description": "Final product delivery with complete documentation and initial support.",
+            "proposal.timeline.5.duration": "1-2 weeks",
+            
+            // Final CTA Section
+            "proposal.finalCTA.title": "Ready to get started?",
+            "proposal.finalCTA.description": "Contact us for a free consultation and discover how we can transform your idea into a successful product.",
+            "proposal.finalCTA.button1": "Contact Now",
+            "proposal.finalCTA.button2": "View Success Cases",
+
+            // Footer
+            "footer.company": "Mercuri3P",
+            "footer.description": "We develop sustainable products with purpose, combining innovation, sustainability and efficiency. Specialists in packaging as a differentiation tool.",
+            "footer.servicesTitle": "Services",
+
+            "footer.projectManagement": "Project Management",
+            "footer.trainingTalent": "Training / Talent Management",
+            "footer.costOptimization": "Cost Optimization",
+            "footer.sustentability": "Sustainability",
+            "footer.designProductPackaging": "Product Design & Packaging",
+
+            "footer.companyTitle": "Company",
+            "footer.aboutUs": "About Us",
+            "footer.ourApproach": "Our Approach",
+            "footer.successCases": "Success Cases",
+            "footer.contact": "Contact",
+            "footer.copyright": "© 2024 Mercuri3P. All rights reserved. | Sustainable product development with purpose.",
+
+            // About Us Component
+            "aboutUs.title": "About",
+            "aboutUs.titleHighlight": "Us",
+            "aboutUs.subtitle": "Real transformations achieved through our comprehensive approach in sustainable product development and innovative packaging.",
+            "aboutUs.experience": "Professional with over 30 years of experience",
+            "aboutUs.experienceDesc": "in product development, packaging engineering, project management and team leadership.",
+            "aboutUs.paragraph1": "Throughout my career I have led innovation, sustainability and organizational transformation projects at Unilever, generating real impact on efficiency, culture and results.",
+            "aboutUs.paragraph2": "I also have a long institutional trajectory in various organizations related to the industry, especially the",
+            "aboutUs.institute": "Argentine Packaging Institute",
+            "aboutUs.paragraph3": ", where I am part of the Executive Committee. At the same time, I lead the Environment Commission of the same institute. Simultaneously, I have given training courses to various universities and companies in the field.",
+            "aboutUs.paragraph4": "Today, from",
+            "aboutUs.companyName": "Mercuri 3P Consulting",
+            "aboutUs.paragraph5": ", I accompany organizations that seek to evolve their processes, strengthen their brands and align their strategies with Triple Impact values (Environmental, Social, Governance).",
+            "aboutUs.quote": "I specialize in converting",
+            "aboutUs.quoteHighlight": "complex challenges into practical solutions",
+            "aboutUs.quoteEnd": ", combining technical vision, human approach and strategic thinking.",
+
+            // Cases Component
+            "cases.title": "Success",
+            "cases.titleHighlight": "Stories",
+            "cases.subtitle": "Real transformations achieved through our comprehensive approach in sustainable product development and innovative packaging.",
+            "cases.challenge": "The Challenge",
+            "cases.result": "The Result",
+
+            // Success Cases
+            "cases.rollOn.title": "ROLL ON",
+            "cases.rollOn.challenge": "The need arose to redesign the applicator for a more haptic morphology for the consumer during use and to stand out from the competition.",
+            "cases.rollOn.result": "The way of use was rethought through consumer usage testing, and from that understanding the morphology was changed, giving it a better application angle on the armpit. The design was adopted globally and global design patenting was obtained.",
+
+            "cases.aerosolAxe.title": "AEROSOL AXE",
+            "cases.aerosolAxe.challenge": "Rethink the Axe aerosol packaging with a more modern, dynamic, and monolithic conception compared to the previous standard product.",
+            "cases.aerosolAxe.result": "Using new container forming technologies, lateral grips were generated through embossing of the aluminum wall. At the same time, the actuator overcap is eliminated, generating an on/off mechanism for actuating the pusher or actuator cap. Design adopted globally.",
+
+            "cases.poteRexona.title": "REXONA ODORONO CONTAINER",
+            "cases.poteRexona.challenge": "Replace the existing container that consisted of separate pot and lid with a cost-effective version that has a positive environmental impact and increased manufacturing productivity.",
+            "cases.poteRexona.result": "A pot with included lid was designed, inspired by a flip-top lid with butterfly-type hinge, achieving a 20% reduction in material weight, therefore cost reduction per unit, and increased efficiency throughout the value chain (molding, logistics, inventory, manufacturing).",
+
+            "cases.srp.title": "SRP",
+            "cases.srp.challenge": "Replace the current secondary packaging (corrugated cardboard boxes) with a more economical version that would facilitate shelf replenishment and increase product exposure. Also being able to synergize options at the point of sale (e.g. Gondola headers, wholesalers, etc).",
+            "cases.srp.result": "The original box format was redesigned, transforming it into a display (shelf ready packaging - SRP), ready to be structured from the factory to the POS, without reworking or additional costs. Additionally, branding could be optimized through box printing.",
+
+            "cases.pcrRfm.title": "PCR RFM",
+            "cases.pcrRfm.challenge": "Within the framework of the sustainability strategy, it was required to include rPP to the Rexona For Men product actuator.",
+            "cases.pcrRfm.result": "Specific rPP blends were developed to adapt it to the IM process and subsequent assembly of each component that makes up the actuator. Finally, 80% PCR inclusion was achieved in the entire assembled set, thus meeting the company's strategic metrics.",
+
+            "cases.pcrBottle.title": "PCR TALC BOTTLE",
+            "cases.pcrBottle.challenge": "Incorporate rHDPE into the current bottle which was manufactured with virgin HDPE. The challenge includes avoiding additional costs, zero aesthetic or functional impact, maximizing the % of PCR inclusion.",
+            "cases.pcrBottle.result": "An EBM bottle was successfully developed using 97% rHDPE. No cost impact and no interaction with the product or consumer.",
+
+            "cases.training.title": "Training and specific coaching",
+            "cases.training.challenge": "Develop specialized training programs that strengthen the technical competencies of internal teams in sustainable packaging and project management.",
+            "cases.training.result": "Comprehensive training programs were implemented that significantly improved team capabilities, increasing operational efficiency and deliverable quality. Trained teams achieved a 30% reduction in development times and improved customer satisfaction."
         }
     }
 };

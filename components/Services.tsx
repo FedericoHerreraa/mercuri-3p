@@ -22,7 +22,7 @@ export const Services = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         {t('services.titleServices')}
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <p className="md:text-xl text-lg text-gray-600 max-w-3xl mx-auto">
                         {t('services.subtitle')}
                     </p>
                 </div>

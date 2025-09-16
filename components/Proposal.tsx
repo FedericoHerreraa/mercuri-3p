@@ -3,8 +3,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 export const ProposalComponent = () => {
+    const { t, i18n } = useTranslation()
+    const currentLanguage = i18n.language
+
     return (
         <>
             <section className="py-32 text-white bg-[#0069c0]/10">
@@ -38,21 +42,20 @@ export const ProposalComponent = () => {
                             </motion.div>
                         </motion.div>
                         <motion.h1 
-                            className="text-5xl md:text-7xl text-gray-700 font-bold mb-8"
+                            className="text-4xl md:text-7xl text-gray-700 font-bold mb-8"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            Nuestra Propuesta
+                            {t('proposal.title')}
                         </motion.h1>
                         <motion.p 
-                            className="text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-700"
+                            className="md:text-xl text-lg max-w-4xl mx-auto mb-12 text-gray-700"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.6 }}
                         >
-                            Transformamos tu visión en productos sustentables que generan impacto real. 
-                            Descubre cómo podemos impulsar tu negocio hacia el futuro.
+                            {t('proposal.description')}
                         </motion.p>
                     </motion.div>
                 </div>
@@ -74,23 +77,32 @@ export const ProposalComponent = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            Nuestra Metodología
+                            {t('proposal.methodology.title')}
                         </motion.h2>
                         <motion.p 
-                            className="text-xl text-gray-600 max-w-3xl mx-auto"
+                            className="md:text-xl text-lg text-gray-600 max-w-3xl mx-auto"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            Un proceso estructurado de 5 fases que garantiza resultados excepcionales 
-                            y la entrega de productos que superan las expectativas.
+                            {t('proposal.methodology.description')}
                         </motion.p>
                     </motion.div>
 
                     <div className="relative max-w-7xl mx-auto">
-                        <div className="flex">
-                            {methodology.map((phase, index) => {
+                        <div className="flex md:flex-row flex-col">
+                            {[1,2,3,4,5].map((phaseNum, index) => {
+                                const phase = {
+                                    title: t(`proposal.methodology.phase${phaseNum}.title`),
+                                    description: t(`proposal.methodology.phase${phaseNum}.description`),
+                                    activities: [
+                                        t(`proposal.methodology.phase${phaseNum}.activity1`),
+                                        t(`proposal.methodology.phase${phaseNum}.activity2`),
+                                        t(`proposal.methodology.phase${phaseNum}.activity3`),
+                                        t(`proposal.methodology.phase${phaseNum}.activity4`)
+                                    ]
+                                }
                                 const colors = [
                                     { bg: 'from-[#0069c0]/70 to-[#0056a3]', text: 'text-white', bullet: 'bg-white' },
                                     { bg: 'from-[#20f26f]/50 to-[#3df883]', text: 'text-gray-900', bullet: 'bg-gray-900' },
@@ -156,7 +168,7 @@ export const ProposalComponent = () => {
                                         </div>
                                         
                                         {/* Flecha conectora - solo visible en desktop y no en el último */}
-                                        {index < methodology.length - 1 && (
+                                        {index < 4 && (
                                             <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-20">
                                                 <div className={`w-6 h-6 bg-gradient-to-r ${currentColor.bg} rotate-45 border-r-2 border-b-2 border-white/50`}></div>
                                             </div>
@@ -185,7 +197,7 @@ export const ProposalComponent = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            ¿Por qué es conveniente?
+                            {t('proposal.whyConvenient.title')}
                         </motion.h2>
                         <motion.p 
                             className="text-xl text-black max-w-3xl mx-auto"
@@ -194,12 +206,12 @@ export const ProposalComponent = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            MERCURI 3P es tu socio estratégico para acelerar el crecimiento y la innovación en tu empresa.
+                            {t('proposal.whyConvenient.description')}
                         </motion.p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-                        {convenience.map((item, index) => (
+                        {[1,2,3].map((itemNum, index) => (
                             <motion.div 
                                 key={index} 
                                 className="bg-white/90 backdrop-blur-sm rounded-2xl border-l-6 border-[#0069c0] p-8 shadow-xl"
@@ -224,7 +236,7 @@ export const ProposalComponent = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.6 + (index * 0.1) }}
                                 >
-                                    <h3 className="text-2xl font-bold text-[#0069c0]">{item.title}</h3>
+                                    <h3 className="text-2xl font-bold text-[#0069c0]">{t(`proposal.convenience.${itemNum}.title`)}</h3>
                                 </motion.div>
                                 <motion.p 
                                     className="text-black leading-relaxed"
@@ -233,7 +245,7 @@ export const ProposalComponent = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.8 + (index * 0.1) }}
                                 >
-                                    {item.description}
+                                    {t(`proposal.convenience.${itemNum}.description`)}
                                 </motion.p>
                             </motion.div>
                         ))}
@@ -257,7 +269,7 @@ export const ProposalComponent = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            ¿Por qué elegirnos?
+                            {t('proposal.whyChooseUs.title')}
                         </motion.h2>
                         <motion.p 
                             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -266,8 +278,7 @@ export const ProposalComponent = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            Nuestro enfoque integral y experiencia comprobada nos convierte en el socio ideal 
-                            para el desarrollo de tus productos sustentables.
+                            {t('proposal.whyChooseUs.description')}
                         </motion.p>
                     </motion.div>
 
@@ -279,7 +290,14 @@ export const ProposalComponent = () => {
                             transition={{ duration: 0.6, delay: 0.6 }}
                         >
                             <div className="space-y-8">
-                                {benefits.map((benefit, index) => (
+                                {[1,2,3,4].map((benefitNum, index) => {
+                                    const icons = [
+                                        "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+                                        "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z",
+                                        "M13 10V3L4 14h7v7l9-11h-7z",
+                                        "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                                    ]
+                                    return (
                                     <motion.div 
                                         key={index} 
                                         className="flex items-start space-x-4"
@@ -304,15 +322,16 @@ export const ProposalComponent = () => {
                                             }}
                                         >
                                             <svg className="w-6 h-6 text-[#0069c0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={benefit.icon} />
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={icons[index]} />
                                             </svg>
                                         </motion.div>
                                         <div>
-                                            <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                                            <p className="text-gray-600">{benefit.description}</p>
+                                            <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(`proposal.benefits.${benefitNum}.title`)}</h3>
+                                            <p className="text-gray-600">{t(`proposal.benefits.${benefitNum}.description`)}</p>
                                         </div>
                                     </motion.div>
-                                ))}
+                                    )
+                                })}
                             </div>
                         </motion.div>
                         <motion.div 
@@ -337,10 +356,10 @@ export const ProposalComponent = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: 0.8 }}
                                 >
-                                    Resultados Garantizados
+                                    {t('proposal.guaranteedResults.title')}
                                 </motion.h3>
                                 <div className="space-y-4">
-                                    {stats.map((stat, index) => (
+                                    {[1,2,3,4].map((statNum, index) => (
                                         <motion.div 
                                             key={index} 
                                             className="flex justify-between items-center p-4 bg-gray-50 rounded-lg"
@@ -357,7 +376,7 @@ export const ProposalComponent = () => {
                                                 transition: { duration: 0.2 }
                                             }}
                                         >
-                                            <span className="text-gray-600">{stat.label}</span>
+                                            <span className="text-gray-600">{t(`proposal.stats.${statNum}.label`)}</span>
                                             <motion.span 
                                                 className="text-2xl font-bold text-[#20f26f]"
                                                 initial={{ opacity: 0 }}
@@ -365,7 +384,7 @@ export const ProposalComponent = () => {
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 0.6, delay: 1.2 + (index * 0.1) }}
                                             >
-                                                {stat.value}
+                                                {t(`proposal.stats.${statNum}.value`)}
                                             </motion.span>
                                         </motion.div>
                                     ))}
@@ -393,7 +412,7 @@ export const ProposalComponent = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            Cliente Objetivo
+                            {t('proposal.targetClient.title')}
                         </motion.h2>
                         <motion.p 
                             className="text-xl text-white/90 max-w-3xl mx-auto"
@@ -402,12 +421,12 @@ export const ProposalComponent = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            Nuestros servicios están diseñados específicamente para diferentes tipos de organizaciones con necesidades de crecimiento y innovación.
+                            {t('proposal.targetClient.description')}
                         </motion.p>
                     </motion.div>
 
                     <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                        {targetClients.map((client, index) => (
+                        {[1,2,3,4,5,6].map((clientNum, index) => (
                             <motion.div 
                                 key={index} 
                                 className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6"
@@ -432,7 +451,7 @@ export const ProposalComponent = () => {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.3, delay: 0.8 + (index * 0.1) }}
                                 >
-                                    <h3 className="text-xl font-semibold text-white">{client}</h3>
+                                    <h3 className="text-xl font-semibold text-white">{t(`proposal.targetClients.${clientNum}`)}</h3>
                                 </motion.div>
                             </motion.div>
                         ))}
@@ -445,17 +464,17 @@ export const ProposalComponent = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16 animate-slide-up">
                         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                            Cómo Trabajamos
+                            {t('proposal.howWeWork.title')}
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Un proceso colaborativo y transparente que te mantiene informado en cada etapa del desarrollo.
+                            {t('proposal.howWeWork.description')}
                         </p>
                     </div>
 
                     <div className="relative">
                         <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gray-200"></div>
                         <div className="space-y-12">
-                            {timeline.map((item, index) => (
+                            {[1,2,3,4,5].map((timelineNum, index) => (
                                 <div key={index} className={`relative flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                                     <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
                                         <div className="card p-6">
@@ -463,11 +482,11 @@ export const ProposalComponent = () => {
                                                 <div className="w-10 h-10 bg-[#0069c0] rounded-full flex items-center justify-center mr-4">
                                                     <span className="text-white font-bold">{index + 1}</span>
                                                 </div>
-                                                <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                                                <h3 className="text-xl font-semibold text-gray-900">{t(`proposal.timeline.${timelineNum}.title`)}</h3>
                                             </div>
-                                            <p className="text-gray-600 mb-4">{item.description}</p>
+                                            <p className="text-gray-600 mb-4">{t(`proposal.timeline.${timelineNum}.description`)}</p>
                                             <div className="text-sm text-[#0069c0] font-medium">
-                                                Duración: {item.duration}
+                                                {currentLanguage === 'es' ? 'Duración: ' : 'Duration: '} {t(`proposal.timeline.${timelineNum}.duration`)}
                                             </div>
                                         </div>
                                     </div>
@@ -495,7 +514,7 @@ export const ProposalComponent = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        ¿Listo para comenzar?
+                        {t('proposal.finalCTA.title')}
                     </motion.h2>
                     <motion.p 
                         className="text-xl mb-8 text-white/90"
@@ -504,8 +523,7 @@ export const ProposalComponent = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        Contacta con nosotros para una consulta gratuita y descubre cómo podemos 
-                        transformar tu idea en un producto exitoso.
+                        {t('proposal.finalCTA.description')}
                     </motion.p>
                     <motion.div 
                         className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -525,7 +543,7 @@ export const ProposalComponent = () => {
                                 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Contactar Ahora
+                                {t('proposal.finalCTA.button1')}
                             </motion.button>
                         </Link>
                         <Link href="/success-cases">
@@ -540,7 +558,7 @@ export const ProposalComponent = () => {
                                 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Ver Casos de Éxito
+                                {t('proposal.finalCTA.button2')}
                             </motion.button>
                         </Link>
                     </motion.div>
@@ -549,138 +567,3 @@ export const ProposalComponent = () => {
         </>
     )
 }
-
-const methodology = [
-    {
-        title: "Identificar Oportunidades",
-        description: "Detectamos y evaluamos oportunidades de mejora y crecimiento en tu negocio.",
-        activities: [
-            "Entrevistas con stakeholders",
-            "Visitas a instalaciones",
-            "Análisis de inducciones",
-            "Generación de reporte inicial"
-        ]
-    },
-    {
-        title: "Diagnóstico Situación Actual",
-        description: "Evaluamos el estado actual de tus procesos y productos para identificar áreas de mejora.",
-        activities: [
-            "Análisis de datos existentes",
-            "Desarrollo de propuestas",
-            "Análisis con equipo interno",
-            "Priorización de iniciativas"
-        ]
-    },
-    {
-        title: "Loop de Soluciones & Plan de Acción",
-        description: "Diseñamos e implementamos soluciones específicas con un plan de acción claro.",
-        activities: [
-            "Definición de entregables",
-            "Acuerdo con stakeholders",
-            "Test piloto",
-            "Launch y escalamiento"
-        ]
-    },
-    {
-        title: "Monitoreo & Control",
-        description: "Seguimiento continuo de los resultados para asegurar el éxito del proyecto.",
-        activities: [
-            "Definición de KPI's",
-            "Cascade al equipo",
-            "Coaching específico",
-            "Evaluación de resultados"
-        ]
-    },
-    {
-        title: "Follow Up (FUP)",
-        description: "Soporte posterior y mejora continua para maximizar el valor del proyecto.",
-        activities: [
-            "Reuniones de seguimiento",
-            "Coaching especializado",
-            "Capacitaciones adicionales",
-            "Optimización continua"
-        ]
-    }
-]
-
-const benefits = [
-    {
-        title: "Experiencia Comprobada",
-        description: "Más de 10 años desarrollando productos sustentables para empresas líderes.",
-        icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-    },
-    {
-        title: "Enfoque Sustentable",
-        description: "Compromiso genuino con el medio ambiente en cada decisión de diseño y producción.",
-        icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"
-    },
-    {
-        title: "Innovación Constante",
-        description: "Utilizamos las últimas tecnologías y metodologías para crear productos únicos.",
-        icon: "M13 10V3L4 14h7v7l9-11h-7z"
-    },
-    {
-        title: "Resultados Medibles",
-        description: "Enfoque basado en datos que garantiza ROI positivo y crecimiento sostenible.",
-        icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-    }
-]
-
-const stats = [
-    { label: "Proyectos Completados", value: "150+" },
-    { label: "Satisfacción del Cliente", value: "98%" },
-    { label: "Reducción de Costos", value: "35%" },
-    { label: "Capacitación / Training específico", value: "50+" }
-]
-
-const timeline = [
-    {
-        title: "Consulta Inicial",
-        description: "Reunión para entender tus necesidades, objetivos y visión del proyecto.",
-        duration: "1-2 días"
-    },
-    {
-        title: "Propuesta Detallada",
-        description: "Elaboramos una propuesta completa con cronograma, costos y entregables.",
-        duration: "3-5 días"
-    },
-    {
-        title: "Kick-off y Planning",
-        description: "Iniciamos el proyecto con la definición detallada del alcance y metodología.",
-        duration: "1 semana"
-    },
-    {
-        title: "Desarrollo Iterativo",
-        description: "Trabajo colaborativo con entregas regulares y feedback continuo.",
-        duration: "4-12 semanas"
-    },
-    {
-        title: "Entrega y Soporte",
-        description: "Entrega final del producto con documentación completa y soporte inicial.",
-        duration: "1-2 semanas"
-    }
-]
-
-const convenience = [
-    {
-        title: "Operación Diaria vs Desarrollo Estratégico",
-        description: "Muchas veces la operatoria del día a día, no deja espacio para la estrategia. MERCURI 3P es un agente catalizador para ejecutarla."
-    },
-    {
-        title: "Planes de Acción claros y Eficientes",
-        description: "Incorporamos técnicas metodológicas probadas para mejorar la efectividad en la gestión de proyectos. (Costos vs Tiempo vs Calidad)"
-    },
-    {
-        title: "Contexto Competitivo",
-        description: "El crecimiento competitivo empieza con equipos energizados y comprometidos. La Responsabilidad Social Sustentable es una barrera competitiva que debe estar en la ecuación de crecimiento."
-    }
-]
-
-const targetClients = [
-    "PYMES con potencial de crecimiento",
-    "Empresas Multinacionales con necesidades específicas",
-    "Terceros & Copackers con restricción de recursos I+D & know how puntuales",
-    "Industrias de Cuidado del Hogar y Personal, Farma, Cosmética y Perfumería",
-    "Industrias convertidoras de materiales de packaging",
-    "Cámaras, Asociaciones Industriales, Universidades"
-]   

@@ -11,7 +11,7 @@ export const WhatsappIcon = () => {
     }
 
     return (
-        <div className="fixed bottom-4 right-4 z-50 cursor-pointer">
+        <div className="fixed md:bottom-4 bottom-2 md:right-4 right-2 z-50 cursor-pointer">
             <Image src="/whatsapp.png" alt="Whatsapp" width={50} height={50} onClick={handleWhatsapp} />
         </div>
     )

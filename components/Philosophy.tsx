@@ -51,7 +51,7 @@ export const Philosophy = () => {
                     <h2 className="text-4xl md:text-5xl font-bold text-zinc-200 mb-6">
                         {t('philosophy.title')}
                     </h2>
-                    <p className="text-xl text-zinc-200 max-w-3xl mx-auto">
+                    <p className="md:text-xl text-lg text-zinc-200 max-w-3xl mx-auto">
                         {t('philosophy.description')}
                     </p>
                 </div>

@@ -33,7 +33,7 @@ export const CasesCTA = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <motion.h2 
-                        className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                        className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -42,7 +42,7 @@ export const CasesCTA = () => {
                         {t('casesCTA.title')}
                     </motion.h2>
                     <motion.p 
-                        className="text-xl text-gray-600 mb-8"
+                        className="md:text-xl text-lg text-gray-600 mb-8"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -51,7 +51,7 @@ export const CasesCTA = () => {
                         {t('casesCTA.description')}
                     </motion.p>
                     <motion.div 
-                        className="grid md:grid-cols-3 gap-8 mb-12"
+                        className="flex gap-10 justify-around mb-12"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -76,7 +76,7 @@ export const CasesCTA = () => {
                                 }}
                             >
                                 <motion.div 
-                                    className="text-3xl font-bold text-[#0069c0] mb-2"
+                                    className="md:text-3xl text-2xl font-bold text-[#0069c0] mb-2"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     viewport={{ once: true }}
@@ -84,7 +84,7 @@ export const CasesCTA = () => {
                                 >
                                     {t(stat.numberKey)}
                                 </motion.div>
-                                <p className="text-gray-600">{t(stat.descriptionKey)}</p>
+                                <p className="text-gray-600 md:text-base text-sm">{t(stat.descriptionKey)}</p>
                             </motion.div>
                         ))}
                     </motion.div>

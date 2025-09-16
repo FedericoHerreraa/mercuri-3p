@@ -1,7 +1,7 @@
 
 'use client'
 
-import { getServiceById, getAllServiceIds } from "@/types/services";
+import { getServiceById } from "@/types/services";
 import { Footer } from "@/components/Footer";
 import { ContactCTA } from "@/components/ContactCTA";
 import Link from "next/link";
@@ -37,10 +37,10 @@ export default function Detail() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={service.icon} />
                                 </svg>
                             </div>
-                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                                 {t(`services.${service.id}.title`)}
                             </h1>
-                            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            <p className="md:text-xl text-lg text-gray-600 max-w-3xl mx-auto">
                                 {t(`services.${service.id}.fullDescription`)}
                             </p>
                         </div>

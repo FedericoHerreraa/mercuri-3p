@@ -21,7 +21,7 @@ export const StatsMarquee = () => {
     ]
     
     return (
-        <section className="py-12 bg-gradient-to-r from-[#0069c0] to-[#137fd9] overflow-hidden">
+        <section className="md:py-12 py-8 bg-gradient-to-r from-[#0069c0] to-[#137fd9] overflow-hidden">
             <Marquee 
                 gradient={false} 
                 speed={50}
@@ -32,7 +32,7 @@ export const StatsMarquee = () => {
                 {statsItems.map((stat, index) => (
                     <motion.div 
                         key={index} 
-                        className="flex items-center mx-12"
+                        className="flex items-center md:mx-12 mx-8"
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.2 }}
                     >

@@ -80,7 +80,7 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="font-semibold text-gray-900">{t('contact.writeUs')}</p>
-                                        <p className="text-gray-600">{t('contact.email')}</p>
+                                        <p className="text-gray-600">mercuri3p@outlook.com</p>
                                     </div>
                                 </div>
 
@@ -90,7 +90,7 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="font-semibold text-gray-900">{t('contact.callUs')}</p>
-                                        <p className="text-gray-600">{t('contact.phone')}</p>
+                                        <p className="text-gray-600">+54 9 11 5758-9961 (Whatsapp)</p>
                                     </div>
                                 </div>
 
@@ -100,7 +100,6 @@ export const Contact = () => {
                                     </div>
                                     <a href="https://www.linkedin.com/company/mercuri-3p-consulting/posts/?feedView=all" target="_blank">
                                         <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">{t('contact.visitUs')}</p>
-                                        <p className="text-gray-600">{t('contact.linkedinDesc')}</p>
                                     </a>
                                 </div>
 
@@ -110,7 +109,6 @@ export const Contact = () => {
                                     </div>
                                     <a href="https://www.facebook.com/mercuri3p" target="_blank">
                                         <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">{t('contact.facebook')}</p>
-                                        <p className="text-gray-600">{t('contact.facebookDesc')}</p>
                                     </a>
                                 </div>
                             </div>

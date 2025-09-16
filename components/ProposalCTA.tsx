@@ -12,7 +12,7 @@ export const ProposalCTA = () => {
     const { t } = useTranslation()
     
     return (
-        <section className="py-24">
+        <section className="md:py-24 py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div 
                     className="text-center mb-16"
@@ -45,7 +45,7 @@ export const ProposalCTA = () => {
                         </motion.div>
                     </motion.div>
                     <motion.h2 
-                        className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                        className="text-3xl md:text-5xl font-bold text-gray-900 mb-6"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -54,7 +54,7 @@ export const ProposalCTA = () => {
                         {t('proposalCTA.title')}
                     </motion.h2>
                     <motion.p 
-                        className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+                        className="md:text-xl text-lg text-gray-600 mb-8 max-w-3xl mx-auto"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
