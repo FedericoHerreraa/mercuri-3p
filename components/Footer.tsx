@@ -17,10 +17,10 @@ export const Footer = () => {
                             {t('footer.description')}
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
+                            <a href="https://www.linkedin.com/company/mercuri-3p-consulting/posts/?feedView=all" target="_blank" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
                                 <Linkedin className="text-zinc-400 hover:text-white"/>
                             </a>
-                            <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
+                            <a href="https://www.facebook.com/mercuri.property.project.partners.llc/" target="_blank" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
                                 <Facebook className="text-zinc-400 hover:text-white"/>
                             </a>
                         </div>

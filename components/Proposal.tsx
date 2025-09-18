@@ -125,13 +125,11 @@ export const ProposalComponent = () => {
                                             ease: "easeOut" 
                                         }}
                                         whileHover={{ 
-                                            // y: -8,
                                             boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
                                             transition: { duration: 0.2 }
                                         }}
                                     >
                                         <div className={`bg-gradient-to-br ${currentColor.bg} p-6 rounded-xl shadow-2xl relative z-10 min-h-[420px] flex flex-col justify-between`}>
-                                            {/* Número grande en el fondo */}
                                             <div className="absolute top-4 right-4 text-6xl font-bold text-white/50">
                                                 {index + 1}
                                             </div>
@@ -167,7 +165,6 @@ export const ProposalComponent = () => {
                                             </ul>
                                         </div>
                                         
-                                        {/* Flecha conectora - solo visible en desktop y no en el último */}
                                         {index < 4 && (
                                             <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-20">
                                                 <div className={`w-6 h-6 bg-gradient-to-r ${currentColor.bg} rotate-45 border-r-2 border-b-2 border-white/50`}></div>

@@ -107,7 +107,7 @@ export const Contact = () => {
                                     <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
                                         <Facebook className="w-6 h-6 text-[#0069c0]" />
                                     </div>
-                                    <a href="https://www.facebook.com/mercuri3p" target="_blank">
+                                    <a href="https://www.facebook.com/mercuri.property.project.partners.llc/" target="_blank">
                                         <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">{t('contact.facebook')}</p>
                                     </a>
                                 </div>
