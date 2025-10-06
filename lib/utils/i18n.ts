@@ -43,7 +43,7 @@ const resources = {
             
             // About
             "about.title": "Sobre Nosotros",
-            "about.experience": "Profesional con más de 30 años de experiencia",
+            "about.experience": "Soy Daniel González, profesional con más de 30 años de experiencia",
             
             // Philosophy/Values
             "philosophy.title": "Nuestros Valores",
@@ -454,7 +454,7 @@ const resources = {
             "aboutUs.title": "Sobre",
             "aboutUs.titleHighlight": "Nosotros",
             "aboutUs.subtitle": "Transformaciones reales logradas a través de nuestro enfoque integral en desarrollo de productos sustentables y packaging innovador.",
-            "aboutUs.experience": "Profesional con más de 30 años de experiencia",
+            "aboutUs.experience": "Soy Daniel González, profesional con más de 30 años de experiencia",
             "aboutUs.experienceDesc": "en desarrollo de productos, ingeniería de envases, gestión de proyectos y liderazgo de equipos.",
             "aboutUs.paragraph1": "A lo largo de mi carrera he dirigido proyectos de innovación, sostenibilidad y transformación organizacional en Unilever, generando impacto real en eficiencia, cultura y resultados.",
             "aboutUs.paragraph2": "Además cuento con larga trayectoria institucional en diversas organizaciones afines a la industria, en especial el",
@@ -542,7 +542,7 @@ const resources = {
             
             // About
             "about.title": "About Us",
-            "about.experience": "Professional with over 30 years of experience",
+            "about.experience": "I'm Daniel González, professional with over 30 years of experience",
             
             // Philosophy/Values
             "philosophy.title": "Our Values",
@@ -951,7 +951,7 @@ const resources = {
             "aboutUs.title": "About",
             "aboutUs.titleHighlight": "Us",
             "aboutUs.subtitle": "Real transformations achieved through our comprehensive approach in sustainable product development and innovative packaging.",
-            "aboutUs.experience": "Professional with over 30 years of experience",
+            "aboutUs.experience": "I'm Daniel González, professional with over 30 years of experience",
             "aboutUs.experienceDesc": "in product development, packaging engineering, project management and team leadership.",
             "aboutUs.paragraph1": "Throughout my career I have led innovation, sustainability and organizational transformation projects at Unilever, generating real impact on efficiency, culture and results.",
             "aboutUs.paragraph2": "I also have a long institutional trajectory in various organizations related to the industry, especially the",

@@ -32,7 +32,7 @@ export const AboutUsComponent = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex md:flex-row flex-col gap-10 mt-40">
                         <div className="md:w-1/2">
-                            <Image src="/image-nosotros.png" alt="About Us" width={500} height={500} />
+                            <Image src="/nosotros2-img.jpeg" alt="About Us" width={500} height={500} className="rounded-full shadow-2xl"/>
                         </div>
                         <div className="md:w-1/2 space-y-6">
                             <div className="space-y-6 text-gray-700 leading-relaxed">

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Linkedin, Facebook, Phone, Mail, Loader2 } from 'lucide-react'
+import { Linkedin, Facebook, Phone, Mail, Loader2, Instagram } from 'lucide-react'
 import { toast } from 'sonner'
 import { useTranslation } from 'react-i18next'
 
@@ -90,7 +90,7 @@ export const Contact = () => {
                                     </div>
                                     <div>
                                         <p className="font-semibold text-gray-900">{t('contact.callUs')}</p>
-                                        <p className="text-gray-600">+54 9 11 5758-9961 (Whatsapp)</p>
+                                        <p className="text-gray-600">+54 9 11 7370 4513 (Whatsapp)</p>
                                     </div>
                                 </div>
 
@@ -109,6 +109,15 @@ export const Contact = () => {
                                     </div>
                                     <a href="https://www.facebook.com/mercuri.property.project.partners.llc/" target="_blank">
                                         <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">{t('contact.facebook')}</p>
+                                    </a>
+                                </div>
+
+                                <div className="flex items-center">
+                                    <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
+                                        <Instagram className="w-6 h-6 text-[#0069c0]" />
+                                    </div>
+                                    <a href="https://www.instagram.com/mercuri3p/" target="_blank">
+                                        <p className="font-semibold text-gray-900 hover:text-[#0069c0] hover:underline">Instagram</p>
                                     </a>
                                 </div>
                             </div>

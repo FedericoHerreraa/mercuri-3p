@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { Facebook, Linkedin } from "lucide-react"
+import { Facebook, Instagram, Linkedin } from "lucide-react"
 import { useTranslation } from 'react-i18next'
 
 
@@ -23,6 +23,9 @@ export const Footer = () => {
                             <a href="https://www.facebook.com/mercuri.property.project.partners.llc/" target="_blank" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
                                 <Facebook className="text-zinc-400 hover:text-white"/>
                             </a>
+                            <a href="https://www.instagram.com/mercuri3p/" target="_blank" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-colors">
+                                <Instagram className="text-zinc-400 hover:text-white"/>
+                            </a>    
                         </div>
                     </div>
 

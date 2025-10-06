@@ -129,12 +129,12 @@ export const ProposalComponent = () => {
                                             transition: { duration: 0.2 }
                                         }}
                                     >
-                                        <div className={`bg-gradient-to-br ${currentColor.bg} p-6 rounded-xl shadow-2xl relative z-10 min-h-[420px] flex flex-col justify-between`}>
-                                            <div className="absolute top-4 right-4 text-6xl font-bold text-white/50">
+                                        <div className={`bg-gradient-to-br ${currentColor.bg} p-6 rounded-md shadow-2xl relative z-10 min-h-[420px] flex flex-col justify-between`}>
+                                            <div className="absolute top-4 right-4 text-[7rem] font-bold text-white/50">
                                                 {index + 1}
                                             </div>
                                             
-                                            <div className="mt-16">
+                                            <div className="mt-auto">
                                                 <h3 className={`text-xl font-semibold ${currentColor.text} mb-3 leading-tight`}>
                                                     {phase.title}
                                                 </h3>
@@ -143,7 +143,7 @@ export const ProposalComponent = () => {
                                                 </p>
                                             </div>
                                             
-                                            <ul className="text-xs space-y-2">
+                                            {/* <ul className="text-xs space-y-2">
                                                 {phase.activities.map((activity, actIndex) => (
                                                     <motion.li 
                                                         key={actIndex} 
@@ -162,7 +162,7 @@ export const ProposalComponent = () => {
                                                         </span>
                                                     </motion.li>
                                                 ))}
-                                            </ul>
+                                            </ul> */}
                                         </div>
                                         
                                         {index < 4 && (
