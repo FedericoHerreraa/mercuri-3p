@@ -16,7 +16,7 @@ export const ContactCTA = () => {
         },
         {
             labelKey: "contactCTA.phone.label",
-            valueKey: "+54 9 11 5758-9961 (Whatsapp)",
+            valueKey: "+54 9 11 7370 4513 (Whatsapp)",
             icon: Phone
         }
     ]

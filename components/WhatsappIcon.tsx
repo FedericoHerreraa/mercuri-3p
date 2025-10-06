@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export const WhatsappIcon = () => {
     const handleWhatsapp = () => {
-        const phone = "+5491157589961";
+        const phone = "+5491173704513";
         const message = "Hola, me interesa tu servicio";
         window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
     }
