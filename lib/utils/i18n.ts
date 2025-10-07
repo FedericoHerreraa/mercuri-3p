@@ -448,7 +448,7 @@ const resources = {
             "footer.ourApproach": "Nuestro Enfoque",
             "footer.successCases": "Casos de Éxito",
             "footer.contact": "Contacto",
-            "footer.copyright": "© 2024 Mercuri3P. Todos los derechos reservados. | Desarrollo de productos sustentables con propósito.",
+            "footer.copyright": "© 2025 Mercuri3P. Todos los derechos reservados. | Desarrollo de productos sustentables con propósito.",
 
             // About Us Component
             "aboutUs.title": "Sobre",
@@ -945,7 +945,7 @@ const resources = {
             "footer.ourApproach": "Our Approach",
             "footer.successCases": "Success Cases",
             "footer.contact": "Contact",
-            "footer.copyright": "© 2024 Mercuri3P. All rights reserved. | Sustainable product development with purpose.",
+            "footer.copyright": "© 2025 Mercuri3P. All rights reserved. | Sustainable product development with purpose.",
 
             // About Us Component
             "aboutUs.title": "About",

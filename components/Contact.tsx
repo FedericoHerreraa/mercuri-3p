@@ -75,23 +75,23 @@ export const Contact = () => {
 
                             <div className="space-y-6">
                                 <div className="flex items-center">
-                                    <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
+                                    <a href="mailto:mercuri3p@outlook.com" className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
                                         <Mail className="w-6 h-6 text-[#0069c0]" />
-                                    </div>
-                                    <div>
+                                    </a>
+                                    <a href="mailto:mercuri3p@outlook.com">
                                         <p className="font-semibold text-gray-900">{t('contact.writeUs')}</p>
                                         <p className="text-gray-600">mercuri3p@outlook.com</p>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <div className="flex items-center">
-                                    <div className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
+                                    <a href="tel:+5491173704513" className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4">
                                         <Phone className="w-6 h-6 text-[#0069c0]" />
-                                    </div>
-                                    <div>
+                                    </a>
+                                    <a href="tel:+5491173704513">
                                         <p className="font-semibold text-gray-900">{t('contact.callUs')}</p>
                                         <p className="text-gray-600">+54 9 11 7370 4513 (Whatsapp)</p>
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <div className="flex items-center">

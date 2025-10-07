@@ -12,11 +12,13 @@ export const ContactCTA = () => {
         {
             labelKey: "contactCTA.email.label",
             valueKey: "mercuri3p@outlook.com",
+            href: "mailto:mercuri3p@outlook.com",
             icon: Mail
         },
         {
             labelKey: "contactCTA.phone.label",
             valueKey: "+54 9 11 7370 4513 (Whatsapp)",
+            href: "tel:+5491173704513",
             icon: Phone
         }
     ]
@@ -73,21 +75,29 @@ export const ContactCTA = () => {
                                     transition: { duration: 0.2 }
                                 }}
                             >
-                                <motion.div 
-                                    className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4"
-                                    whileHover={{ 
-                                        backgroundColor: "rgba(0, 105, 192, 0.2)",
-                                        scale: 1.1,
-                                        transition: { duration: 0.2 }
-                                    }}
-                                >
-                                    <div className="w-6 h-6 text-[#0069c0]">
-                                        <contact.icon />
-                                    </div>
-                                </motion.div>
+                                <a href={contact.href}>
+                                    <motion.div 
+                                        className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4"
+                                        whileHover={{ 
+                                            backgroundColor: "rgba(0, 105, 192, 0.2)",
+                                            scale: 1.1,
+                                            transition: { duration: 0.2 }
+                                        }}
+                                    >
+                                        
+                                            <div className="w-6 h-6 text-[#0069c0]">
+                                                <contact.icon />
+                                            </div>
+                                    
+                                    </motion.div>
+                                </a>
                                 <div className="text-left">
-                                    <p className="font-semibold text-gray-900">{t(contact.labelKey)}</p>
-                                    <p className="text-gray-600">{t(contact.valueKey)}</p>
+                                    <a href={contact.href}>
+                                        <p className="font-semibold text-gray-900">{t(contact.labelKey)}</p>
+                                    </a>
+                                    <a href={contact.href}>
+                                        <p className="text-gray-600">{t(contact.valueKey)}</p>
+                                    </a>
                                 </div>
                             </motion.div>
                         ))}

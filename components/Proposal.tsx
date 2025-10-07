@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
+import AnimatedBackground from "./AnimatedBG"
 
 export const ProposalComponent = () => {
     const { t, i18n } = useTranslation()
@@ -115,7 +116,7 @@ export const ProposalComponent = () => {
                                 return (
                                     <motion.div
                                         key={index}
-                                        className="relative"
+                                        className="relative md:flex-1 md:basis-1/5"
                                         initial={{ opacity: 0, y: 30 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true }}
