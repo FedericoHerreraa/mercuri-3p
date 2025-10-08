@@ -43,7 +43,7 @@ export const ContactCTA = () => {
                         {t('contactCTA.title')}
                     </motion.h2>
                     <motion.p 
-                        className="md:text-xl text-lg text-gray-600 mb-8"
+                        className="md:text-xl text-base text-gray-600 mb-8"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -62,7 +62,6 @@ export const ContactCTA = () => {
                             <motion.div 
                                 key={index}
                                 className="flex items-center"
-                                initial={{ opacity: 0, x: index === 0 ? -20 : 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ 
@@ -77,7 +76,7 @@ export const ContactCTA = () => {
                             >
                                 <a href={contact.href}>
                                     <motion.div 
-                                        className="w-12 h-12 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4"
+                                        className="md:w-12 md:h-12 w-10 h-10 bg-[#0069c0]/10 rounded-lg flex items-center justify-center mr-4"
                                         whileHover={{ 
                                             backgroundColor: "rgba(0, 105, 192, 0.2)",
                                             scale: 1.1,
@@ -93,10 +92,10 @@ export const ContactCTA = () => {
                                 </a>
                                 <div className="text-left">
                                     <a href={contact.href}>
-                                        <p className="font-semibold text-gray-900">{t(contact.labelKey)}</p>
+                                        <p className="font-semibold md:text-base text-sm text-gray-900">{t(contact.labelKey)}</p>
                                     </a>
                                     <a href={contact.href}>
-                                        <p className="text-gray-600">{t(contact.valueKey)}</p>
+                                        <p className="text-gray-600 md:text-base text-sm">{t(contact.valueKey)}</p>
                                     </a>
                                 </div>
                             </motion.div>

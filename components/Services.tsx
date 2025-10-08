@@ -10,13 +10,13 @@ export const Services = () => {
     const { t } = useTranslation()
     
     return (
-        <section id="services" className="py-24 gradient-subtle">
+        <section id="services" className="py-24 gradient-subtle w-full">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-                <div className="absolute -top-32 -right-32 w-80 h-80 bg-[#20f26f]/15 rounded-full blur-3xl animate-float"></div>
-                <div className="absolute top-1/4 -left-40 w-64 h-64 bg-[#3df883]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-                <div className="absolute bottom-1/4 right-1/6 w-72 h-72 bg-[#20f26f]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-[#3df883]/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+                <div className="absolute hidden md:block -top-32 -right-32 w-80 h-80 bg-[#20f26f]/15 rounded-full blur-3xl animate-float"></div>
+                <div className="absolute hidden md:block top-1/4 -left-40 w-64 h-64 bg-[#3df883]/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute hidden md:block bottom-1/4 right-1/6 w-72 h-72 bg-[#20f26f]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute hidden md:block -bottom-20 -left-20 w-96 h-96 bg-[#3df883]/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
 
                 <div className="text-center mb-16 animate-slide-up">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
