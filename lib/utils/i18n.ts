@@ -501,7 +501,12 @@ const resources = {
 
             "cases.training.title": "Capacitación y entrenamientos específicos",
             "cases.training.challenge": "Desarrollar programas de capacitación especializados que fortalezcan las competencias técnicas de los equipos internos en packaging sustentable y gestión de proyectos.",
-            "cases.training.result": "Se implementaron programas de capacitación integral que mejoraron significativamente las capacidades del equipo, incrementando la eficiencia operativa y la calidad de entregables. Los equipos capacitados lograron reducir tiempos de desarrollo en un 30% y mejorar la satisfacción del cliente."
+            "cases.training.result": "Se implementaron programas de capacitación integral que mejoraron significativamente las capacidades del equipo, incrementando la eficiencia operativa y la calidad de entregables. Los equipos capacitados lograron reducir tiempos de desarrollo en un 30% y mejorar la satisfacción del cliente.",
+            
+            // Testimonials
+            "testimonials.title": "Deja tu Reseña",
+            "testimonials.description": "¿Trabajaste con nosotros? Comparte tu experiencia en LinkedIn",
+            "testimonials.linkText": "Dejar Reseña en LinkedIn"
         }
     },
     en: {
@@ -535,7 +540,7 @@ const resources = {
             "nav.cases": "Success Cases",
             "nav.about": "About Us",
             "nav.contact": "Contact",
-            
+                    
             // Services
             "services.title": "Our Services",
             "services.description": "Comprehensive sustainable product development solutions from strategy to implementation.",
@@ -998,7 +1003,12 @@ const resources = {
 
             "cases.training.title": "Training and specific coaching",
             "cases.training.challenge": "Develop specialized training programs that strengthen the technical competencies of internal teams in sustainable packaging and project management.",
-            "cases.training.result": "Comprehensive training programs were implemented that significantly improved team capabilities, increasing operational efficiency and deliverable quality. Trained teams achieved a 30% reduction in development times and improved customer satisfaction."
+            "cases.training.result": "Comprehensive training programs were implemented that significantly improved team capabilities, increasing operational efficiency and deliverable quality. Trained teams achieved a 30% reduction in development times and improved customer satisfaction.",
+            
+            // Testimonials
+            "testimonials.title": "Leave Your Review",
+            "testimonials.description": "Have you worked with us? Share your experience on LinkedIn",
+            "testimonials.linkText": "Leave Review on LinkedIn"
         }
     }
 };

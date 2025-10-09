@@ -6,6 +6,7 @@ import { CasesCTA } from "@/components/CasesCTA";
 import { ProposalCTA } from "@/components/ProposalCTA";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Footer } from "@/components/Footer";
+import { Testimonials } from "@/components/Testimonials";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Philosophy />
       <Services />
       <ProposalCTA />
+      <Testimonials />
       <StatsMarquee />
       <CasesCTA />
       <ContactCTA />

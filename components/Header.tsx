@@ -35,6 +35,7 @@ export const Header = () => {
                         <Link href="/proposal" className="text-gray-600 hover:text-[#0069c0] transition-colors">{t('nav.proposal')}</Link>
                         <Link href="/about-us" className="text-gray-600 hover:text-[#0069c0] transition-colors">{t('nav.about')}</Link>
                         <Link href="/success-cases" className="text-gray-600 hover:text-[#0069c0] transition-colors">{t('nav.cases')}</Link>
+                        <Link href="/videos" className="text-gray-600 hover:text-[#0069c0] transition-colors">Videos</Link>
                         <Link href="/contact-us" className="text-gray-600 hover:text-[#0069c0] transition-colors">{t('nav.contact')}</Link>
                         <LanguageSwitcher />
                     </div>
